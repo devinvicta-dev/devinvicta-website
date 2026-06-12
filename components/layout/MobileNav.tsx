@@ -20,7 +20,7 @@ export default function MobileNav({ isOpen, onClose }: MobileNavProps) {
     <>
       <div
         className={cn(
-          'fixed inset-0 z-[150] flex-col items-center justify-center gap-10 bg-black/[0.96]',
+          'fixed inset-0 z-150 flex-col items-center justify-center gap-10 bg-black/96',
           isOpen ? 'flex' : 'hidden'
         )}
         id="mobile-nav"

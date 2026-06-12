@@ -42,7 +42,7 @@ export default function LogosSection() {
   return (
     <section className="bg-[radial-gradient(circle,rgba(0,0,0,0.07)_1px,transparent_1px)] [background-size:22px_22px] pt-14 md:pt-28">
       <div className="mx-auto max-w-page px-5 md:px-8">
-        <div className="mb-12 flex flex-col gap-4 md:mb-[5.625rem] md:flex-row md:items-start md:justify-between md:gap-[1.875rem]">
+        <div className="mb-12 flex flex-col gap-4 md:mb-22.5 md:flex-row md:items-start md:justify-between md:gap-7.5">
           <Badge
             variant="outline"
             data-anim=""
@@ -54,17 +54,14 @@ export default function LogosSection() {
             {t('differentiators.headline')}
           </WordScrub>
         </div>
-        <div
-          ref={gridRef}
-          className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4"
-        >
+        <div ref={gridRef} className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4">
           {DIFFERENTIATOR_KEYS.map((key, i) => (
             <article
               key={key}
               data-card=""
-              className="rounded-card bg-white p-[1.875rem] shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)]"
+              className="rounded-card bg-white p-7.5 shadow-[0_2px_24px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)]"
             >
-              <div className="mb-[1.875rem] flex items-center justify-between">
+              <div className="mb-7.5 flex items-center justify-between">
                 <p className="text-[0.875rem] leading-[1.625] text-dark-gray">
                   {t(`differentiators.items.${key}.label`)}
                 </p>

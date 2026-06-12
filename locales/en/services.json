@@ -47,12 +47,16 @@
         "body": "Intuitive, polished interfaces and scalable design systems that remove friction and keep products coherent as they grow."
       },
       "automation": {
-        "title": "Automation",
-        "body": "AI-driven automation that gives time back through real-time monitoring, smart notifications and intelligent routing across your systems."
+        "title": "AI Flows & Automation",
+        "body": "End-to-end AI engineering across the full stack, LLM integration, machine learning pipelines, intelligent agents and workflow automation, designed to embed real AI capability into your operations."
       },
       "cloud": {
         "title": "Cloud and Backend",
         "body": "Reliable cloud infrastructure and backends covering APIs, databases, CI/CD and security by design, prepared for growth and AI workloads."
+      },
+      "outsourcing": {
+        "title": "Outsourcing",
+        "body": "Dedicated engineering teams that integrate seamlessly with your organisation, from individual specialists to full squads, delivering consistent output, accountability and technical ownership without the overhead of in-house hiring."
       }
     }
   },
@@ -379,6 +383,48 @@
       ],
       "closingHeading": "Backends built to keep everything running",
       "closingPara": "From the first architecture decision to deployment and continuous operation, we build cloud and backend systems that are resilient, secure and prepared for growth. We turn requirements into foundations that stay adaptable, consistent and effective while supporting AI-ready workloads."
+    },
+    "outsourcing": {
+      "title": "Outsourcing",
+      "intro": "Dedicated engineering teams that become part of your business",
+      "introParas": [
+        "We embed experienced engineers directly into your team, fully aligned with your culture, processes and goals, so you get the output of an internal hire without the overhead or timeline of recruiting.",
+        "Whether you need one senior specialist or a full cross-functional squad, we match the right people to your stack, your pace and your ambitions.",
+        "Our engineers take real ownership: they attend stand-ups, write production code, review PRs and stay accountable for delivery, just like a team member you hired yourself."
+      ],
+      "subHeading": "Flexible teams, consistent delivery",
+      "subPara": "We scale up or down as your project evolves, keeping the same quality bar and the same commitment to shipping software that works.",
+      "videoHeading": "Your team, extended",
+      "bullets": [
+        {
+          "label": "Onboarding and alignment",
+          "text": "We invest time upfront to understand your codebase, workflows and standards, so engineers are productive from the first sprint."
+        },
+        {
+          "label": "Ongoing delivery",
+          "text": "Through clear communication and regular reporting, we keep you in control of priorities while the team focuses on execution."
+        }
+      ],
+      "features": [
+        {
+          "title": "Individual specialists",
+          "desc": "Senior engineers embedded in your team for focused, high-impact work."
+        },
+        {
+          "title": "Full squads",
+          "desc": "End-to-end teams covering frontend, backend, AI and QA under one contract."
+        },
+        {
+          "title": "Flexible engagement",
+          "desc": "Scale capacity up or down as your roadmap and budget evolve."
+        },
+        {
+          "title": "Ownership & accountability",
+          "desc": "Engineers take genuine ownership, code quality, timelines and outcomes."
+        }
+      ],
+      "closingHeading": "Engineering capacity without the hiring overhead",
+      "closingPara": "From a single specialist to a full delivery squad, we provide the engineering muscle your business needs, with the culture fit, accountability and technical depth to make it feel like your own team. We take ownership of outcomes, not just tasks."
     }
   }
 }

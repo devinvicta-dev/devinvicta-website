@@ -5,10 +5,10 @@
   },
   "hero": {
     "title": "Serviços",
-    "subhead": "Construímos software à medida e escalável com IA responsável, de agentes inteligentes e integração de LLM a plataformas web, apps móveis e cloud, tudo projetado em torno do seu negócio."
+    "subhead": "Construímos software à medida e escalável com IA responsável, de agentes inteligentes e integração de LLM a plataformas web, apps móveis e cloud, tudo concebido em torno do seu negócio."
   },
   "strategy": {
-    "headline": "Criando estratégias únicas que transformam visões em resultados poderosos",
+    "headline": "Estratégias únicas que transformam visões em resultados poderosos",
     "features": {
       "excellence": {
         "title": "Excelência técnica",
@@ -32,10 +32,10 @@
     "items": {
       "web": {
         "title": "Desenvolvimento",
-        "body": "Plataformas web à medida, projetadas para escalar com o seu negócio.\n\nComeçamos por compreender o problema antes de moldar a solução, para que cada plataforma que construímos assente em necessidades reais do negócio e não em suposições.\n\nDe interfaces front-end limpas a APIs e camadas de dados robustas, construímos sistemas web rápidos, sustentáveis e prontos para produção.\n\nO nosso objetivo é software que evolui de forma elegante, apoiando o crescimento e mantendo intactos o desempenho, a segurança e a qualidade do código."
+        "body": "Plataformas web à medida, concebidas para escalar com o seu negócio.\n\nComeçamos por compreender o problema antes de moldar a solução, para que cada plataforma que construímos assente em necessidades reais do negócio e não em suposições.\n\nDe interfaces front-end limpas a APIs e camadas de dados robustas, construímos sistemas web rápidos, sustentáveis e prontos para produção.\n\nO nosso objetivo é software que evolui de forma elegante, apoiando o crescimento e mantendo intactos o desempenho, a segurança e a qualidade do código."
       },
       "mobile": {
-        "title": "Aplicativos",
+        "title": "Aplicações",
         "body": "Apps iOS, Android e multiplataforma de qualidade nativa, concebidas em torno de jornadas reais do utilizador e preparadas para escalar com o seu público."
       },
       "ai": {
@@ -47,12 +47,16 @@
         "body": "Interfaces intuitivas e refinadas e sistemas de design escaláveis que reduzem o atrito e mantêm os produtos coerentes à medida que crescem."
       },
       "automation": {
-        "title": "Automação",
-        "body": "Automação orientada por IA que devolve tempo através de monitorização em tempo real, notificações inteligentes e encaminhamento inteligente nos seus sistemas."
+        "title": "Fluxos de IA & Automação",
+        "body": "Engenharia de IA de ponta a ponta, integração de LLM, pipelines de machine learning, agentes inteligentes e automação de fluxos de trabalho, concebida para incorporar capacidade real de IA nas suas operações."
       },
       "cloud": {
         "title": "Cloud e backend",
         "body": "Infraestrutura cloud fiável e backends que cobrem APIs, bases de dados, CI/CD e segurança por design, preparados para o crescimento e cargas de trabalho de IA."
+      },
+      "outsourcing": {
+        "title": "Outsourcing",
+        "body": "Equipas de engenharia dedicadas que se integram de forma transparente na sua organização, de especialistas individuais a squads completas, com entrega consistente, responsabilidade e ownership técnico sem os custos de contratação interna."
       }
     }
   },
@@ -139,7 +143,7 @@
   "definitions": {
     "web-development": {
       "title": "Desenvolvimento",
-      "intro": "Plataformas web à medida, projetadas para escalar com o seu negócio",
+      "intro": "Plataformas web à medida, concebidas para escalar com o seu negócio",
       "introParas": [
         "Começamos por compreender o problema antes de moldar a solução, para que cada plataforma que construímos assente em necessidades reais do negócio e não em suposições.",
         "De interfaces front-end limpas a APIs e camadas de dados robustas, construímos sistemas web rápidos, sustentáveis e prontos para produção.",
@@ -147,7 +151,7 @@
       ],
       "subHeading": "Da arquitetura à implementação, construído para durar",
       "subPara": "Concebemos a arquitetura com a escalabilidade no centro, para que a sua plataforma cresça consigo em vez de ser reconstruída de raiz.",
-      "videoHeading": "Projetado para ter desempenho",
+      "videoHeading": "Concebido para ter desempenho",
       "bullets": [
         {
           "label": "Estratégia e arquitetura",
@@ -180,7 +184,7 @@
       "closingPara": "Do primeiro diagnóstico à implementação e manutenção contínua, entregamos plataformas web com propósito, refinadas e construídas para ter desempenho face a necessidades em evolução. Transformamos ideias em sistemas coesos que permanecem adaptáveis, consistentes e eficazes à medida que o seu negócio cresce."
     },
     "mobile-apps": {
-      "title": "Aplicativos",
+      "title": "Aplicações",
       "intro": "Experiências móveis de qualidade nativa que os seus utilizadores vão adorar",
       "introParas": [
         "Concebemos produtos móveis em torno de jornadas reais do utilizador, para que a experiência seja natural, rápida e fiável desde o primeiro lançamento.",
@@ -385,6 +389,48 @@
       ],
       "closingHeading": "Backends construídos para manter tudo a funcionar",
       "closingPara": "Da primeira decisão de arquitetura à implementação e operação contínua, construímos sistemas cloud e de backend resilientes, seguros e preparados para o crescimento. Transformamos requisitos em bases que se mantêm adaptáveis, consistentes e eficazes, apoiando cargas de trabalho preparadas para IA."
+    },
+    "outsourcing": {
+      "title": "Outsourcing",
+      "intro": "Equipas de engenharia dedicadas que fazem parte do seu negócio",
+      "introParas": [
+        "Integramos engenheiros experientes diretamente na sua equipa, totalmente alinhados com a sua cultura, processos e objetivos, para que obtenha o desempenho de uma contratação interna sem os custos ou o tempo de recrutamento.",
+        "Seja um especialista sénior ou uma squad completa multifuncional, encontramos as pessoas certas para a sua stack, o seu ritmo e as suas ambições.",
+        "Os nossos engenheiros assumem verdadeiro ownership: participam em stand-ups, escrevem código de produção, reveem PRs e são responsáveis pela entrega, como um colaborador que contratou internamente."
+      ],
+      "subHeading": "Equipas flexíveis, entrega consistente",
+      "subPara": "Escalamos para cima ou para baixo à medida que o projeto evolui, mantendo o mesmo nível de qualidade e o mesmo compromisso de entregar software que funciona.",
+      "videoHeading": "A sua equipa, reforçada",
+      "bullets": [
+        {
+          "label": "Integração e alinhamento",
+          "text": "Investimos tempo de início para compreender o seu código, fluxos de trabalho e padrões, para que os engenheiros sejam produtivos desde o primeiro sprint."
+        },
+        {
+          "label": "Entrega contínua",
+          "text": "Através de comunicação clara e relatórios regulares, mantemo-lo no controlo das prioridades enquanto a equipa se foca na execução."
+        }
+      ],
+      "features": [
+        {
+          "title": "Especialistas individuais",
+          "desc": "Engenheiros séniores integrados na sua equipa para trabalho focado e de alto impacto."
+        },
+        {
+          "title": "Squads completas",
+          "desc": "Equipas end-to-end cobrindo frontend, backend, IA e QA num único contrato."
+        },
+        {
+          "title": "Modelo flexível",
+          "desc": "Escale a capacidade para cima ou para baixo à medida que o seu roadmap e orçamento evoluem."
+        },
+        {
+          "title": "Ownership & responsabilidade",
+          "desc": "Os engenheiros assumem verdadeiro ownership, qualidade do código, prazos e resultados."
+        }
+      ],
+      "closingHeading": "Capacidade de engenharia sem os custos de contratação",
+      "closingPara": "De um único especialista a uma squad de entrega completa, fornecemos a capacidade de engenharia que o seu negócio necessita, com o ajuste cultural, responsabilidade e profundidade técnica para parecer a sua própria equipa. Assumimos a responsabilidade pelos resultados, não apenas pelas tarefas."
     }
   }
 }

@@ -50,15 +50,15 @@ export default function ApproachSection() {
     <section className="py-14 md:py-28 bg-ivory border-t border-black/10">
       <div className="mx-auto max-w-page px-5 md:px-8 flex flex-col gap-10">
         {/* Header */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[1.875rem] md:items-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-7.5 md:items-end">
           <WordScrub
             as="h2"
-            className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] text-black leading-[1.15] max-w-[34rem]"
+            className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] text-black leading-[1.15] max-w-136"
           >
             {t('approach.headline')}
           </WordScrub>
           <p
-            className="text-[0.9375rem] text-dark-gray leading-[1.7] max-w-[34rem] md:ml-auto"
+            className="text-[0.9375rem] text-dark-gray leading-[1.7] max-w-136 md:ml-auto"
             data-anim
           >
             {t('approach.body')}

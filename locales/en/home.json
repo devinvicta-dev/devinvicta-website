@@ -1,12 +1,16 @@
 {
+  "meta": {
+    "title": "DevInvicta | AI Agents, Web & Mobile Software House",
+    "description": "AI agents, web platforms and mobile apps engineered for ambitious teams. EU AI Act compliant, proven before you pay."
+  },
   "hero": {
     "wordLeft": "Building",
-    "wordRight": "your dreams",
+    "wordRight": "businesses",
     "tagline": "AI agents, web platforms and mobile apps engineered to scale, automate and outperform."
   },
   "about": {
     "label": "About us",
-    "headline": "We partner with ambitious teams building the next wave of AI-powered products",
+    "headline": "We partner with ambitious teams embedding AI into the heart of their operations",
     "quote": "“They shipped our AI agent pipeline in three weeks. The system handles 80% of our support tickets automatically. We couldn’t have imagined this speed without them.”",
     "cta": "Let's talk",
     "yearsLabel": "Years of experience"
@@ -69,9 +73,10 @@
     "items": {
       "web": "Web Development",
       "mobile": "Mobile App Development",
-      "ai": "AI Agents & Automation",
+      "ai": "AI Flows: LLM, ML & Agents",
       "design": "UX/UI Design",
-      "cloud": "Cloud & Backend Solutions"
+      "cloud": "Cloud & Backend Solutions",
+      "outsourcing": "Outsourcing"
     }
   },
   "serviceV2": {
@@ -82,7 +87,8 @@
       "ai": "AI Agents & LLM Integration",
       "design": "UX/UI Design",
       "automation": "AI Automation & Workflows",
-      "cloud": "Cloud & Backend"
+      "cloud": "Cloud & Backend",
+      "outsourcing": "Outsourcing"
     }
   },
   "reviews": {

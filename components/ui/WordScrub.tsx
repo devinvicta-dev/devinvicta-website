@@ -50,17 +50,15 @@ export default function WordScrub({
       el.appendChild(frag)
 
       const wordSpans = el.querySelectorAll('.scrub-word')
-      const section = el.closest('section') || el
-
       gsap.set(wordSpans, { opacity: 0.12 })
       gsap.to(wordSpans, {
         opacity: 1,
         stagger: 0.5,
         ease: 'none',
         scrollTrigger: {
-          trigger: section,
-          start: 'top 65%',
-          end: 'center 30%',
+          trigger: el,
+          start: 'top 75%',
+          end: 'bottom 30%',
           scrub: scrubSpeed,
         },
       })

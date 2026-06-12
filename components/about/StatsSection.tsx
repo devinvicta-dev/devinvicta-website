@@ -8,28 +8,22 @@ export default function StatsSection() {
   return (
     <section className="bg-[radial-gradient(circle,rgba(0,0,0,0.07)_1px,transparent_1px)] bg-[length:24px_24px] py-14 md:py-28 bg-ivory">
       <div className="mx-auto max-w-page px-5 md:px-8 grid grid-cols-1 md:grid-cols-[40%_1fr] gap-10 md:gap-20 items-stretch">
-        <div className="relative flex w-full min-h-[260px] md:min-h-[400px]" data-anim>
+        <div className="relative flex w-full min-h-65 md:min-h-100" data-anim>
           <Image
             src="https://images.unsplash.com/photo-1518019671582-55004f1bc9ab?w=800&h=1000&fit=crop&q=85"
             alt="Draped linen, soft sculptural folds"
             fill
             sizes="(max-width: 768px) 100vw, 40vw"
-            className="stats-photo object-cover rounded-[1.25rem] [filter:grayscale(1)_contrast(1.2)_brightness(0.82)]"
+            className="stats-photo object-cover rounded-5 [filter:grayscale(1)_contrast(1.2)_brightness(0.82)]"
           />
         </div>
         <div className="flex flex-col justify-center pt-4">
-          <div className="mb-8 flex flex-col gap-5">
+          <div className="mb-8">
             <WordScrub
               className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.035em] text-black leading-[1.2]"
               as="p"
             >
-              {t('stats.introP1')}
-            </WordScrub>
-            <WordScrub
-              className="text-[clamp(1.5rem,2.5vw,2rem)] font-bold tracking-[-0.035em] text-black leading-[1.2]"
-              as="p"
-            >
-              {t('stats.introP2')}
+              {t('stats.intro')}
             </WordScrub>
           </div>
           <Separator className="bg-black/10" />
@@ -39,7 +33,7 @@ export default function StatsSection() {
           >
             <div
               className="stats-big text-[clamp(3rem,6vw,5.5rem)] font-extrabold tracking-[-0.05em] text-black leading-none"
-              data-target="2"
+              data-target="3"
               data-suffix="+"
             >
               0+

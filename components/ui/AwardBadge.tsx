@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 /**
  * Live-text circular "seal" badge.
  *
- * Renders the ring of text ("AWARD WINNING SOLUTIONS · SINCE 2025 ·") as real,
+ * Renders the ring of text ("AWARD WINNING SOLUTIONS · SINCE 2024 ·") as real,
  * selectable SVG <textPath> wrapped around a circle — so the year stays editable
  * text (replaces the old vectorized Webflow SVG where "2012" was outline paths).
  *
@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
  */
 export default function AwardBadge({
   className,
-  text = 'AWARD WINNING SOLUTIONS · SINCE 2025 · ',
+  text = 'AWARD WINNING SOLUTIONS · SINCE 2024 · ',
   ...props
 }: React.ComponentProps<'svg'> & { text?: string }) {
   // A circle centered at 56,56 with r=44 inside a 112x112 box.

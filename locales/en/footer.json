@@ -9,5 +9,5 @@
     "reviews": "Reviews",
     "contact": "Contact"
   },
-  "copyright": "© 2025 DevInvicta. All rights reserved."
+  "copyright": "© {year} DevInvicta. All rights reserved."
 }

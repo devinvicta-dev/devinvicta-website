@@ -4,11 +4,6 @@ import { Separator } from '@/components/ui/separator'
 import { getService } from '@/lib/services'
 import type { Project } from '@/data/projects'
 
-/**
- * Project-detail body — a 2-column block mirroring the service-detail layout: a
- * meta sidebar on the left, and the editorial column (Challenge → Solution →
- * Related services) on the right. Typographic, no imagery.
- */
 export default function ProjectChallengeSolution({ project }: { project: Project }) {
   const t = useTranslations('projects')
   const tServices = useTranslations('services')
@@ -40,31 +35,58 @@ export default function ProjectChallengeSolution({ project }: { project: Project
                   {t('detail.typeValue')}
                 </dd>
               </div>
+              {project.website ? (
+                <div data-anim>
+                  <Link
+                    href={project.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sub font-semibold text-brand-accent transition-opacity duration-300 hover:opacity-70"
+                  >
+                    {t('detail.visitWebsite')}
+                    <span aria-hidden>↗</span>
+                  </Link>
+                </div>
+              ) : null}
             </dl>
           </aside>
 
           {/* right editorial column */}
           <div className="flex flex-col">
-            {/* solution (only) */}
+            {/* challenge */}
             <span
               data-anim
-              className="text-sub font-medium tracking-[0.08em] text-fiery-red uppercase"
+              className="text-sub font-medium tracking-[0.08em] text-brand-accent uppercase"
+            >
+              {t('detail.challengeLabel')}
+            </span>
+            <p data-anim className="mt-5 text-body leading-[1.75] text-dark-gray">
+              {t(`items.${project.slug}.challenge`)}
+            </p>
+
+            {/* solution */}
+            <span
+              data-anim
+              className="mt-12 text-sub font-medium tracking-[0.08em] text-brand-accent uppercase"
             >
               {t('detail.solutionLabel')}
             </span>
             <h2
               data-anim
-              className="mt-4 text-h2 leading-[1.2] font-semibold tracking-[-0.04em] text-black"
+              className="mt-3 text-h3 leading-[1.2] font-semibold tracking-[-0.03em] text-black"
             >
-              {t(`items.${project.slug}.solution`)}
+              {t(`items.${project.slug}.category`)}
             </h2>
+            <p data-anim className="mt-5 text-body leading-[1.75] text-dark-gray">
+              {t(`items.${project.slug}.solution`)}
+            </p>
 
             {/* related services */}
             {related.length ? (
               <>
                 <h4
                   data-anim
-                  className="mt-16 text-h4 leading-[1.3] font-semibold tracking-[-0.02em] text-black"
+                  className="mt-12 text-h4 leading-[1.3] font-semibold tracking-[-0.02em] text-black"
                 >
                   {t('detail.relatedServices')}
                 </h4>
@@ -76,7 +98,7 @@ export default function ProjectChallengeSolution({ project }: { project: Project
                         className="group flex items-center justify-between rounded-pill bg-white px-6 py-4 text-button font-semibold text-black ring-1 ring-black/10 transition-colors duration-300 hover:bg-black hover:text-white"
                       >
                         {tServices(`definitions.${s.slug}.title`)}
-                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        <span className="transition-colors duration-300 group-hover:text-white">
                           →
                         </span>
                       </Link>

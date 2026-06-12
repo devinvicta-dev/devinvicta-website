@@ -13,15 +13,14 @@
     "statement": "Desenvolvemos software que escala, tem desempenho e é entregue, transformando desafios técnicos complexos em sistemas inteligentes que aceleram o seu negócio desde o primeiro dia."
   },
   "stats": {
-    "introP1": "Fundada há cerca de dois anos, a DevInvicta nasceu da visão do seu fundador, José Neves, após anos de experiência no setor de desenvolvimento de software.",
-    "introP2": "A nossa missão é entregar software à medida que gera valor real, cresce com os clientes e está preparado para o futuro da Inteligência Artificial.",
+    "intro": "Fundada em 2024, a DevInvicta nasceu da visão do seu fundador, José Neves, após anos de experiência no setor de desenvolvimento de software. A nossa missão é entregar software à medida que gera valor real, cresce com os clientes e está preparado para o futuro da Inteligência Artificial.",
     "years": "Anos de atividade, transformando anos de experiência em desenvolvimento de software em soluções à medida que crescem com os nossos clientes.",
-    "ai": "Foco em soluções, construindo inteligência pronta para produção e em conformidade com a regulamentação europeia desde o primeiro dia.",
+    "ai": "Foco em soluções, a construir inteligência pronta para produção e em conformidade com a regulamentação europeia desde o primeiro dia.",
     "endToEnd": "Software completo, entregue de ponta a ponta, da arquitetura e implementação até à manutenção e evolução contínua."
   },
   "mission": {
-    "headline": "Construímos software inteligente e escalável que gera valor real para as empresas, aliando inovação tecnológica a rigor técnico e foco nos resultados dos clientes.",
-    "body": "A nossa visão é ser a referência europeia no desenvolvimento de software de IA, reconhecida pela excelência técnica, conformidade regulatória e capacidade de transformar negócios."
+    "headline": "Construímos software inteligente que escala e gera valor real.",
+    "body": "Aliamos inovação tecnológica a rigor técnico e foco nos resultados dos clientes, entregando software que cresce com o seu negócio. A nossa visão é ser a referência europeia no desenvolvimento de software de IA, reconhecida pela excelência técnica, conformidade regulatória e capacidade de transformar negócios."
   },
   "servicesDark": {
     "items": {
@@ -30,14 +29,15 @@
       "mobile": { "title": "Apps móveis", "tag": "iOS / Android" },
       "cloud": { "title": "Cloud & backend", "tag": "Infraestrutura" },
       "design": { "title": "Design UX / UI", "tag": "Design" },
-      "automation": { "title": "Automação & fluxos de IA", "tag": "Processo" }
+      "automation": { "title": "Automação & fluxos de IA", "tag": "Processo" },
+      "outsourcing": { "title": "Outsourcing", "tag": "Equipas" }
     }
   },
   "values": {
     "headline": "Os valores que moldam tudo o que construímos.",
     "responsibleAi": {
       "title": "Inovação responsável em IA",
-      "body": "Levamos inteligência a cada camada do sistema de forma responsável, construindo IA pronta para produção que é segura, responsável e feita para durar."
+      "body": "Levamos inteligência a cada camada do sistema de forma responsável, a construir IA pronta para produção que é segura, responsável e feita para durar."
     },
     "clientFocus": {
       "title": "Foco no cliente",

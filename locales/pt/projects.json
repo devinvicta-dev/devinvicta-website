@@ -20,52 +20,62 @@
     "typeValue": "Caso de estudo",
     "challengeLabel": "O desafio",
     "solutionLabel": "A nossa solução",
-    "relatedServices": "Serviços relacionados"
+    "relatedServices": "Serviços relacionados",
+    "visitWebsite": "Visitar website"
   },
   "items": {
     "europacolon": {
       "title": "Europacolon Portugal",
       "category": "Plataforma para ONG e triagem com IA",
+      "challenge": "Site institucional desatualizado, sem plataforma de administração e sem encaminhamento de emails. A equipa não conseguia gerir contactos de forma eficiente e as mensagens urgentes perdiam-se no processo.",
       "solution": "Um novo site institucional para uma ONG dedicada ao cancro digestivo, construído para transmitir a sua missão com a clareza e o acolhimento que as pessoas merecem quando procuram ajuda. Acrescentámos um backend de administração completo que a equipa controla no dia a dia, encaminhamento de email fiável e uma camada de IA que lê cada pedido de contacto assim que chega, categoriza-o e prioriza-o, para que as mensagens mais urgentes cheguem primeiro à pessoa certa. Entregue em seis meses e acompanhado de manutenção contínua, para que a organização possa concentrar-se em quem serve, e não no software por trás."
     },
     "vmoove": {
       "title": "Vmoove Transfers",
       "category": "Backend de transferes e IA",
+      "challenge": "Empresa sem qualquer presença online, sem plataforma de administração e sem processos automatizados. Toda a operação era gerida manualmente, limitando a captação de novos clientes e a eficiência operacional.",
       "solution": "Uma base digital completa para uma empresa de transferes que não tinha presença online nem forma de gerir as suas operações. Construímos um site informativo moderno e migrámos tudo para um backend proprietário, com API própria e base de dados dedicada, e depois acrescentámos módulos de IA para personalização e automação de processos. O resultado é uma plataforma que gere o negócio de ponta a ponta e que trouxe um aumento considerável de novos clientes desde o lançamento."
     },
     "confidential-project": {
       "title": "Projeto confidencial",
       "category": "ERP fintech e IA",
+      "challenge": "Ausência de produto funcional, sem faturação automática nem gestão de recursos humanos integrada. A start-up não tinha capacidade de crescer nem de ligar os seus sistemas, e precisava de um MVP operacional rapidamente.",
       "solution": "Um MVP construído de raiz para uma start-up fintech que precisava de um produto funcional depressa. Entregámos um módulo de faturação com leitura e processamento de faturas por IA, categorização inteligente que aprende a forma como o negócio organiza os seus dados e um módulo de gestão de RH totalmente integrado. Entregue em três meses, com a equipa do cliente operacional e autónoma desde o primeiro dia."
     },
     "ecommerce": {
       "title": "Projeto confidencial",
       "category": "Plataforma de e-commerce e IA",
+      "challenge": "Sistema de gestão de conteúdos antigo sem API própria, sem controlo sobre os dados e sem capacidade de integrar tecnologias de inteligência artificial ou fazer crescer o negócio. A plataforma era um obstáculo ao crescimento.",
       "solution": "Uma reconstrução completa de plataforma para um negócio de e-commerce preso a um CMS antigo, sem API e sem controlo sobre os próprios dados. Migrámos tudo para um backend proprietário com uma API limpa e uma base de dados dedicada, e integrámos módulos de IA para personalização e automação. Concluída em quatro meses sem qualquer indisponibilidade, com desempenho mais rápido, controlo total dos dados e uma plataforma pronta para crescer com IA."
     },
     "fraud": {
       "title": "Projeto confidencial",
       "category": "Deteção de fraude e IA",
+      "challenge": "Sistema de deteção de fraude com IA já existente, mas com necessidade de melhoria de desempenho, precisão e desenvolvimento contínuo da plataforma. Os modelos não acompanhavam o volume e a sofisticação das tentativas de fraude.",
       "solution": "Uma colaboração de longo prazo para afinar um sistema de deteção de fraude com IA para pagamentos e e-commerce. Otimizámos os modelos para maior precisão e investimos engenharia real na plataforma tecnológica da empresa, tornando-a mais robusta e escalável. Ao longo de doze meses de trabalho contínuo, a fraude passou a ser detetada com maior rigor e a plataforma cresceu à altura da ambição que a sustenta."
     },
     "insurance": {
       "title": "Projeto confidencial",
       "category": "Cotações de seguros e IA",
+      "challenge": "Site de cotações construído sobre sistemas desatualizados, processos manuais e sem qualquer automação para a equipa comercial. O crescimento estava limitado e a experiência do cliente era fraca.",
       "solution": "Uma modernização completa para uma start-up de seguros cujo site de cotações assentava em sistemas desatualizados e processos manuais. Migrámos todos os sistemas para tecnologias modernas, reconstruímos o motor de cotações com IA e automatizámos o fluxo da equipa de vendas. Entregue ao longo de dezoito meses, o projeto aumentou a conversão em mais de cinquenta por cento, tornou o sistema visivelmente mais rápido e libertou a equipa para vender. A manutenção continua ativa."
     },
     "manufacturing": {
       "title": "Projeto confidencial",
       "category": "Software industrial e IA",
+      "challenge": "Fábricas sem visibilidade sobre os seus próprios processos de produção, sem dados em tempo real e sem capacidade de tomar decisões informadas para otimizar a operação. A gestão era feita às cegas.",
       "solution": "Software com IA que dá às fábricas visibilidade real sobre a sua própria produção. As unidades do cliente não tinham dados em tempo real nem informação para agir, por isso construímos ferramentas de monitorização e otimização que mostram o que acontece no chão de fábrica à medida que acontece. Entregue em oito meses com um plano de manutenção estabelecido, deu ao cliente controlo real sobre as suas operações e gerou valor significativo."
     },
     "maritime": {
       "title": "Projeto confidencial",
       "category": "Plataforma marítima e IA",
+      "challenge": "Operador multinacional de transporte marítimo sem plataforma digital para os seus clientes e sem processos de IA nas operações. A eficiência operacional e a experiência dos clientes estavam comprometidas.",
       "solution": "A digitalização completa de um operador multinacional de transporte marítimo que não tinha plataforma para os seus clientes nem IA nas suas operações. Construímos uma plataforma dedicada e integrámos processos de IA no trabalho do dia a dia. Já no seu décimo segundo mês, a plataforma foi lançada com resultados muito positivos, com operações a correr de forma significativamente mais eficiente."
     },
     "automotive": {
       "title": "Projeto confidencial",
       "category": "MVP automóvel e IA",
+      "challenge": "Start-up sem produto funcional, sem sistema de marcações automatizado e sem capacidade de prever a procura ou comunicar proativamente com os clientes. O negócio não conseguia crescer sem infraestrutura digital.",
       "solution": "Um MVP para uma start-up automóvel que não tinha produto nem reservas automatizadas. Construímos um sistema de reservas de lavagem de automóveis, acrescentámos IA para prever a procura e configurámos notificações automáticas que avisam cada cliente quando chega a hora da próxima lavagem. Entregue como um MVP robusto, com o sistema de reservas operacional, clientes notificados automaticamente por IA e a equipa capaz de antecipar picos de procura desde o primeiro dia."
     }
   }

@@ -89,6 +89,15 @@ const SEED: ServiceSeed[] = [
     bulletCount: 2,
     featureNums: ['01', '02', '03', '04'],
   },
+  {
+    slug: 'outsourcing',
+    heroImage:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70',
+    poster:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70',
+    bulletCount: 2,
+    featureNums: ['01', '02', '03', '04'],
+  },
 ]
 
 export const SERVICES: Service[] = SEED.map(({ poster, ...s }) => ({

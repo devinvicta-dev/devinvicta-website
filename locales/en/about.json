@@ -13,15 +13,14 @@
     "statement": "We engineer software that scales, performs and ships, turning complex technical challenges into intelligent systems that accelerate your business from day one."
   },
   "stats": {
-    "introP1": "Founded around two years ago, DevInvicta was born from the vision of its founder, José Neves, after years of experience in the software development sector.",
-    "introP2": "Our mission is to deliver tailored software that generates real value, grows with clients and is ready for the future of Artificial Intelligence.",
+    "intro": "Founded in 2024, DevInvicta was born from the vision of its founder, José Neves, after years of experience in the software development sector. Our mission is to deliver tailored software that generates real value, grows with clients and is ready for the future of Artificial Intelligence.",
     "years": "Years of activity, turning years of software development experience into custom solutions that grow with our clients.",
     "ai": "Solutions focus, building production-ready intelligence that is compliant with European regulation from day one.",
     "endToEnd": "Complete software, delivered end-to-end from architecture and deployment through maintenance and continuous evolution."
   },
   "mission": {
-    "headline": "We build intelligent, scalable software that generates real value for businesses, pairing technological innovation with technical rigor and a focus on client results.",
-    "body": "Our vision is to be the European reference in AI software development, recognised for technical excellence, regulatory compliance and the ability to transform businesses."
+    "headline": "We build intelligent software that scales and generates real value.",
+    "body": "We pair technological innovation with technical rigor and a relentless focus on client results, delivering software that grows with your business. Our vision is to be the European reference in AI software development, recognised for technical excellence, regulatory compliance and the ability to transform businesses."
   },
   "servicesDark": {
     "items": {
@@ -30,7 +29,8 @@
       "mobile": { "title": "Mobile apps", "tag": "iOS / Android" },
       "cloud": { "title": "Cloud & backend", "tag": "Infrastructure" },
       "design": { "title": "UX / UI design", "tag": "Design" },
-      "automation": { "title": "AI automation & workflows", "tag": "Process" }
+      "automation": { "title": "AI automation & workflows", "tag": "Process" },
+      "outsourcing": { "title": "Outsourcing", "tag": "Teams" }
     }
   },
   "values": {

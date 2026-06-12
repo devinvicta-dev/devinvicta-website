@@ -1,0 +1,54 @@
+# DevInvicta
+
+> AI-focused software house based in Porto, Portugal. We build AI agents, web platforms, and mobile apps for ambitious teams — with responsible AI and EU AI Act compliance built in.
+
+## What We Do
+
+DevInvicta engineers custom software at the intersection of AI and product. We work with companies that want to embed AI into the heart of their operations, not just as a feature, but as a core competitive advantage.
+
+We deliver:
+
+- **AI Agents & LLMs** — Custom AI agent pipelines, LLM integrations, RAG systems, and intelligent automation.
+- **Web Development** — Full-stack platforms, SaaS products, and performance-first web applications.
+- **Mobile Apps** — Cross-platform and native mobile applications (iOS & Android).
+- **UX/UI Design** — User-centred design systems, prototyping, and product design.
+- **AI Automation & Workflows** — Business process automation with AI orchestration.
+- **Cloud & Backend** — Scalable backend services, DevOps, infrastructure, and API design.
+
+## How We Work
+
+We are transparent and phased — clients pay as they see results. Every engagement starts with a free diagnostic session, followed by a clear, phased proposal with investments defined upfront.
+
+We practice **responsible AI by default**: EU AI Act compliant, GDPR-aware, and production-tested before handoff.
+
+## Who We Work With
+
+We partner with:
+- Startups scaling their MVP to production
+- Scale-ups integrating AI into existing operations
+- Enterprises automating internal processes with custom AI agents
+
+## Notable Work
+
+- **EuropaColon** — Patient digital platform for oncology support (web + mobile)
+- **Vmoove** — Transport marketplace with AI-powered logistics
+- **Fintech AI pipeline** — Automated 80% of support ticket handling in 3 weeks
+- **Insurance SaaS** — AI-driven document processing and fraud detection
+
+## Contact
+
+- Website: https://devinvicta.com
+- Email: info@devinvicta.com
+- Phone: +351 928 144 223
+- LinkedIn: https://www.linkedin.com/company/devinvicta/
+
+## Location
+
+Porto, Portugal — serving clients across Europe.
+
+## Key Differentiators
+
+1. **EU AI Act compliance** built into every AI product from day one
+2. **Proven before you pay** — phased delivery with results-based milestones
+3. **360° delivery** — from strategy and design to development and maintenance
+4. **Speed** — AI agent pipelines shipped in weeks, not months

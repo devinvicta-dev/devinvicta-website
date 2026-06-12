@@ -32,11 +32,11 @@ export default function MissionSection() {
           </svg>
           <WordScrub
             as="h2"
-            className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold leading-[1.15] tracking-[-0.04em] text-black"
+            className="text-[clamp(1.25rem,2vw,1.75rem)] font-bold leading-[1.2] tracking-[-0.03em] text-black"
           >
             {t('mission.headline')}
           </WordScrub>
-          <p className="text-base text-dark-gray leading-[1.7]" data-anim>
+          <p className="text-base text-dark-gray leading-[1.75] max-w-lg" data-anim>
             {t('mission.body')}
           </p>
         </div>

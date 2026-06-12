@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getMessages } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 import '@/styles/globals.css'
 import SmoothScroll from '@/components/ui/SmoothScroll'
+
+const BASE = 'https://devinvicta.com'
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -12,26 +14,38 @@ const interTight = Inter_Tight({
   variable: '--font-inter-tight',
 })
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://devinvicta.com'),
-  title: 'DevInvicta | AI Agents, Web & Mobile',
-  description:
-    'AI agents, web platforms and mobile apps engineered to scale, automate, and outperform.',
-  openGraph: {
-    title: 'DevInvicta | AI Agents, Web & Mobile',
-    description:
-      'AI agents, web platforms and mobile apps engineered to scale, automate, and outperform.',
-    url: 'https://devinvicta.com',
-    siteName: 'DevInvicta',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'DevInvicta | AI Agents, Web & Mobile',
-    description:
-      'AI agents, web platforms and mobile apps engineered to scale, automate, and outperform.',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('home')
+  const locale = await getLocale()
+  const ogLocale = locale === 'pt' ? 'pt_PT' : 'en_US'
+
+  return {
+    metadataBase: new URL(BASE),
+    title: t('meta.title'),
+    description: t('meta.description'),
+    alternates: {
+      canonical: '/',
+      languages: {
+        'pt-PT': BASE,
+        en: BASE,
+        'x-default': BASE,
+      },
+    },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: t('meta.title'),
+      description: t('meta.description'),
+      url: BASE,
+      siteName: 'DevInvicta',
+      locale: ogLocale,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('meta.title'),
+      description: t('meta.description'),
+    },
+  }
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

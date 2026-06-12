@@ -22,9 +22,9 @@ export default function ProjectCard({ project }: { project: Project }) {
         </span>
         <span
           aria-hidden
-          className="text-h5 leading-none text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:text-white"
+          className="shrink-0 text-black transition-colors duration-300 group-hover:text-white"
         >
-          →
+          ↗
         </span>
       </div>
 

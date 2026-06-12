@@ -10,16 +10,20 @@ export interface Project {
   slug: string
   /** Related service slugs from `lib/services.ts` to cross-link. */
   services?: string[]
+  /** Public website URL, if the project is not confidential. */
+  website?: string
 }
 
 export const PROJECTS: Project[] = [
   {
     slug: 'europacolon',
     services: ['web-development', 'cloud-backend', 'ai-agents-llm', 'ux-ui-design'],
+    website: 'https://europacolon.pt',
   },
   {
     slug: 'vmoove',
     services: ['web-development', 'cloud-backend', 'ai-automation'],
+    website: 'https://vmoovetransfers.com',
   },
   {
     slug: 'confidential-project',
