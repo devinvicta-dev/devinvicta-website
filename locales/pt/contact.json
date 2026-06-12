@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Contacto | DevInvicta",
+    "description": "Vamos conversar. Contacte a DevInvicta sobre agentes de IA, plataformas web e apps móveis. Conte-nos sobre o seu projeto e orçamento e entraremos em contacto."
+  },
+  "hero": {
+    "title": "Contacto",
+    "headline": "Vamos falar! Contacte-nos a qualquer momento!",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefone"
+  },
+  "form": {
+    "name": "Nome",
+    "namePlaceholder": "Introduza o seu nome",
+    "email": "Email",
+    "emailPlaceholder": "O seu email",
+    "phone": "Telefone",
+    "phonePlaceholder": "O seu telefone",
+    "company": "Empresa",
+    "companyPlaceholder": "Nome da empresa",
+    "budget": "Orçamento",
+    "budgetPlaceholder": "Selecione o seu orçamento...",
+    "message": "Mensagem",
+    "messagePlaceholder": "Escreva a sua mensagem...",
+    "submit": "Enviar",
+    "sending": "A enviar...",
+    "successTitle": "Mensagem enviada. Obrigado!",
+    "successBody": "Recebemos a sua mensagem e entraremos em contacto em breve.",
+    "successAgain": "Enviar outra mensagem",
+    "errors": {
+      "name": "Por favor, introduza o seu nome.",
+      "emailRequired": "Por favor, introduza o seu email.",
+      "emailInvalid": "Por favor, introduza um endereço de email válido.",
+      "message": "Por favor, escreva uma mensagem com pelo menos 10 caracteres.",
+      "generic": "Algo correu mal. Por favor, tente novamente.",
+      "genericShort": "Algo correu mal."
+    }
+  }
+}

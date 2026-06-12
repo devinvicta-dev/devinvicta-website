@@ -3,12 +3,22 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
 import WordScrub from '@/components/ui/WordScrub'
 import SlideButton from '@/components/ui/SlideButton'
 
+const SERVICE_ITEMS = [
+  { num: '(01)', key: 'web', svc: '1', slug: 'web-development' },
+  { num: '(02)', key: 'mobile', svc: '2', slug: 'mobile-apps' },
+  { num: '(03)', key: 'ai', svc: '3', slug: 'ai-agents-llm' },
+  { num: '(04)', key: 'design', svc: '4', slug: 'ux-ui-design' },
+  { num: '(05)', key: 'cloud', svc: '5', slug: 'cloud-backend' },
+] as const
+
 export default function ServiceV1Section() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('home')
 
   // Light support animation: swap the left preview image on hover only.
   // Card i (0-based) reveals overlay i-1; card 0 / mouse-leave shows the base image.
@@ -49,10 +59,10 @@ export default function ServiceV1Section() {
         <div className="mx-auto max-w-page px-5 md:px-8">
           <div className="mb-8 flex flex-col items-start gap-5 md:mb-[5.625rem] md:flex-row md:items-center md:justify-between md:gap-[1.875rem]">
             <WordScrub className="max-w-[39.375rem] text-[clamp(1.5625rem,3.5vw,2.5rem)] font-semibold leading-[1.25] tracking-[-0.03em] text-black">
-              AI-first engineering, from intelligent agents to full-stack products
+              {t('serviceV1.headline')}
             </WordScrub>
             <div data-anim="">
-              <SlideButton href="/contact" text="Let's talk" />
+              <SlideButton href="/contact" text={t('serviceV1.cta')} />
             </div>
           </div>
           <div className="flex flex-col gap-[1.875rem] lg:flex-row lg:items-start lg:justify-between">
@@ -100,18 +110,11 @@ export default function ServiceV1Section() {
                 />
               </div>
               <p className="text-[0.9375rem] leading-[1.625] text-dark-gray">
-                We build AI agents, automate business workflows, and engineer web &amp; mobile
-                platforms, delivering intelligent software that scales from day one.
+                {t('serviceV1.body')}
               </p>
             </div>
             <div className="flex max-w-[48.125rem] flex-1 flex-col">
-              {[
-                { num: '(01)', name: 'Web Development', svc: '1', slug: 'web-development' },
-                { num: '(02)', name: 'Mobile App Development', svc: '2', slug: 'mobile-apps' },
-                { num: '(03)', name: 'AI Agents & Automation', svc: '3', slug: 'ai-agents-llm' },
-                { num: '(04)', name: 'UX/UI Design', svc: '4', slug: 'ux-ui-design' },
-                { num: '(05)', name: 'Cloud & Backend Solutions', svc: '5', slug: 'cloud-backend' },
-              ].map((svc, i) => (
+              {SERVICE_ITEMS.map((svc, i) => (
                 <Link
                   key={svc.svc}
                   href={`/service-detail/${svc.slug}`}
@@ -125,7 +128,7 @@ export default function ServiceV1Section() {
                       {svc.num}
                     </span>
                     <span className="flex-1 px-[1.875rem] text-2xl font-semibold text-black [transition:color_0.35s] md:group-hover:text-white">
-                      {svc.name}
+                      {t(`serviceV1.items.${svc.key}`)}
                     </span>
                     <div className="flex h-8 w-8 items-center justify-center overflow-hidden">
                       <img

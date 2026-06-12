@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { useTranslations } from 'next-intl'
 
 import SlideButton from '@/components/ui/SlideButton'
 import { Field, FieldGroup, FieldLabel, FieldError } from '@/components/ui/field'
@@ -20,20 +21,14 @@ const BUDGETS = [
   '$15,000+',
 ]
 
-const schema = z.object({
-  name: z.string().trim().min(1, 'Please enter your name.'),
-  email: z
-    .string()
-    .trim()
-    .min(1, 'Please enter your email.')
-    .email('Please enter a valid email address.'),
-  phone: z.string().trim().optional(),
-  company: z.string().trim().optional(),
-  budget: z.string().trim().optional(),
-  message: z.string().trim().min(10, 'Please enter a message of at least 10 characters.'),
-})
-
-type FormValues = z.infer<typeof schema>
+type FormValues = {
+  name: string
+  email: string
+  phone?: string
+  company?: string
+  budget?: string
+  message: string
+}
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
@@ -41,8 +36,22 @@ const fieldClass =
   'border-0 border-b border-black/15 bg-transparent px-0 pb-2.5 pt-1 text-body text-black rounded-none h-auto md:text-body placeholder:text-dark-gray/70 focus-visible:border-black focus-visible:ring-0 transition-colors'
 
 export default function ContactForm() {
+  const t = useTranslations('contact')
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
+
+  const schema = z.object({
+    name: z.string().trim().min(1, t('form.errors.name')),
+    email: z
+      .string()
+      .trim()
+      .min(1, t('form.errors.emailRequired'))
+      .email(t('form.errors.emailInvalid')),
+    phone: z.string().trim().optional(),
+    company: z.string().trim().optional(),
+    budget: z.string().trim().optional(),
+    message: z.string().trim().min(10, t('form.errors.message')),
+  })
 
   const {
     register,
@@ -74,13 +83,13 @@ export default function ContactForm() {
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
-        throw new Error(body.error || 'Something went wrong. Please try again.')
+        throw new Error(body.error || t('form.errors.generic'))
       }
       setStatus('success')
       reset()
     } catch (err) {
       setStatus('error')
-      setError(err instanceof Error ? err.message : 'Something went wrong.')
+      setError(err instanceof Error ? err.message : t('form.errors.genericShort'))
     }
   }
 
@@ -94,17 +103,15 @@ export default function ContactForm() {
           ✓
         </span>
         <h3 className="text-h4 font-semibold tracking-[-0.02em] text-black">
-          Message sent. Thank you!
+          {t('form.successTitle')}
         </h3>
-        <p className="text-body leading-[1.7] text-dark-gray">
-          We&apos;ve received your message and will get back to you shortly.
-        </p>
+        <p className="text-body leading-[1.7] text-dark-gray">{t('form.successBody')}</p>
         <button
           type="button"
           onClick={() => setStatus('idle')}
           className="mt-2 text-button font-semibold text-black underline underline-offset-4 hover:opacity-60"
         >
-          Send another message
+          {t('form.successAgain')}
         </button>
       </div>
     )
@@ -119,12 +126,12 @@ export default function ContactForm() {
     >
       <FieldGroup className="gap-7">
         <Field data-invalid={!!errors.name}>
-          <FieldLabel htmlFor="name">Name</FieldLabel>
+          <FieldLabel htmlFor="name">{t('form.name')}</FieldLabel>
           <Input
             id="name"
             type="text"
             autoComplete="name"
-            placeholder="Enter your name"
+            placeholder={t('form.namePlaceholder')}
             aria-invalid={!!errors.name}
             className={fieldClass}
             {...register('name')}
@@ -134,12 +141,12 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
           <Field data-invalid={!!errors.email}>
-            <FieldLabel htmlFor="email">Email</FieldLabel>
+            <FieldLabel htmlFor="email">{t('form.email')}</FieldLabel>
             <Input
               id="email"
               type="email"
               autoComplete="email"
-              placeholder="Your email"
+              placeholder={t('form.emailPlaceholder')}
               aria-invalid={!!errors.email}
               className={fieldClass}
               {...register('email')}
@@ -148,12 +155,12 @@ export default function ContactForm() {
           </Field>
 
           <Field>
-            <FieldLabel htmlFor="phone">Phone</FieldLabel>
+            <FieldLabel htmlFor="phone">{t('form.phone')}</FieldLabel>
             <Input
               id="phone"
               type="tel"
               autoComplete="tel"
-              placeholder="Your phone"
+              placeholder={t('form.phonePlaceholder')}
               className={fieldClass}
               {...register('phone')}
             />
@@ -162,25 +169,25 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
           <Field>
-            <FieldLabel htmlFor="company">Company</FieldLabel>
+            <FieldLabel htmlFor="company">{t('form.company')}</FieldLabel>
             <Input
               id="company"
               type="text"
               autoComplete="organization"
-              placeholder="Company name"
+              placeholder={t('form.companyPlaceholder')}
               className={fieldClass}
               {...register('company')}
             />
           </Field>
 
           <Field>
-            <FieldLabel htmlFor="budget">Budget</FieldLabel>
+            <FieldLabel htmlFor="budget">{t('form.budget')}</FieldLabel>
             <select
               id="budget"
               className={cn(fieldClass, 'cursor-pointer outline-none')}
               {...register('budget')}
             >
-              <option value="">Select your budget...</option>
+              <option value="">{t('form.budgetPlaceholder')}</option>
               {BUDGETS.map((b) => (
                 <option key={b} value={b}>
                   {b}
@@ -191,11 +198,11 @@ export default function ContactForm() {
         </div>
 
         <Field data-invalid={!!errors.message}>
-          <FieldLabel htmlFor="message">Message</FieldLabel>
+          <FieldLabel htmlFor="message">{t('form.message')}</FieldLabel>
           <Textarea
             id="message"
             rows={4}
-            placeholder="Enter your message..."
+            placeholder={t('form.messagePlaceholder')}
             aria-invalid={!!errors.message}
             className={cn(fieldClass, 'min-h-0 resize-none')}
             {...register('message')}
@@ -214,7 +221,7 @@ export default function ContactForm() {
         <SlideButton
           type="submit"
           disabled={status === 'loading'}
-          text={status === 'loading' ? 'Sending...' : 'Submit'}
+          text={status === 'loading' ? t('form.sending') : t('form.submit')}
           className="w-fit"
         />
       </FieldGroup>

@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import AnimWrapper from '@/components/ui/AnimWrapper'
 import ContactHero from '@/components/contact/ContactHero'
 import Footer from '@/components/layout/Footer'
 
-export const metadata: Metadata = {
-  title: 'Contact | DevInvicta',
-  description:
-    'Let’s connect. Reach out to DevInvicta about AI agents, web platforms and mobile apps. Tell us about your project and budget and we’ll get back to you.',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('contact')
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  }
 }
 
 export default function ContactPage() {

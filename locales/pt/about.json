@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Sobre a DevInvicta",
+    "description": "Conheça a DevInvicta, uma empresa de engenharia de software AI-first que constrói software à medida e escalável com excelência técnica e conformidade com o EU AI Act."
+  },
+  "hero": {
+    "srTitle": "Sobre a DevInvicta",
+    "line1": "Sobre",
+    "line2": "DevInvicta"
+  },
+  "partners": {
+    "kicker": "A Nossa Missão",
+    "statement": "Desenvolvemos software que escala, tem desempenho e é entregue, transformando desafios técnicos complexos em sistemas inteligentes que aceleram o seu negócio desde o primeiro dia."
+  },
+  "stats": {
+    "introP1": "Fundada há cerca de dois anos, a DevInvicta nasceu da visão do seu fundador, José Neves, após anos de experiência no setor de desenvolvimento de software.",
+    "introP2": "A nossa missão é entregar software à medida que gera valor real, cresce com os clientes e está preparado para o futuro da Inteligência Artificial.",
+    "years": "Anos de atividade, transformando anos de experiência em desenvolvimento de software em soluções à medida que crescem com os nossos clientes.",
+    "ai": "Foco em soluções, construindo inteligência pronta para produção e em conformidade com a regulamentação europeia desde o primeiro dia.",
+    "endToEnd": "Software completo, entregue de ponta a ponta, da arquitetura e implementação até à manutenção e evolução contínua."
+  },
+  "mission": {
+    "headline": "Construímos software inteligente e escalável que gera valor real para as empresas, aliando inovação tecnológica a rigor técnico e foco nos resultados dos clientes.",
+    "body": "A nossa visão é ser a referência europeia no desenvolvimento de software de IA, reconhecida pela excelência técnica, conformidade regulatória e capacidade de transformar negócios."
+  },
+  "servicesDark": {
+    "items": {
+      "ai": { "title": "Agentes de IA & integração de LLM", "tag": "IA / Automação" },
+      "web": { "title": "Desenvolvimento web", "tag": "Engenharia" },
+      "mobile": { "title": "Apps móveis", "tag": "iOS / Android" },
+      "cloud": { "title": "Cloud & backend", "tag": "Infraestrutura" },
+      "design": { "title": "Design UX / UI", "tag": "Design" },
+      "automation": { "title": "Automação & fluxos de IA", "tag": "Processo" }
+    }
+  },
+  "values": {
+    "headline": "Os valores que moldam tudo o que construímos.",
+    "responsibleAi": {
+      "title": "Inovação responsável em IA",
+      "body": "Levamos inteligência a cada camada do sistema de forma responsável, construindo IA pronta para produção que é segura, responsável e feita para durar."
+    },
+    "clientFocus": {
+      "title": "Foco no cliente",
+      "body": "Mantemo-nos próximos e totalmente transparentes até que cada detalhe esteja correto, alinhados com os seus objetivos em cada fase para que o resultado gere valor real para o negócio."
+    },
+    "compliance": {
+      "title": "Conformidade regulatória",
+      "body": "Foco total no EU AI Act e na regulamentação europeia, garantindo segurança jurídica desde o primeiro dia em cada projeto que entregamos."
+    },
+    "excellence": {
+      "title": "Excelência técnica",
+      "body": "Uma equipa altamente especializada mantém a qualidade e o rigor intactos desde a primeira linha de código até à entrega final, sem atalhos."
+    }
+  },
+  "milestones": {
+    "headline": "Reconhecimento & marcos que impulsionam impacto e inovação",
+    "items": {
+      "founded": { "title": "DevInvicta fundada", "description": "Lançamento da empresa" },
+      "firstAgent": {
+        "title": "Primeiro agente de IA entregue",
+        "description": "Marco de produto"
+      },
+      "tenClients": { "title": "10 clientes servidos", "description": "Marco de crescimento" },
+      "llmPractice": {
+        "title": "Prática de integração de LLM",
+        "description": "Expansão de serviços"
+      },
+      "fiftyProjects": {
+        "title": "Mais de 50 projetos entregues",
+        "description": "Marco de entrega"
+      },
+      "automationSuite": {
+        "title": "Suite de automação de fluxos com IA",
+        "description": "Lançamento de plataforma"
+      }
+    }
+  },
+  "approach": {
+    "headline": "Porque é que as empresas escolhem a DevInvicta",
+    "body": "Do profundo know-how técnico à total conformidade regulatória, reunimos a experiência, o rigor e a perspetiva global necessários para transformar ideias ambiciosas em software que perdura.",
+    "cards": {
+      "diagnostic": {
+        "title": "Diagnóstico gratuito",
+        "body": "Uma sessão inicial sem compromisso para analisar o seu negócio e propor soluções concretas antes de decidir o que quer que seja."
+      },
+      "aiWorks": {
+        "title": "IA que realmente funciona",
+        "body": "Construímos sistemas de IA e machine learning prontos para produção, que funcionam de forma fiável, melhoram ao longo do tempo e entregam resultados mensuráveis."
+      },
+      "complete": {
+        "title": "Software completo",
+        "body": "Entrega de ponta a ponta, da arquitetura à implementação, incluindo manutenção e evolução contínua à medida que o seu negócio cresce."
+      }
+    }
+  }
+}

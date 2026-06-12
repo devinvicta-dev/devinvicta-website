@@ -1,12 +1,14 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import WordScrub from '@/components/ui/WordScrub'
 
 export default function ValuesBentoSection() {
+  const t = useTranslations('about')
   return (
     <section className="bg-[radial-gradient(circle,rgba(0,0,0,0.07)_1px,transparent_1px)] bg-[length:24px_24px] py-14 md:py-28 bg-ivory">
       <div className="mx-auto max-w-page px-5 md:px-8">
         <WordScrub className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold tracking-[-0.04em] text-black leading-[1.15] text-center mb-14 max-w-[38rem] mx-auto">
-          The values that shape everything we build.
+          {t('values.headline')}
         </WordScrub>
         <div className="flex flex-wrap min-[1025px]:flex-nowrap gap-5 items-stretch">
           {/* Card 1: dark image */}
@@ -18,11 +20,10 @@ export default function ValuesBentoSection() {
               +
             </div>
             <div className="text-[1.125rem] font-bold tracking-[-0.02em] text-white mt-auto">
-              Responsible AI innovation
+              {t('values.responsibleAi.title')}
             </div>
             <div className="text-[0.9375rem] text-white/55 leading-[1.6]">
-              We bring intelligence into every layer of the system responsibly, building
-              production-ready AI that is safe, accountable and built to last.
+              {t('values.responsibleAi.body')}
             </div>
           </div>
           {/* Card 2: white stat card */}
@@ -37,13 +38,14 @@ export default function ValuesBentoSection() {
             >
               0%
             </div>
-            <div className="text-[0.9375rem] font-bold text-black">Client focus</div>
+            <div className="text-[0.9375rem] font-bold text-black">
+              {t('values.clientFocus.title')}
+            </div>
             <div
               className="text-[0.9375rem] text-dark-gray leading-[1.6]"
               style={{ marginTop: 'auto' }}
             >
-              We stay close and fully transparent until every detail is right, aligned with your
-              goals at every stage so the result drives real business value.
+              {t('values.clientFocus.body')}
             </div>
             <div className="flex" style={{ marginTop: '1rem' }}>
               <Image
@@ -113,13 +115,12 @@ export default function ValuesBentoSection() {
                   marginBottom: '0.5rem',
                 }}
               >
-                Regulatory compliance
+                {t('values.compliance.title')}
               </div>
               <div
                 style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}
               >
-                Full focus on the EU AI Act and European regulation, giving you legal safety from
-                day one across every project we deliver.
+                {t('values.compliance.body')}
               </div>
             </div>
           </div>
@@ -141,13 +142,12 @@ export default function ValuesBentoSection() {
                   marginBottom: '0.5rem',
                 }}
               >
-                Technical excellence
+                {t('values.excellence.title')}
               </div>
               <div
                 style={{ fontSize: '0.9375rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}
               >
-                A highly specialised team holds quality and rigour intact from the first line of
-                code to the final delivery, with no shortcuts.
+                {t('values.excellence.body')}
               </div>
             </div>
           </div>

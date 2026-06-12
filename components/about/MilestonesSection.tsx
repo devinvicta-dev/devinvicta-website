@@ -1,12 +1,14 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
 import WordScrub from '@/components/ui/WordScrub'
 import { milestones } from '@/data/milestones'
 
 export default function MilestonesSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('about')
 
   useGSAP(
     () => {
@@ -59,7 +61,7 @@ export default function MilestonesSection() {
       <div className="mx-auto max-w-page px-5 md:px-8">
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-6 md:gap-0 mb-12">
           <WordScrub className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] text-black leading-[1.15] max-w-[30rem]">
-            Recognition &amp; milestones driving impact and innovation
+            {t('milestones.headline')}
           </WordScrub>
         </div>
         <div className="milestones-card bg-white rounded-[1.25rem] overflow-hidden">
@@ -72,9 +74,11 @@ export default function MilestonesSection() {
                 <span className="text-dark-gray font-semibold text-[0.9375rem] w-32 flex-shrink-0">
                   {m.year}
                 </span>
-                <span className="flex-1 text-[0.9375rem] text-black font-semibold">{m.title}</span>
+                <span className="flex-1 text-[0.9375rem] text-black font-semibold">
+                  {t(`milestones.items.${m.key}.title`)}
+                </span>
                 <span className="text-dark-gray text-[0.9375rem] font-medium text-right">
-                  {m.description}
+                  {t(`milestones.items.${m.key}.description`)}
                 </span>
               </div>
             ))}

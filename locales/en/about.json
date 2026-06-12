@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "About DevInvicta",
+    "description": "Learn about DevInvicta, an AI-first software engineering company building custom, scalable software with technical excellence and EU AI Act compliance."
+  },
+  "hero": {
+    "srTitle": "About DevInvicta",
+    "line1": "About",
+    "line2": "DevInvicta"
+  },
+  "partners": {
+    "kicker": "Our Mission",
+    "statement": "We engineer software that scales, performs and ships, turning complex technical challenges into intelligent systems that accelerate your business from day one."
+  },
+  "stats": {
+    "introP1": "Founded around two years ago, DevInvicta was born from the vision of its founder, José Neves, after years of experience in the software development sector.",
+    "introP2": "Our mission is to deliver tailored software that generates real value, grows with clients and is ready for the future of Artificial Intelligence.",
+    "years": "Years of activity, turning years of software development experience into custom solutions that grow with our clients.",
+    "ai": "Solutions focus, building production-ready intelligence that is compliant with European regulation from day one.",
+    "endToEnd": "Complete software, delivered end-to-end from architecture and deployment through maintenance and continuous evolution."
+  },
+  "mission": {
+    "headline": "We build intelligent, scalable software that generates real value for businesses, pairing technological innovation with technical rigor and a focus on client results.",
+    "body": "Our vision is to be the European reference in AI software development, recognised for technical excellence, regulatory compliance and the ability to transform businesses."
+  },
+  "servicesDark": {
+    "items": {
+      "ai": { "title": "AI Agents & LLM integration", "tag": "AI / Automation" },
+      "web": { "title": "Web development", "tag": "Engineering" },
+      "mobile": { "title": "Mobile apps", "tag": "iOS / Android" },
+      "cloud": { "title": "Cloud & backend", "tag": "Infrastructure" },
+      "design": { "title": "UX / UI design", "tag": "Design" },
+      "automation": { "title": "AI automation & workflows", "tag": "Process" }
+    }
+  },
+  "values": {
+    "headline": "The values that shape everything we build.",
+    "responsibleAi": {
+      "title": "Responsible AI innovation",
+      "body": "We bring intelligence into every layer of the system responsibly, building production-ready AI that is safe, accountable and built to last."
+    },
+    "clientFocus": {
+      "title": "Client focus",
+      "body": "We stay close and fully transparent until every detail is right, aligned with your goals at every stage so the result drives real business value."
+    },
+    "compliance": {
+      "title": "Regulatory compliance",
+      "body": "Full focus on the EU AI Act and European regulation, giving you legal safety from day one across every project we deliver."
+    },
+    "excellence": {
+      "title": "Technical excellence",
+      "body": "A highly specialised team holds quality and rigour intact from the first line of code to the final delivery, with no shortcuts."
+    }
+  },
+  "milestones": {
+    "headline": "Recognition & milestones driving impact and innovation",
+    "items": {
+      "founded": { "title": "DevInvicta founded", "description": "Company launch" },
+      "firstAgent": { "title": "First AI agent shipped", "description": "Product milestone" },
+      "tenClients": { "title": "10 clients served", "description": "Growth milestone" },
+      "llmPractice": { "title": "LLM integration practice", "description": "Service expansion" },
+      "fiftyProjects": { "title": "50+ projects delivered", "description": "Delivery milestone" },
+      "automationSuite": {
+        "title": "AI workflow automation suite",
+        "description": "Platform launch"
+      }
+    }
+  },
+  "approach": {
+    "headline": "Why companies choose DevInvicta",
+    "body": "From deep technical know-how to full regulatory compliance, we combine the experience, rigour and global perspective needed to turn ambitious ideas into software that lasts.",
+    "cards": {
+      "diagnostic": {
+        "title": "Free diagnostic",
+        "body": "An initial, no-commitment session to analyse your business and propose concrete solutions before you decide anything."
+      },
+      "aiWorks": {
+        "title": "AI that actually works",
+        "body": "We build production-ready AI and machine learning systems that run reliably, compound over time and deliver measurable outcomes."
+      },
+      "complete": {
+        "title": "Complete software",
+        "body": "End-to-end delivery from architecture to deployment, including maintenance and continuous evolution as your business grows."
+      }
+    }
+  }
+}

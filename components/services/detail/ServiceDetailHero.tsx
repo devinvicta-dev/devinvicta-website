@@ -2,6 +2,7 @@
 
 import { Fragment, useRef } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { SWING_TO } from '@/lib/animations/easing'
 import { useScrubParallax } from '@/lib/animations/hooks'
@@ -17,8 +18,10 @@ import type { Service } from '@/lib/services'
 export default function ServiceDetailHero({ service }: { service: Service }) {
   const sectionRef = useRef<HTMLElement>(null)
   const bannerRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations('services')
 
-  const words = service.title.split(' ')
+  const title = t(`definitions.${service.slug}.title`)
+  const words = title.split(' ')
 
   useGSAP(
     () => {
@@ -55,7 +58,7 @@ export default function ServiceDetailHero({ service }: { service: Service }) {
         >
           <Image
             src={service.heroImage}
-            alt={service.title}
+            alt={title}
             fill
             priority
             sizes="100vw"
@@ -88,12 +91,12 @@ export default function ServiceDetailHero({ service }: { service: Service }) {
       {/* meta row */}
       <div className="mx-auto max-w-page px-5 md:px-8">
         <div className="grid grid-cols-1 gap-3 py-6 text-sub font-medium tracking-[0.08em] text-dark-gray uppercase sm:grid-cols-3">
-          <span data-anim>Service details</span>
+          <span data-anim>{t('detail.metaServiceDetails')}</span>
           <span data-anim className="sm:text-center">
             {service.years}
           </span>
           <span data-anim className="sm:text-right">
-            Projects by years
+            {t('detail.metaProjectsByYears')}
           </span>
         </div>
         <Separator className="bg-black/10" />

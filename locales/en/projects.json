@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Projects | DevInvicta",
+    "description": "Selected case studies. Real products we have shipped, from institutional platforms to AI integrations, each framed by the solution we delivered.",
+    "fallbackTitle": "Project | DevInvicta"
+  },
+  "list": {
+    "title": "Projects",
+    "intro": "A selection of products we have shipped. Each one framed by the solution we built to move our client forward.",
+    "caseStudies": "Case studies"
+  },
+  "detail": {
+    "allProjects": "All projects",
+    "projectDetails": "Project details",
+    "caseStudy": "Case study",
+    "fallbackClient": "DevInvicta",
+    "discipline": "Discipline",
+    "client": "Client",
+    "type": "Type",
+    "typeValue": "Case study",
+    "challengeLabel": "The challenge",
+    "solutionLabel": "Our solution",
+    "relatedServices": "Related services"
+  },
+  "items": {
+    "europacolon": {
+      "title": "Europacolon Portugal",
+      "category": "NGO platform & AI triage",
+      "solution": "A new institutional website for a digestive-cancer NGO, built to carry its mission with the warmth and clarity people deserve when they reach out. We paired it with a full admin backend the team controls day to day, reliable email forwarding, and an AI layer that reads every contact request as it arrives, categorizes it and prioritizes it, so the most urgent messages reach the right person first. Delivered in six months and supported with continuous maintenance, so the organization can focus on the people it serves, not the software behind it."
+    },
+    "vmoove": {
+      "title": "Vmoove Transfers",
+      "category": "Transfers backend & AI",
+      "solution": "A complete digital foundation for a transfers company that had no online presence and no way to manage its operations. We built a modern informational website and migrated everything onto a proprietary backend with its own API and dedicated database, then layered in AI modules for personalization and process automation. The result is a platform that runs the business end to end and has driven a considerable rise in new clients since launch."
+    },
+    "confidential-project": {
+      "title": "Confidential project",
+      "category": "Fintech ERP & AI",
+      "solution": "An MVP built from zero for a fintech start-up that needed a working product fast. We shipped an invoicing module with AI-powered invoice reading and processing, intelligent categorization that learns how the business files its data, and a fully integrated HR management module. Delivered in three months, with the client's team operational and autonomous from day one."
+    },
+    "ecommerce": {
+      "title": "Confidential project",
+      "category": "E-commerce platform & AI",
+      "solution": "A full re-platforming for an e-commerce business locked into a legacy CMS with no API and no control over its own data. We migrated everything onto a proprietary backend with a clean API and a dedicated database, then integrated AI modules for personalization and automation. Completed in four months with zero downtime, faster performance, full data ownership, and a platform ready to grow with AI."
+    },
+    "fraud": {
+      "title": "Confidential project",
+      "category": "Fraud detection & AI",
+      "solution": "A long-run collaboration to sharpen an AI fraud-detection system for payments and e-commerce. We optimized the models for higher precision and threw real engineering weight behind the company's tech platform, making it more robust and scalable. Over twelve months of continuous work, fraud was caught with greater accuracy and the platform grew to match the ambition behind it."
+    },
+    "insurance": {
+      "title": "Confidential project",
+      "category": "Insurance quotes & AI",
+      "solution": "A full modernization for an insurance start-up whose quotes website sat on outdated systems and manual processes. We migrated every system to modern technologies, rebuilt the quotes engine with AI, and automated the sales team's workflow. Delivered over eighteen months, the project lifted conversion by more than fifty percent, made the system noticeably faster, and freed the sales team to sell. Maintenance is still active."
+    },
+    "manufacturing": {
+      "title": "Confidential project",
+      "category": "Industrial software & AI",
+      "solution": "AI-driven software that gives factories real visibility into their own production. The client's plants had no real-time data and little insight to act on, so we built monitoring and optimization tooling that surfaces what is happening on the floor as it happens. Delivered in eight months with an established maintenance plan, it gave the client real control over its operations and generated significant value."
+    },
+    "maritime": {
+      "title": "Confidential project",
+      "category": "Maritime platform & AI",
+      "solution": "The full digitalization of a multinational maritime transport operator that had no client-facing platform and no AI in its operations. We built a dedicated platform and wove AI processes into the day-to-day workflow. Now in its twelfth month, the platform has launched to very positive results, with operations running significantly more efficiently."
+    },
+    "automotive": {
+      "title": "Confidential project",
+      "category": "Automotive MVP & AI",
+      "solution": "An MVP for an automotive start-up that had no product and no automated booking. We built a car-wash booking system, added AI to forecast demand, and set up automatic notifications that tell each client when their next wash is due. Shipped as a robust MVP with the booking system operational, clients auto-notified by AI and the team able to anticipate demand peaks from day one."
+    }
+  }
+}

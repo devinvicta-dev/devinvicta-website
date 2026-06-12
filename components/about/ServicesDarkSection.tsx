@@ -1,10 +1,14 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+
+const SERVICE_KEYS = ['ai', 'web', 'mobile', 'cloud', 'design', 'automation'] as const
 
 export default function ServicesDarkSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('about')
 
   useGSAP(
     () => {
@@ -60,84 +64,24 @@ export default function ServicesDarkSection() {
     <section className="bg-black py-14 md:py-28" ref={sectionRef}>
       <div className="mx-auto max-w-page px-5 md:px-8">
         <ul className="list-none p-0 m-0">
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                01
+          {SERVICE_KEYS.map((key, i) => (
+            <li
+              key={key}
+              className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65"
+            >
+              <div className="flex items-center gap-8">
+                <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
+                  {t(`servicesDark.items.${key}.title`)}
+                </span>
+              </div>
+              <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
+                {t(`servicesDark.items.${key}.tag`)}
               </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                AI Agents &amp; LLM integration
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              AI / Automation
-            </span>
-          </li>
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                02
-              </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                Web development
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              Engineering
-            </span>
-          </li>
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                03
-              </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                Mobile apps
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              iOS / Android
-            </span>
-          </li>
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                04
-              </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                Cloud &amp; backend
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              Infrastructure
-            </span>
-          </li>
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                05
-              </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                UX / UI design
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              Design
-            </span>
-          </li>
-          <li className="services-dark-item flex items-center justify-between py-7 border-b border-white/[0.08] first:border-t cursor-default transition-opacity duration-200 hover:opacity-65">
-            <div className="flex items-center gap-8">
-              <span className="text-[0.7rem] font-bold tracking-[0.08em] text-white/30 min-w-6">
-                06
-              </span>
-              <span className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-[-0.04em] text-white leading-none">
-                AI automation &amp; workflows
-              </span>
-            </div>
-            <span className="text-[0.7rem] font-bold tracking-[0.08em] uppercase text-white/30">
-              Process
-            </span>
-          </li>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

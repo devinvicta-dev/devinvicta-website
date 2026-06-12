@@ -2,23 +2,28 @@
 
 import { useRef } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
 import { SWING_TO } from '@/lib/animations/easing'
 import { useMouseParallax, useScrubParallax } from '@/lib/animations/hooks'
 import Navbar from '@/components/layout/Navbar'
+import BookACallButton from '@/components/ui/BookACallButton'
 import { cn } from '@/lib/utils'
 
+// Abstract, material craft imagery (rendered B&W) — flowing silk, sculptural
+// stone and faceted plaster: "bespoke / crafted / one-of-a-kind" via form, not people.
 const HERO_IMAGES = [
-  'https://cdn.prod.website-files.com/691d92c72b801c04cbc08bec/6932ac58f54bfef16ed1ec4d_vertora-service-hero-image-one.webp',
-  'https://cdn.prod.website-files.com/691d92c72b801c04cbc08bec/6932ac58d9196fcd41fc42db_vertora-service-hero-image-two.webp',
-  'https://cdn.prod.website-files.com/691d92c72b801c04cbc08bec/6932ac58b7502585152a95af_vertora-service-hero-image-three.webp',
+  'https://images.unsplash.com/photo-1617238749996-ab4c0f9fba57?w=900&h=1200&fit=crop&q=85',
+  'https://images.unsplash.com/photo-1667400104789-f50a4cb393cf?w=900&h=1200&fit=crop&q=85',
+  'https://images.unsplash.com/photo-1604854574894-1be73ca43cb8?w=900&h=1200&fit=crop&q=85',
 ]
-
-const LETTERS = 'Service'.split('')
 
 export default function ServicesHero() {
   const sectionRef = useRef<HTMLElement>(null)
   const cardsRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations('services')
+  const tNav = useTranslations('nav')
+  const letters = t('hero.title').split('')
 
   useGSAP(
     () => {
@@ -74,24 +79,22 @@ export default function ServicesHero() {
       className="relative overflow-hidden bg-transparent"
     >
       <Navbar light />
-      <div className="mx-auto max-w-page px-5 pt-section-hero-pt pb-20 md:px-8">
+      <div className="mx-auto max-w-page px-5 pt-24 md:pt-28 pb-20 md:px-8">
         {/* top row: title + subhead */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <h1
             id="services-hero-title"
             className="text-h1 leading-[0.9] font-semibold tracking-[-0.044em] text-black"
           >
-            {LETTERS.map((l, i) => (
+            {letters.map((l, i) => (
               <span key={i} className="inline-block overflow-hidden align-bottom">
                 <span className="svc-hero-letter inline-block">{l}</span>
               </span>
             ))}
           </h1>
           <div className="flex max-w-sm flex-col items-start gap-7 lg:pt-6">
-            <p className="text-body leading-[1.625] text-dark-gray">
-              We provide digital solutions to boost your brand’s online presence, from web design to
-              branding and content creation, all tailored to your business needs.
-            </p>
+            <p className="text-body leading-[1.625] text-dark-gray">{t('hero.subhead')}</p>
+            <BookACallButton variant="dark" label={tNav('cta')} />
           </div>
         </div>
 

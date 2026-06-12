@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Accordion as AccordionPrimitive } from '@base-ui/react/accordion'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
 import { Accordion, AccordionItem } from '@/components/ui/accordion'
@@ -11,6 +12,7 @@ import { faqItems } from '@/data/faq'
 export default function FaqSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const faqRightRef = useRef<HTMLDivElement>(null)
+  const t = useTranslations('home')
 
   useGSAP(
     () => {
@@ -78,14 +80,14 @@ export default function FaqSection() {
           <div className="flex max-w-[25rem] flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
             <div>
               <WordScrub className="text-[clamp(1.5625rem,3.5vw,2.5rem)] font-semibold leading-[1.25] tracking-[-0.03em] text-black">
-                Frequently asked questions
+                {t('faq.title')}
               </WordScrub>
               <p
                 className="text-[clamp(0.9375rem,1.1vw,1rem)] leading-[1.625] text-dark-gray"
                 style={{ marginTop: '1rem' }}
                 data-anim
               >
-                Find clear answers about our process, services and how we work with clients.
+                {t('faq.subtitle')}
               </p>
             </div>
             <div
@@ -93,12 +95,12 @@ export default function FaqSection() {
               data-anim
             >
               <h4 className="text-2xl font-semibold leading-[1.41] tracking-[-0.045rem] text-black">
-                Can&apos;t find your answer?
+                {t('faq.ctaTitle')}
               </h4>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.9375rem' }}>
-                If you have questions or need more details, feel free to reach out.
+                {t('faq.ctaBody')}
               </p>
-              <SlideButton href="/contact" text="Let's talk" />
+              <SlideButton href="/contact" text={t('faq.ctaButton')} />
             </div>
           </div>
 
@@ -113,7 +115,7 @@ export default function FaqSection() {
                 <AccordionPrimitive.Header className="flex">
                   <AccordionPrimitive.Trigger className="group/faq flex w-full cursor-pointer items-center justify-between gap-4 pt-[1.8125rem] pb-[0.6875rem] text-left outline-none">
                     <span className="text-2xl font-semibold leading-[1.41] text-black">
-                      {item.question}
+                      {t(`faq.items.${item.key}.question`)}
                     </span>
                     <div className="relative flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-black">
                       <div className="absolute h-0.5 w-[0.6875rem] bg-white"></div>
@@ -123,7 +125,7 @@ export default function FaqSection() {
                 </AccordionPrimitive.Header>
                 <AccordionPrimitive.Panel className="h-(--accordion-panel-height) overflow-hidden transition-[height] duration-400 ease-out data-ending-style:h-0 data-starting-style:h-0">
                   <p className="pb-[1.875rem] text-[0.9375rem] leading-[1.625] text-dark-gray">
-                    {item.answer}
+                    {t(`faq.items.${item.key}.answer`)}
                   </p>
                 </AccordionPrimitive.Panel>
               </AccordionItem>

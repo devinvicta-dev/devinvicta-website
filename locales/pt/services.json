@@ -1,0 +1,390 @@
+{
+  "meta": {
+    "title": "Serviços | DevInvicta",
+    "description": "Software à medida e escalável construído com IA responsável, incluindo plataformas web, apps móveis, agentes de IA e integração de LLM, design UX/UI, automação e cloud e backend, entregue de ponta a ponta."
+  },
+  "hero": {
+    "title": "Serviços",
+    "subhead": "Construímos software à medida e escalável com IA responsável, de agentes inteligentes e integração de LLM a plataformas web, apps móveis e cloud, tudo projetado em torno do seu negócio."
+  },
+  "strategy": {
+    "headline": "Criando estratégias únicas que transformam visões em resultados poderosos",
+    "features": {
+      "excellence": {
+        "title": "Excelência técnica",
+        "body": "Uma equipa altamente especializada com experiência real em software complexo e soluções de IA prontas para produção."
+      },
+      "compliance": {
+        "title": "Conformidade com o EU AI Act",
+        "body": "Foco total no AI Act e na regulamentação europeia, para que o seu negócio se mantenha juridicamente seguro desde o primeiro dia."
+      },
+      "endToEnd": {
+        "title": "Entrega de ponta a ponta",
+        "body": "Da arquitetura à implementação, entregamos soluções completas, incluindo manutenção e evolução contínua."
+      }
+    },
+    "trustLabel": "Confiança",
+    "trustText": "Confiança em fintech, seguros, e-commerce e indústria"
+  },
+  "accordion": {
+    "headline": "Ideias inovadoras e execução ousada que impulsionam crescimento mensurável",
+    "viewMore": "Ver mais",
+    "items": {
+      "web": {
+        "title": "Desenvolvimento",
+        "body": "Plataformas web à medida, projetadas para escalar com o seu negócio.\n\nComeçamos por compreender o problema antes de moldar a solução, para que cada plataforma que construímos assente em necessidades reais do negócio e não em suposições.\n\nDe interfaces front-end limpas a APIs e camadas de dados robustas, construímos sistemas web rápidos, sustentáveis e prontos para produção.\n\nO nosso objetivo é software que evolui de forma elegante, apoiando o crescimento e mantendo intactos o desempenho, a segurança e a qualidade do código."
+      },
+      "mobile": {
+        "title": "Aplicativos",
+        "body": "Apps iOS, Android e multiplataforma de qualidade nativa, concebidas em torno de jornadas reais do utilizador e preparadas para escalar com o seu público."
+      },
+      "ai": {
+        "title": "Inteligência artificial",
+        "body": "Agentes inteligentes e integrações de LLM que automatizam trabalho real, como IA de documentos, assistentes e deteção, em conformidade com o EU AI Act."
+      },
+      "design": {
+        "title": "Design",
+        "body": "Interfaces intuitivas e refinadas e sistemas de design escaláveis que reduzem o atrito e mantêm os produtos coerentes à medida que crescem."
+      },
+      "automation": {
+        "title": "Automação",
+        "body": "Automação orientada por IA que devolve tempo através de monitorização em tempo real, notificações inteligentes e encaminhamento inteligente nos seus sistemas."
+      },
+      "cloud": {
+        "title": "Cloud e backend",
+        "body": "Infraestrutura cloud fiável e backends que cobrem APIs, bases de dados, CI/CD e segurança por design, preparados para o crescimento e cargas de trabalho de IA."
+      }
+    }
+  },
+  "work": {
+    "headline": "Casos de estudo reais: desafios resolvidos com software e IA responsável",
+    "body": "De MVPs a migrações empresariais, eis como trabalhamos com fintech, seguros, e-commerce, indústria e muito mais, entregando produtos que têm desempenho, escalam e se mantêm em conformidade.",
+    "cta": "Vamos conversar",
+    "challengeLabel": "Desafio",
+    "solutionLabel": "Solução",
+    "visitProject": "Visitar projeto",
+    "confidential": "Projeto confidencial",
+    "cases": {
+      "fintech": {
+        "client": "Start-up Fintech",
+        "challenge": "Sem produto funcional, com faturação automática e gestão de RH integrada, e sem capacidade de crescer ou ligar sistemas.",
+        "solution": "MVP com um módulo de faturação, leitura e processamento de faturas com IA, categorização inteligente e um módulo de gestão de RH totalmente integrado.",
+        "result": "Produto robusto entregue em 3 meses. Categorização de faturas automatizada por IA. Equipa do cliente operacional e autónoma desde o primeiro dia."
+      },
+      "ecommerce": {
+        "client": "E-commerce (Anónimo)",
+        "challenge": "Sistema de gestão de conteúdos antigo sem API própria, sem controlo sobre os dados e incapaz de integrar IA ou fazer crescer o negócio.",
+        "solution": "Migração completa para um backend proprietário com API, base de dados dedicada e integração de módulos de IA para personalização e automação.",
+        "result": "Migração concluída em 4 meses sem indisponibilidade. Desempenho melhorado. Controlo total sobre os dados e uma plataforma pronta para crescer com IA."
+      },
+      "europacolon": {
+        "client": "Europacolon Portugal",
+        "challenge": "Site institucional desatualizado, sem plataforma de administração e sem encaminhamento de email.",
+        "solution": "Novo site institucional moderno com backend de administração completo, encaminhamento de email e análise automática por IA dos pedidos de contacto, com categorização e priorização antes de chegarem ao administrador.",
+        "result": "Site entregue em 6 meses. Plataforma de administração operacional desde o primeiro dia. Serviço de manutenção contínua ativo."
+      },
+      "fraud": {
+        "client": "Start-up Fintech (Confidencial)",
+        "challenge": "Sistema de deteção de fraude com IA existente que necessitava de melhor desempenho, precisão e desenvolvimento da plataforma.",
+        "solution": "Otimização de modelos de IA de deteção de fraude para pagamentos e e-commerce, além de contribuição ativa na construção e melhoria da plataforma tecnológica da empresa.",
+        "result": "Modelos de IA com maior precisão na deteção de fraude, uma plataforma mais robusta e escalável, entregues ao longo de 12 meses de colaboração contínua."
+      },
+      "insurance": {
+        "client": "Start-up de Seguros (Confidencial)",
+        "challenge": "Site de cotações construído sobre sistemas desatualizados, processos manuais e sem automação para a equipa de vendas, limitando o crescimento.",
+        "solution": "Migração completa de todos os sistemas para tecnologias modernas, motor de cotações melhorado com IA e automação dos processos da equipa de vendas.",
+        "result": "Projeto concluído em 18 meses. Conversão acima de 50%, sistema significativamente mais rápido e uma equipa de vendas mais eficiente. Manutenção contínua ativa."
+      },
+      "vmoove": {
+        "client": "Vmoove Transfers",
+        "challenge": "Sem presença online, sem plataforma de administração e sem processos automatizados, limitando a aquisição de novos clientes.",
+        "solution": "Site informativo moderno, plataforma de administração completa e processos de IA para otimizar operações.",
+        "result": "Site entregue em 4 meses. Aumento considerável de clientes desde o lançamento."
+      },
+      "manufacturing": {
+        "client": "Start-up Industrial (Confidencial)",
+        "challenge": "Fábricas do cliente sem visibilidade sobre os seus próprios processos de produção, sem dados em tempo real e incapazes de tomar decisões informadas.",
+        "solution": "Software com IA para monitorização e otimização das fábricas, fornecendo dados em tempo real e visibilidade sobre a produção.",
+        "result": "Entregue em 8 meses com um plano de manutenção estabelecido. Os clientes ganharam maior conhecimento e controlo sobre as suas fábricas, gerando valor significativo."
+      },
+      "maritime": {
+        "client": "Transporte Marítimo Multinacional (Confidencial)",
+        "challenge": "Multinacional sem plataforma digital para os seus clientes e sem processos de IA, limitando a eficiência operacional e a experiência do cliente.",
+        "solution": "Digitalização completa com uma plataforma dedicada e processos de IA integrados nas operações.",
+        "result": "Em curso há 12 meses. Plataforma lançada com resultados muito positivos e operações significativamente mais eficientes com IA integrada."
+      },
+      "automotive": {
+        "client": "Start-up Automóvel (Confidencial)",
+        "challenge": "Sem produto funcional, sem sistema de reservas automatizado e incapaz de prever a procura ou comunicar proativamente com os clientes.",
+        "solution": "MVP com um sistema de reservas de lavagem de automóveis, integração de IA para previsão da procura e notificações automáticas da próxima lavagem aos clientes.",
+        "result": "MVP robusto entregue com um sistema de reservas operacional, clientes notificados automaticamente por IA e capacidade de antecipar picos de procura desde o primeiro dia."
+      }
+    }
+  },
+  "cta": {
+    "kicker": "Comece com um diagnóstico gratuito",
+    "heading": "Vamos construir software que tem desempenho, escala e se mantém em conformidade",
+    "body": "Conte-nos onde está hoje. Traçaremos o caminho mais rápido e em conformidade, sem compromisso e sem jargão.",
+    "button": "Pedir orçamento",
+    "emailLink": "Ou envie-nos um email diretamente"
+  },
+  "detail": {
+    "meta": {
+      "fallbackTitle": "Serviço | DevInvicta"
+    },
+    "metaServiceDetails": "Detalhes do serviço",
+    "metaProjectsByYears": "Projetos por anos",
+    "processHeading": "Como trabalhamos, do diagnóstico gratuito à entrega e além"
+  },
+  "definitions": {
+    "web-development": {
+      "title": "Desenvolvimento",
+      "intro": "Plataformas web à medida, projetadas para escalar com o seu negócio",
+      "introParas": [
+        "Começamos por compreender o problema antes de moldar a solução, para que cada plataforma que construímos assente em necessidades reais do negócio e não em suposições.",
+        "De interfaces front-end limpas a APIs e camadas de dados robustas, construímos sistemas web rápidos, sustentáveis e prontos para produção.",
+        "O nosso objetivo é software que evolui de forma elegante, apoiando o crescimento e mantendo intactos o desempenho, a segurança e a qualidade do código."
+      ],
+      "subHeading": "Da arquitetura à implementação, construído para durar",
+      "subPara": "Concebemos a arquitetura com a escalabilidade no centro, para que a sua plataforma cresça consigo em vez de ser reconstruída de raiz.",
+      "videoHeading": "Projetado para ter desempenho",
+      "bullets": [
+        {
+          "label": "Estratégia e arquitetura",
+          "text": "Mapeamos objetivos, utilizadores e restrições para definir uma arquitetura que apoia a clareza, o desempenho e a escalabilidade a longo prazo em todos os dispositivos."
+        },
+        {
+          "label": "Construção e entrega",
+          "text": "Através de desenvolvimento iterativo e testes contínuos, entregamos código fiável e bem documentado e acompanhamos a manutenção e a evolução."
+        }
+      ],
+      "features": [
+        {
+          "title": "Engenharia front-end",
+          "desc": "Interfaces responsivas e acessíveis construídas com React e ferramentas modernas."
+        },
+        {
+          "title": "Backend & APIs",
+          "desc": "APIs e modelos de dados seguros e bem estruturados com Node.js e Python."
+        },
+        {
+          "title": "Desempenho",
+          "desc": "Otimização de velocidade e arquitetura limpa para plataformas rápidas e estáveis."
+        },
+        {
+          "title": "Bases escaláveis",
+          "desc": "Arquitetura concebida para crescer com o seu negócio sem retrabalho."
+        }
+      ],
+      "closingHeading": "Software web robusto, entregue de ponta a ponta",
+      "closingPara": "Do primeiro diagnóstico à implementação e manutenção contínua, entregamos plataformas web com propósito, refinadas e construídas para ter desempenho face a necessidades em evolução. Transformamos ideias em sistemas coesos que permanecem adaptáveis, consistentes e eficazes à medida que o seu negócio cresce."
+    },
+    "mobile-apps": {
+      "title": "Aplicativos",
+      "intro": "Experiências móveis de qualidade nativa que os seus utilizadores vão adorar",
+      "introParas": [
+        "Concebemos produtos móveis em torno de jornadas reais do utilizador, para que a experiência seja natural, rápida e fiável desde o primeiro lançamento.",
+        "Seja iOS, Android ou multiplataforma, construímos apps com arquitetura limpa, dados prontos para offline e interações fluidas e intencionais.",
+        "O nosso objetivo é software móvel que conquista uso diário, mantendo-se fiável, refinado e pronto para escalar com o seu público."
+      ],
+      "subHeading": "Produtos móveis bem pensados, de ponta a ponta",
+      "subPara": "Do protótipo ao lançamento nas lojas e além, assumimos todo o ciclo de vida para que a sua app se mantenha estável, segura e atualizada.",
+      "videoHeading": "Feito para o bolso",
+      "bullets": [
+        {
+          "label": "Produto e experiência",
+          "text": "Alinhamos fluxos, desempenho e convenções da plataforma para que a app seja intuitiva, responsiva e consistente em todos os dispositivos."
+        },
+        {
+          "label": "Engenharia e lançamento",
+          "text": "Através de testes e entrega contínua, entregamos apps resilientes e apoiamo-las através de atualizações e conformidade com as lojas."
+        }
+      ],
+      "features": [
+        {
+          "title": "iOS & Android",
+          "desc": "Apps nativas e multiplataforma otimizadas para cada ecossistema."
+        },
+        {
+          "title": "Dados prontos para offline",
+          "desc": "Sincronização fiável e estado local-first para condições reais."
+        },
+        {
+          "title": "Interações fluidas",
+          "desc": "Movimento fluido e micro-interações com sensação premium."
+        },
+        {
+          "title": "Loja & ciclo de vida",
+          "desc": "Lançamento, monitorização e manutenção contínua tratados por nós."
+        }
+      ],
+      "closingHeading": "Software móvel que escala com o seu público",
+      "closingPara": "Criamos experiências móveis com propósito e refinadas, construídas para ter desempenho em todos os dispositivos e necessidades em evolução. Do diagnóstico ao lançamento e melhoria contínua, transformamos ideias em produtos coesos que se mantêm adaptáveis, consistentes e eficazes ao longo do tempo."
+    },
+    "ai-agents-llm": {
+      "title": "Inteligência artificial",
+      "intro": "Agentes inteligentes e integrações de LLM que automatizam trabalho real",
+      "introParas": [
+        "Começamos por compreender onde a IA pode criar valor mensurável na sua operação, depois concebemos agentes que atuam sobre isso, entregando automação útil em vez de hype.",
+        "Da compreensão e triagem de documentos a assistentes com retrieval-augmented, integramos LLMs nos seus produtos e fluxos de trabalho com as salvaguardas certas.",
+        "Cada solução é construída para IA responsável, alinhada com o EU AI Act, segura com os seus dados e concebida para manter os humanos no controlo."
+      ],
+      "subHeading": "IA responsável, fundamentada nos seus dados",
+      "subPara": "Combinamos frameworks de IA modernas com engenharia rigorosa, para que os seus agentes sejam precisos, observáveis e conformes por design.",
+      "videoHeading": "Inteligência que é entregue",
+      "bullets": [
+        {
+          "label": "Caso de uso e design",
+          "text": "Identificamos tarefas de elevado valor e concebemos agentes em torno de dados reais, garantindo precisão, segurança e resultados mensuráveis nos seus fluxos de trabalho."
+        },
+        {
+          "label": "Integração e evolução",
+          "text": "Através de avaliação e iteração, integramos LLMs em sistemas de produção e melhoramo-los continuamente com monitorização e feedback."
+        }
+      ],
+      "features": [
+        {
+          "title": "Integração de LLM",
+          "desc": "Assistentes e copilotos construídos com LangChain e APIs de modelos modernos."
+        },
+        {
+          "title": "IA de documentos",
+          "desc": "Leitura, categorização e processamento automático de documentos e faturas."
+        },
+        {
+          "title": "Fraude & deteção",
+          "desc": "Modelos de IA que melhoram a precisão na deteção e na decisão."
+        },
+        {
+          "title": "Conformidade com o AI Act",
+          "desc": "Design consciente do risco e alinhado com a regulamentação da UE desde o primeiro dia."
+        }
+      ],
+      "closingHeading": "IA que cria valor real e em conformidade",
+      "closingPara": "Transformamos a IA de palavra da moda em sistemas fiáveis que categorizam faturas, triam pedidos, melhoram a deteção de fraude e potenciam assistentes. Construídas de forma responsável e alinhadas com o AI Act, as nossas soluções mantêm-se adaptáveis, transparentes e eficazes, apoiando o crescimento a longo prazo."
+    },
+    "ux-ui-design": {
+      "title": "Design",
+      "intro": "Interfaces que parecem intuitivas, refinadas e fiéis à marca",
+      "introParas": [
+        "Começamos pelo utilizador e pelo problema, concebendo experiências que parecem naturais e removem o atrito em vez de o adicionar.",
+        "Através de estrutura clara e sistemas visuais ponderados, comunicamos de forma eficaz sem complexidade desnecessária.",
+        "O nosso objetivo é design que escala, com componentes e padrões consistentes que mantêm os produtos coerentes à medida que crescem."
+      ],
+      "subHeading": "Decisões de design que criam clareza e equilíbrio",
+      "subPara": "Através de refinamento cuidadoso e colaboração, produzimos interfaces que equilibram criatividade com desempenho prático.",
+      "videoHeading": "Concebido com intenção",
+      "bullets": [
+        {
+          "label": "Pesquisa e estrutura",
+          "text": "Alinhamos necessidades do utilizador, fluxos e arquitetura de informação para que cada ecrã apoie a clareza, a usabilidade e decisões confiantes."
+        },
+        {
+          "label": "Sistemas e handoff",
+          "text": "Construímos sistemas de design escaláveis e colaboramos de perto com a engenharia para uma implementação fiel e eficiente."
+        }
+      ],
+      "features": [
+        {
+          "title": "Pesquisa de UX",
+          "desc": "Fluxos e jornadas fundamentados em comportamento real do utilizador."
+        },
+        {
+          "title": "Design de interface",
+          "desc": "UI refinada e acessível que fortalece a sua marca."
+        },
+        {
+          "title": "Sistemas de design",
+          "desc": "Componentes reutilizáveis que mantêm os produtos consistentes à escala."
+        },
+        {
+          "title": "Prototipagem",
+          "desc": "Protótipos interativos para validar antes de construir."
+        }
+      ],
+      "closingHeading": "Design que torna os produtos intuitivos",
+      "closingPara": "Decisões de design intencionais criam clareza, equilíbrio e experiências digitais mais fortes. Criamos interfaces com propósito e refinadas, transformando ideias em sistemas coesos que permanecem adaptáveis, consistentes e eficazes, apoiando o envolvimento a longo prazo."
+    },
+    "ai-automation": {
+      "title": "Automação",
+      "intro": "Automatize operações com fluxos de trabalho orientados por IA",
+      "introParas": [
+        "Analisamos onde a sua equipa perde tempo com trabalho manual e repetitivo, depois concebemos automação que devolve esse tempo com confiança.",
+        "De monitorização em tempo real a notificações automáticas e encaminhamento inteligente, ligamos os seus sistemas e deixamos a IA tratar do trabalho repetitivo.",
+        "Cada fluxo de trabalho é construído para ser observável e fiável, para que a automação aumente a eficiência sem retirar o controlo."
+      ],
+      "subHeading": "Menos trabalho manual, mais resultados mensuráveis",
+      "subPara": "Concebemos automações que revelam dados em tempo real e atuam sobre eles, melhorando a velocidade, a precisão e a tomada de decisão em toda a operação.",
+      "videoHeading": "Operações em piloto automático",
+      "bullets": [
+        {
+          "label": "Mapeamento de processos",
+          "text": "Mapeamos a sua operação para encontrar automações de elevado impacto que reduzem o esforço manual e produzem resultados mensuráveis e consistentes."
+        },
+        {
+          "label": "Construir e monitorizar",
+          "text": "Através de integração e testes, entregamos fluxos de trabalho fiáveis e mantemo-los observáveis, adaptáveis e alinhados com o negócio."
+        }
+      ],
+      "features": [
+        {
+          "title": "Automação de fluxos",
+          "desc": "Ligar sistemas e remover passos manuais repetitivos."
+        },
+        {
+          "title": "Monitorização em tempo real",
+          "desc": "Dados ao vivo e visibilidade sobre o que acontece nas operações."
+        },
+        {
+          "title": "Notificações inteligentes",
+          "desc": "Alertas e encaminhamento automáticos orientados por sinais de IA."
+        },
+        { "title": "Previsão", "desc": "Antecipar a procura e agir antes de surgirem problemas." }
+      ],
+      "closingHeading": "Automação que escala a operação",
+      "closingPara": "Ao alinhar dados, sistemas e lógica inteligente, criamos automações com propósito e fiáveis, dando às equipas visibilidade em tempo real e libertando-as do trabalho repetitivo. O resultado é uma operação que se mantém adaptável, eficiente e eficaz à medida que cresce."
+    },
+    "cloud-backend": {
+      "title": "Cloud e backend",
+      "intro": "Infraestrutura cloud fiável e sistemas de backend",
+      "introParas": [
+        "Concebemos backends e infraestrutura em torno de como o seu produto realmente funciona, para que a base seja segura, observável e pronta para escalar.",
+        "De APIs e bases de dados a arquitetura cloud e CI/CD, construímos os sistemas que mantêm tudo o resto rápido e fiável.",
+        "O nosso objetivo é infraestrutura em que possa confiar, mantendo-se resiliente, consciente dos custos e preparada para o crescimento e cargas de trabalho de IA."
+      ],
+      "subHeading": "Arquitetura concebida para escala e resiliência",
+      "subPara": "Construímos sistemas cloud com escalabilidade e segurança no centro, para que a sua plataforma se mantenha estável à medida que o tráfego e os dados crescem.",
+      "videoHeading": "Bases em que pode confiar",
+      "bullets": [
+        {
+          "label": "Arquitetura e dados",
+          "text": "Concebemos APIs, modelos de dados e arquitetura cloud que apoiam o desempenho, a segurança e a integração perfeita entre sistemas."
+        },
+        {
+          "label": "Operar e escalar",
+          "text": "Através de automação e monitorização, mantemos a infraestrutura fiável, consciente dos custos e pronta para escalar com o negócio."
+        }
+      ],
+      "features": [
+        {
+          "title": "APIs & bases de dados",
+          "desc": "Backends seguros e bem estruturados com camadas de dados dedicadas."
+        },
+        {
+          "title": "Arquitetura cloud",
+          "desc": "Infraestrutura escalável e resiliente em plataformas cloud modernas."
+        },
+        {
+          "title": "CI/CD & DevOps",
+          "desc": "Pipelines automatizados para entregas rápidas, seguras e repetíveis."
+        },
+        {
+          "title": "Segurança & conformidade",
+          "desc": "Tratamento de dados alinhado com o RGPD e segurança por design."
+        }
+      ],
+      "closingHeading": "Backends construídos para manter tudo a funcionar",
+      "closingPara": "Da primeira decisão de arquitetura à implementação e operação contínua, construímos sistemas cloud e de backend resilientes, seguros e preparados para o crescimento. Transformamos requisitos em bases que se mantêm adaptáveis, consistentes e eficazes, apoiando cargas de trabalho preparadas para IA."
+    }
+  }
+}

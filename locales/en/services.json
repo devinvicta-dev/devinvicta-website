@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "title": "Services | DevInvicta",
+    "description": "Custom, scalable software built with responsible AI, including web platforms, mobile apps, AI agents and LLM integration, UX/UI design, automation and cloud and backend, delivered end-to-end."
+  },
+  "hero": {
+    "title": "Service",
+    "subhead": "We build custom, scalable software with responsible AI, from intelligent agents and LLM integration to web platforms, mobile apps and cloud, all engineered around your business."
+  },
+  "strategy": {
+    "headline": "Crafting unique strategies that turn visions into powerful results",
+    "features": {
+      "excellence": {
+        "title": "Technical excellence",
+        "body": "A highly specialised team with real experience in complex software and production-ready AI solutions."
+      },
+      "compliance": {
+        "title": "EU AI Act compliance",
+        "body": "Full focus on the AI Act and European regulation, so your business stays legally safe from day one."
+      },
+      "endToEnd": {
+        "title": "End-to-end delivery",
+        "body": "From architecture to deployment, we deliver complete solutions, including maintenance and continuous evolution."
+      }
+    },
+    "trustLabel": "Trust",
+    "trustText": "Trusted across fintech, insurance, e-commerce and manufacturing"
+  },
+  "accordion": {
+    "headline": "Innovative ideas and bold execution that drive measurable growth",
+    "viewMore": "View more",
+    "items": {
+      "web": {
+        "title": "Development",
+        "body": "Custom web platforms engineered to scale with your business.\n\nWe start by understanding the challenge before shaping the solution, so every platform we build rests on real business needs, not assumptions.\n\nFrom clean front-end interfaces to robust APIs and data layers, we build web systems that are fast, sustainable and production-ready.\n\nOur goal is software that evolves gracefully, supporting growth while keeping performance, security and code quality intact."
+      },
+      "mobile": {
+        "title": "Applications",
+        "body": "Native-grade iOS, Android and cross-platform apps designed around real user journeys and built to scale with your audience."
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "body": "Intelligent agents and LLM integrations that automate real work such as document AI, assistants and detection, aligned with the EU AI Act."
+      },
+      "design": {
+        "title": "Design",
+        "body": "Intuitive, polished interfaces and scalable design systems that remove friction and keep products coherent as they grow."
+      },
+      "automation": {
+        "title": "Automation",
+        "body": "AI-driven automation that gives time back through real-time monitoring, smart notifications and intelligent routing across your systems."
+      },
+      "cloud": {
+        "title": "Cloud and Backend",
+        "body": "Reliable cloud infrastructure and backends covering APIs, databases, CI/CD and security by design, prepared for growth and AI workloads."
+      }
+    }
+  },
+  "work": {
+    "headline": "Real case studies: challenges solved with software and responsible AI",
+    "body": "From MVPs to enterprise migrations, here is how we partner with fintech, insurance, e-commerce, manufacturing and more, shipping products that perform, scale and stay compliant.",
+    "cta": "Let's talk",
+    "challengeLabel": "Challenge",
+    "solutionLabel": "Solution",
+    "visitProject": "Visit project",
+    "confidential": "Confidential project",
+    "cases": {
+      "fintech": {
+        "client": "Start-up Fintech",
+        "challenge": "No functional product, with automatic invoicing and integrated HR management, and no ability to grow or connect systems.",
+        "solution": "MVP with an invoicing module, AI-powered invoice reading and processing, intelligent categorization and a fully integrated HR management module.",
+        "result": "Robust product delivered in 3 months. AI-automated invoice categorization. Client team operational and autonomous from day one."
+      },
+      "ecommerce": {
+        "client": "E-commerce (Anonymous)",
+        "challenge": "Old content-management system with no API of its own, no control over data and unable to integrate AI or grow the business.",
+        "solution": "Full migration to a proprietary backend with API, dedicated database and integration of AI modules for personalization and automation.",
+        "result": "Migration completed in 4 months with no downtime. Improved performance. Full control over data and a platform ready to grow with AI."
+      },
+      "europacolon": {
+        "client": "Europacolon Portugal",
+        "challenge": "Outdated institutional website, no admin platform and no email forwarding.",
+        "solution": "Modern new institutional website with a full admin backend, email forwarding and automatic AI analysis of contact requests, with categorization and prioritization before reaching the administrator.",
+        "result": "Website delivered in 6 months. Admin platform live from day one. Continuous maintenance service active."
+      },
+      "fraud": {
+        "client": "Start-up Fintech (Confidential)",
+        "challenge": "Existing AI fraud-detection system needing improved performance, precision and platform development.",
+        "solution": "Optimization of AI fraud-detection models for payments and e-commerce, plus active contribution to building and improving the company's tech platform.",
+        "result": "AI models with greater fraud-detection precision, a more robust and scalable platform, delivered over 12 months of continuous collaboration."
+      },
+      "insurance": {
+        "client": "Start-up Insurance (Confidential)",
+        "challenge": "Quotes website built on outdated systems, manual processes and no automation for the sales team, limiting growth.",
+        "solution": "Full migration of all systems to modern technologies, improved quotes engine with AI and automation of sales-team processes.",
+        "result": "Project completed in 18 months. Conversion up over 50%, significantly faster system and a more efficient sales team. Continuous maintenance active."
+      },
+      "vmoove": {
+        "client": "Vmoove Transfers",
+        "challenge": "No online presence, no admin platform and no automated processes, limiting acquisition of new clients.",
+        "solution": "Modern informational website, complete admin platform and AI processes to optimize operations.",
+        "result": "Website delivered in 4 months. Considerable increase in clients since launch."
+      },
+      "manufacturing": {
+        "client": "Start-up Manufacturing (Confidential)",
+        "challenge": "Client factories with no visibility over their own production processes, no real-time data and unable to make informed decisions.",
+        "solution": "Software with AI for factory monitoring and optimization, providing real-time data and insight into production.",
+        "result": "Delivered in 8 months with an established maintenance plan. Clients gained greater knowledge and control over their factories, generating significant value."
+      },
+      "maritime": {
+        "client": "Multinational Maritime Transport (Confidential)",
+        "challenge": "Multinational with no digital platform for its clients and no AI processes, limiting operational efficiency and client experience.",
+        "solution": "Full digitalization with a dedicated platform and AI processes integrated into operations.",
+        "result": "Ongoing for 12 months. Platform launched with very positive results and significantly more efficient operations with integrated AI."
+      },
+      "automotive": {
+        "client": "Start-up Automotive (Confidential)",
+        "challenge": "No functional product, no automated booking system and unable to forecast demand or proactively communicate with clients.",
+        "solution": "MVP with a car-wash booking system, AI integration for demand forecasting and automatic next-wash notifications to clients.",
+        "result": "Robust MVP delivered with an operational booking system, clients auto-notified via AI and ability to anticipate demand peaks from day one."
+      }
+    }
+  },
+  "cta": {
+    "kicker": "Start with a free diagnostic",
+    "heading": "Let's build software that performs, scales and stays compliant",
+    "body": "Tell us where you are today. We'll map the fastest compliant path forward, with no commitment and no jargon.",
+    "button": "Get a quote",
+    "emailLink": "Or email us directly"
+  },
+  "detail": {
+    "meta": {
+      "fallbackTitle": "Service | DevInvicta"
+    },
+    "metaServiceDetails": "Service details",
+    "metaProjectsByYears": "Projects by years",
+    "processHeading": "How we work, from free diagnostic to delivery and beyond"
+  },
+  "definitions": {
+    "web-development": {
+      "title": "Development",
+      "intro": "Custom web platforms engineered to scale with your business",
+      "introParas": [
+        "We start by understanding the problem before shaping the solution, so every platform we build is grounded in real business needs rather than assumptions.",
+        "From clean front-end interfaces to robust APIs and data layers, we build web systems that are fast, maintainable and ready for production.",
+        "Our goal is software that evolves gracefully, supporting growth while keeping performance, security and code quality intact."
+      ],
+      "subHeading": "From architecture to deployment, built to last",
+      "subPara": "We design the architecture with scalability at its core, so your platform grows with you instead of being rebuilt from scratch.",
+      "videoHeading": "Engineered to perform",
+      "bullets": [
+        {
+          "label": "Strategy and architecture",
+          "text": "We map goals, users and constraints to define an architecture that supports clarity, performance and long-term scalability across devices."
+        },
+        {
+          "label": "Build and delivery",
+          "text": "Through iterative development and continuous testing, we ship reliable, well-documented code and stay on through maintenance and evolution."
+        }
+      ],
+      "features": [
+        {
+          "title": "Front-end engineering",
+          "desc": "Responsive, accessible interfaces built with React and modern tooling."
+        },
+        {
+          "title": "Backend & APIs",
+          "desc": "Secure, well-structured APIs and data models with Node.js and Python."
+        },
+        {
+          "title": "Performance",
+          "desc": "Speed optimization and clean architecture for fast, stable platforms."
+        },
+        {
+          "title": "Scalable foundations",
+          "desc": "Architecture designed to grow with your business without rework."
+        }
+      ],
+      "closingHeading": "Robust web software, delivered end-to-end",
+      "closingPara": "From the first diagnostic to deployment and ongoing maintenance, we deliver web platforms that are purposeful, refined and built to perform across evolving needs. We turn ideas into cohesive systems that remain adaptable, consistent and effective as your business grows."
+    },
+    "mobile-apps": {
+      "title": "Apps",
+      "intro": "Native-grade mobile experiences your users will love",
+      "introParas": [
+        "We design mobile products around real user journeys, so the experience feels natural, fast and dependable from the very first launch.",
+        "Whether iOS, Android or cross-platform, we build apps with clean architecture, offline-ready data and smooth, intentional interactions.",
+        "Our goal is mobile software that earns daily use, staying reliable, polished and ready to scale with your audience."
+      ],
+      "subHeading": "Thoughtful mobile products, end-to-end",
+      "subPara": "From prototype to store release and beyond, we own the full lifecycle so your app stays stable, secure and current.",
+      "videoHeading": "Built for the pocket",
+      "bullets": [
+        {
+          "label": "Product and experience",
+          "text": "We align flows, performance and platform conventions so the app feels intuitive, responsive and consistent on every device."
+        },
+        {
+          "label": "Engineering and release",
+          "text": "Through testing and continuous delivery, we ship resilient apps and support them through updates and store compliance."
+        }
+      ],
+      "features": [
+        {
+          "title": "iOS & Android",
+          "desc": "Native and cross-platform apps tuned for each ecosystem."
+        },
+        {
+          "title": "Offline-ready data",
+          "desc": "Reliable sync and local-first state for real-world conditions."
+        },
+        {
+          "title": "Smooth interactions",
+          "desc": "Fluid motion and micro-interactions that feel premium."
+        },
+        {
+          "title": "Store & lifecycle",
+          "desc": "Release, monitoring and ongoing maintenance handled for you."
+        }
+      ],
+      "closingHeading": "Mobile software that scales with your audience",
+      "closingPara": "We craft mobile experiences that feel purposeful and refined, built to perform across devices and evolving user needs. From diagnostic to launch and continuous improvement, we transform ideas into cohesive products that stay adaptable, consistent and effective over time."
+    },
+    "ai-agents-llm": {
+      "title": "Artificial intelligence",
+      "intro": "Intelligent agents and LLM integrations that automate real work",
+      "introParas": [
+        "We begin by understanding where AI can create measurable value in your operation, then design agents that act on it, delivering useful automation rather than hype.",
+        "From document understanding and triage to retrieval-augmented assistants, we integrate LLMs into your products and workflows with the right guardrails.",
+        "Every solution is built for responsible AI, aligned with the EU AI Act, secure with your data and designed to keep humans in control."
+      ],
+      "subHeading": "Responsible AI, grounded in your data",
+      "subPara": "We combine modern AI frameworks with rigorous engineering, so your agents are accurate, observable and compliant by design.",
+      "videoHeading": "Intelligence that ships",
+      "bullets": [
+        {
+          "label": "Use-case and design",
+          "text": "We identify high-value tasks and design agents around real data, ensuring accuracy, safety and measurable outcomes across your workflows."
+        },
+        {
+          "label": "Integration and evolution",
+          "text": "Through evaluation and iteration, we embed LLMs into production systems and improve them continuously with monitoring and feedback."
+        }
+      ],
+      "features": [
+        {
+          "title": "LLM integration",
+          "desc": "Assistants and copilots built on LangChain and modern model APIs."
+        },
+        {
+          "title": "Document AI",
+          "desc": "Reading, categorising and processing documents and invoices automatically."
+        },
+        {
+          "title": "Fraud & detection",
+          "desc": "AI models that improve precision in detection and decisioning."
+        },
+        {
+          "title": "AI Act compliance",
+          "desc": "Risk-aware design aligned with EU regulation from day one."
+        }
+      ],
+      "closingHeading": "AI that creates real, compliant value",
+      "closingPara": "We turn AI from a buzzword into dependable systems that categorise invoices, triage requests, improve fraud detection and power assistants. Built responsibly and aligned with the AI Act, our solutions remain adaptable, transparent and effective while supporting long-term growth."
+    },
+    "ux-ui-design": {
+      "title": "Design",
+      "intro": "Interfaces that feel intuitive, polished and on-brand",
+      "introParas": [
+        "We start with the user and the problem, designing experiences that feel natural and remove friction instead of adding it.",
+        "Through clear structure and considered visual systems, we communicate effectively without unnecessary complexity.",
+        "Our goal is design that scales, with consistent components and patterns that keep products coherent as they grow."
+      ],
+      "subHeading": "Design decisions that create clarity and balance",
+      "subPara": "Through careful refinement and collaboration, we produce interfaces that balance creativity with practical performance.",
+      "videoHeading": "Designed with intention",
+      "bullets": [
+        {
+          "label": "Research and structure",
+          "text": "We align user needs, flows and information architecture so every screen supports clarity, usability and confident decisions."
+        },
+        {
+          "label": "Systems and handoff",
+          "text": "We build scalable design systems and collaborate closely with engineering for a faithful, efficient build."
+        }
+      ],
+      "features": [
+        { "title": "UX research", "desc": "Flows and journeys grounded in real user behaviour." },
+        {
+          "title": "Interface design",
+          "desc": "Polished, accessible UI that strengthens your brand."
+        },
+        {
+          "title": "Design systems",
+          "desc": "Reusable components that keep products consistent at scale."
+        },
+        { "title": "Prototyping", "desc": "Interactive prototypes to validate before you build." }
+      ],
+      "closingHeading": "Design that makes products feel effortless",
+      "closingPara": "Intentional design decisions create clarity, balance and stronger digital experiences. We craft interfaces that feel purposeful and refined, transforming ideas into cohesive systems that remain adaptable, consistent and effective while supporting long-term engagement."
+    },
+    "ai-automation": {
+      "title": "Automation",
+      "intro": "Automate operations with AI-driven workflows",
+      "introParas": [
+        "We look at where your team loses time to manual, repetitive work, then design automation that gives that time back with confidence.",
+        "From real-time monitoring to automatic notifications and intelligent routing, we connect your systems and let AI handle the busywork.",
+        "Every workflow is built to be observable and reliable, so automation increases efficiency without removing control."
+      ],
+      "subHeading": "Less manual work, more measurable output",
+      "subPara": "We design automations that surface real-time data and act on it, improving speed, accuracy and decision-making across the operation.",
+      "videoHeading": "Operations on autopilot",
+      "bullets": [
+        {
+          "label": "Process mapping",
+          "text": "We map your operation to find high-impact automations that reduce manual effort and produce measurable, consistent outcomes."
+        },
+        {
+          "label": "Build and monitor",
+          "text": "Through integration and testing, we deliver reliable workflows and keep them observable, adaptable and aligned with the business."
+        }
+      ],
+      "features": [
+        {
+          "title": "Workflow automation",
+          "desc": "Connect systems and remove repetitive manual steps."
+        },
+        {
+          "title": "Real-time monitoring",
+          "desc": "Live data and insight into what is happening across operations."
+        },
+        {
+          "title": "Smart notifications",
+          "desc": "Automatic alerts and routing driven by AI signals."
+        },
+        { "title": "Forecasting", "desc": "Anticipate demand and act before issues arise." }
+      ],
+      "closingHeading": "Automation that scales the operation",
+      "closingPara": "By aligning data, systems and intelligent logic, we craft automations that feel purposeful and reliable, giving teams real-time visibility and freeing them from busywork. The result is an operation that stays adaptable, efficient and effective as it grows."
+    },
+    "cloud-backend": {
+      "title": "Cloud & backend",
+      "intro": "Reliable cloud infrastructure and backend systems",
+      "introParas": [
+        "We design backends and infrastructure around how your product actually runs, so the foundation is secure, observable and ready to scale.",
+        "From APIs and databases to cloud architecture and CI/CD, we build the systems that keep everything else fast and dependable.",
+        "Our goal is infrastructure that you can trust, staying resilient, cost-aware and prepared for growth and AI workloads."
+      ],
+      "subHeading": "Architecture designed for scale and resilience",
+      "subPara": "We build cloud systems with scalability and security at the core, so your platform stays stable as traffic and data grow.",
+      "videoHeading": "Foundations you can trust",
+      "bullets": [
+        {
+          "label": "Architecture and data",
+          "text": "We design APIs, data models and cloud architecture that support performance, security and seamless integration across systems."
+        },
+        {
+          "label": "Operate and scale",
+          "text": "Through automation and monitoring, we keep infrastructure reliable, cost-aware and ready to scale with the business."
+        }
+      ],
+      "features": [
+        {
+          "title": "APIs & databases",
+          "desc": "Well-structured, secure backends with dedicated data layers."
+        },
+        {
+          "title": "Cloud architecture",
+          "desc": "Scalable, resilient infrastructure on modern cloud platforms."
+        },
+        {
+          "title": "CI/CD & DevOps",
+          "desc": "Automated pipelines for fast, safe, repeatable delivery."
+        },
+        {
+          "title": "Security & compliance",
+          "desc": "GDPR-aligned data handling and security by design."
+        }
+      ],
+      "closingHeading": "Backends built to keep everything running",
+      "closingPara": "From the first architecture decision to deployment and continuous operation, we build cloud and backend systems that are resilient, secure and prepared for growth. We turn requirements into foundations that stay adaptable, consistent and effective while supporting AI-ready workloads."
+    }
+  }
+}

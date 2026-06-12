@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import WordScrub from '@/components/ui/WordScrub'
 import SlideButton from '@/components/ui/SlideButton'
 import { cn } from '@/lib/utils'
@@ -14,128 +15,39 @@ const img = (id: string) =>
 
 type CaseStudy = {
   num: string
-  client: string
-  challenge: string
-  solution: string
-  result: string
+  key: string
   href?: string
-  confidential?: boolean
   image: string
 }
 
-// The 9 real case studies surfaced as expanding rows. Each row shows the client
-// name + headline result; expanding reveals challenge → solution → result. We
-// link out only where a public URL exists; confidential work is labelled.
+// The 9 real case studies surfaced as expanding rows. Display copy lives in the
+// `services` locale namespace (services.work.cases.<key>). This list keeps only
+// the locale-independent structure: ordering, image, link and confidential flag.
 const CASES: CaseStudy[] = [
   {
     num: '01',
-    client: 'Start-up Fintech',
-    challenge:
-      'No functional product, with automatic invoicing and integrated HR management, and no ability to grow or connect systems.',
-    solution:
-      'MVP with an invoicing module, AI-powered invoice reading and processing, intelligent categorization and a fully integrated HR management module.',
-    result:
-      'Robust product delivered in 3 months. AI-automated invoice categorization. Client team operational and autonomous from day one.',
-    confidential: true,
-    image: img('1554224155-6726b3ff858f'),
-  },
-  {
-    num: '02',
-    client: 'E-commerce (Anonymous)',
-    challenge:
-      'Old content-management system with no API of its own, no control over data and unable to integrate AI or grow the business.',
-    solution:
-      'Full migration to a proprietary backend with API, dedicated database and integration of AI modules for personalization and automation.',
-    result:
-      'Migration completed in 4 months with no downtime. Improved performance. Full control over data and a platform ready to grow with AI.',
-    image: img('1556742049-0cfed4f6a45d'),
-  },
-  {
-    num: '03',
-    client: 'Europacolon Portugal',
-    challenge: 'Outdated institutional website, no admin platform and no email forwarding.',
-    solution:
-      'Modern new institutional website with a full admin backend, email forwarding and automatic AI analysis of contact requests, with categorization and prioritization before reaching the administrator.',
-    result:
-      'Website delivered in 6 months. Admin platform live from day one. Continuous maintenance service active.',
+    key: 'europacolon',
     href: 'https://www.europacolon.pt/home',
-    image: img('1498050108023-c5249f4df085'),
+    image: '/assets/work/europacolon.png',
   },
-  {
-    num: '04',
-    client: 'Start-up Fintech (Confidential)',
-    challenge:
-      'Existing AI fraud-detection system needing improved performance, precision and platform development.',
-    solution:
-      "Optimization of AI fraud-detection models for payments and e-commerce, plus active contribution to building and improving the company's tech platform.",
-    result:
-      'AI models with greater fraud-detection precision, a more robust and scalable platform, delivered over 12 months of continuous collaboration.',
-    confidential: true,
-    image: img('1563013544-824ae1b704d3'),
-  },
-  {
-    num: '05',
-    client: 'Start-up Insurance (Confidential)',
-    challenge:
-      'Quotes website built on outdated systems, manual processes and no automation for the sales team, limiting growth.',
-    solution:
-      'Full migration of all systems to modern technologies, improved quotes engine with AI and automation of sales-team processes.',
-    result:
-      'Project completed in 18 months. Conversion up over 50%, significantly faster system and a more efficient sales team. Continuous maintenance active.',
-    confidential: true,
-    image: img('1450101499163-c8848c66ca85'),
-  },
+  { num: '02', key: 'fintech', image: img('1620503374956-c942862f0372') },
+  { num: '03', key: 'ecommerce', image: img('1594332495179-d979bcd18142') },
+  { num: '04', key: 'fraud', image: img('1556388275-bb5585725aca') },
+  { num: '05', key: 'insurance', image: img('1625948085447-2881572802ca') },
   {
     num: '06',
-    client: 'Vmoove Transfers',
-    challenge:
-      'No online presence, no admin platform and no automated processes, limiting acquisition of new clients.',
-    solution:
-      'Modern informational website, complete admin platform and AI processes to optimize operations.',
-    result: 'Website delivered in 4 months. Considerable increase in clients since launch.',
+    key: 'vmoove',
     href: 'https://vmoovetransfers.com',
-    image: img('1502920917128-1aa500764cbd'),
+    image: '/assets/work/vmoove.png',
   },
-  {
-    num: '07',
-    client: 'Start-up Manufacturing (Confidential)',
-    challenge:
-      'Client factories with no visibility over their own production processes, no real-time data and unable to make informed decisions.',
-    solution:
-      'Software with AI for factory monitoring and optimization, providing real-time data and insight into production.',
-    result:
-      'Delivered in 8 months with an established maintenance plan. Clients gained greater knowledge and control over their factories, generating significant value.',
-    confidential: true,
-    image: img('1581091226825-a6a2a5aee158'),
-  },
-  {
-    num: '08',
-    client: 'Multinational Maritime Transport (Confidential)',
-    challenge:
-      'Multinational with no digital platform for its clients and no AI processes, limiting operational efficiency and client experience.',
-    solution:
-      'Full digitalization with a dedicated platform and AI processes integrated into operations.',
-    result:
-      'Ongoing for 12 months. Platform launched with very positive results and significantly more efficient operations with integrated AI.',
-    confidential: true,
-    image: img('1494412574643-ff11b0a5c1c3'),
-  },
-  {
-    num: '09',
-    client: 'Start-up Automotive (Confidential)',
-    challenge:
-      'No functional product, no automated booking system and unable to forecast demand or proactively communicate with clients.',
-    solution:
-      'MVP with a car-wash booking system, AI integration for demand forecasting and automatic next-wash notifications to clients.',
-    result:
-      'Robust MVP delivered with an operational booking system, clients auto-notified via AI and ability to anticipate demand peaks from day one.',
-    confidential: true,
-    image: img('1605559424843-9e4c228bf1c2'),
-  },
+  { num: '07', key: 'manufacturing', image: img('1608424371207-ab70d9d68e80') },
+  { num: '08', key: 'maritime', image: img('1523251836828-b75d28b89804') },
+  { num: '09', key: 'automotive', image: img('1536405416754-3bcd4fb38128') },
 ]
 
 export default function ServicesWorkSection() {
   const [active, setActive] = useState(0)
+  const t = useTranslations('services')
 
   return (
     <section className="bg-transparent px-5 py-14 md:px-8 md:py-28">
@@ -143,15 +55,11 @@ export default function ServicesWorkSection() {
         {/* header */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start lg:gap-24">
           <WordScrub className="text-h2 leading-[1.15] font-semibold tracking-[-0.04em] text-black">
-            Real case studies: challenges solved with software and responsible AI
+            {t('work.headline')}
           </WordScrub>
           <div data-anim className="flex flex-col items-start gap-6 lg:pt-2">
-            <p className="max-w-md text-body leading-[1.7] text-dark-gray">
-              From MVPs to enterprise migrations, here is how we partner with fintech, insurance,
-              e-commerce, manufacturing and more, shipping products that perform, scale and stay
-              compliant.
-            </p>
-            <SlideButton href="/contact" text="Let's talk" className="w-fit" />
+            <p className="max-w-md text-body leading-[1.7] text-dark-gray">{t('work.body')}</p>
+            <SlideButton href="/contact" text={t('work.cta')} className="w-fit" />
           </div>
         </div>
 
@@ -160,6 +68,8 @@ export default function ServicesWorkSection() {
         <div className="mt-12 flex flex-col gap-4 md:mt-16">
           {CASES.map((item, i) => {
             const isActive = active === i
+            const client = t(`work.cases.${item.key}.client`)
+            const result = t(`work.cases.${item.key}.result`)
 
             const inner = (
               <div
@@ -185,7 +95,7 @@ export default function ServicesWorkSection() {
                         isActive ? 'text-white' : 'text-black'
                       )}
                     >
-                      {item.client}
+                      {client}
                     </h3>
                     <p
                       className={cn(
@@ -193,7 +103,7 @@ export default function ServicesWorkSection() {
                         isActive ? 'text-white/60' : 'text-dark-gray'
                       )}
                     >
-                      {item.result}
+                      {result}
                     </p>
                   </div>
                 </div>
@@ -208,37 +118,36 @@ export default function ServicesWorkSection() {
                 >
                   <Image
                     src={item.image}
-                    alt={item.client}
+                    alt={client}
                     fill
                     sizes="(max-width: 1024px) 100vw, 320px"
-                    className="object-cover"
+                    className={cn(
+                      'object-cover',
+                      (item.key === 'europacolon' || item.key === 'vmoove') && 'object-top'
+                    )}
                   />
                 </div>
 
-                {/* challenge + solution detail — only when active */}
+                {/* solution detail — only when active */}
                 <div className={cn('flex w-full flex-col gap-3 lg:w-[30%]', !isActive && 'hidden')}>
                   <div>
                     <span className="text-sub font-semibold tracking-[0.06em] text-white/40 uppercase">
-                      Challenge
+                      {t('work.solutionLabel')}
                     </span>
-                    <p className="mt-1 text-sub leading-[1.5] text-white/70">{item.challenge}</p>
-                  </div>
-                  <div>
-                    <span className="text-sub font-semibold tracking-[0.06em] text-white/40 uppercase">
-                      Solution
-                    </span>
-                    <p className="mt-1 text-sub leading-[1.5] text-white/70">{item.solution}</p>
+                    <p className="mt-1 text-sub leading-[1.5] text-white/70">
+                      {t(`work.cases.${item.key}.solution`)}
+                    </p>
                   </div>
                   {item.href ? (
                     <span className="mt-1 flex items-center gap-1.5 text-sub font-semibold text-white">
-                      Visit project
+                      {t('work.visitProject')}
                       <span aria-hidden>↗</span>
                     </span>
-                  ) : item.confidential ? (
+                  ) : (
                     <span className="mt-1 text-sub font-medium text-white/40">
-                      Confidential project
+                      {t('work.confidential')}
                     </span>
-                  ) : null}
+                  )}
                 </div>
               </div>
             )

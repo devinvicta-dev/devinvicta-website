@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 import AnimWrapper from '@/components/ui/AnimWrapper'
 import ServiceDetailHero from '@/components/services/detail/ServiceDetailHero'
 import ServiceDetailBody from '@/components/services/detail/ServiceDetailBody'
@@ -18,10 +19,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const service = getService(slug)
-  if (!service) return { title: 'Service | DevInvicta' }
+  const t = await getTranslations('services')
+  if (!service) return { title: t('detail.meta.fallbackTitle') }
   return {
-    title: `${service.title} | DevInvicta`,
-    description: service.intro,
+    title: `${t(`definitions.${slug}.title`)} | DevInvicta`,
+    description: t(`definitions.${slug}.intro`),
   }
 }
 

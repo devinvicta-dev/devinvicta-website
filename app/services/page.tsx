@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import ServicesHero from '@/components/services/ServicesHero'
 import StrategyFeaturesSection from '@/components/services/StrategyFeaturesSection'
 import ServicesAccordionSection from '@/components/services/ServicesAccordionSection'
@@ -7,10 +8,12 @@ import ServicesCtaSection from '@/components/services/ServicesCtaSection'
 import Footer from '@/components/layout/Footer'
 import AnimWrapper from '@/components/ui/AnimWrapper'
 
-export const metadata: Metadata = {
-  title: 'Services | DevInvicta',
-  description:
-    'Custom, scalable software built with responsible AI, including web platforms, mobile apps, AI agents and LLM integration, UX/UI design, automation and cloud and backend, delivered end-to-end.',
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('services')
+  return {
+    title: t('meta.title'),
+    description: t('meta.description'),
+  }
 }
 
 export default function ServicesPage() {

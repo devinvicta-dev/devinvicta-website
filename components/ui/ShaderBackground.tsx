@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useRef } from 'react'
+import { useCallback, useRef, useEffect } from 'react'
 import { gsap, useGSAP } from '@/lib/gsap'
 
 /**
@@ -62,11 +62,11 @@ void main(){
   float density = mask * (0.22 + clouds);
   density = smoothstep(0.22, 1.0, density);
 
-  // shades of blue only
-  vec3 deep  = vec3(0.020, 0.060, 0.200); // near-navy haze
-  vec3 blue  = vec3(0.120, 0.260, 0.860); // #1b3bd6
-  vec3 royal = vec3(0.180, 0.400, 0.940); // #2563eb
-  vec3 sky   = vec3(0.420, 0.620, 1.000); // bright highlight
+  // shades of the brand purple #51356e (matched to the DevInvicta logo)
+  vec3 deep  = vec3(0.118, 0.078, 0.161); // dark plum haze
+  vec3 blue  = vec3(0.318, 0.208, 0.431); // #51356e
+  vec3 royal = vec3(0.435, 0.290, 0.584); // lifted purple
+  vec3 sky   = vec3(0.604, 0.478, 0.776); // bright violet highlight
 
   vec3 col = vec3(0.0);
   col = mix(col, deep,  smoothstep(0.0, 0.4, density));
@@ -109,9 +109,12 @@ export default function ShaderBackground({
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const anchorRef = useRef(anchor)
-  anchorRef.current = anchor
   const speedRef = useRef(speed)
-  speedRef.current = speed
+
+  useEffect(() => {
+    anchorRef.current = anchor
+    speedRef.current = speed
+  }, [anchor, speed])
   // Eased pointer position (driven by gsap.quickTo, read by the ticker).
   const pos = useRef({ mx: 0.5, my: 0.5 })
   const quick = useRef<{ x: (v: number) => void; y: (v: number) => void } | null>(null)
@@ -195,11 +198,15 @@ export default function ShaderBackground({
       io.observe(canvas)
 
       return () => {
+        // NOTE: do NOT call loseContext() here. On remount (and React Strict
+        // Mode's mount→unmount→mount) the canvas element is reused, and a lost
+        // context cannot be re-acquired — the shader would render blank after
+        // navigating away and back. Stopping the ticker + dropping refs is
+        // enough; the GPU context is freed when the canvas leaves the DOM.
         gsap.ticker.remove(render)
         ro.disconnect()
         io.disconnect()
         quick.current = null
-        gl.getExtension('WEBGL_lose_context')?.loseContext()
       }
     },
     { dependencies: [], scope: canvasRef }

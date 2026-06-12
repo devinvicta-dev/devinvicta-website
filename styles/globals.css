@@ -11,7 +11,10 @@
   --color-silver-gray: #c8c8c8;
   --color-silver: #c0c0c0;
   --color-fiery-red: #f3350c;
-  --color-blue: #2563eb;
+  /* Brand accent — matched to the DevInvicta logo (purple). Kept under the
+     `blue` token name so existing `text-blue`/`bg-blue` usages pick it up. */
+  --color-blue: #51356e;
+  --color-purple: #51356e;
 
   /* ── Fonts (provided by next/font via --font-inter-tight) ── */
   --font-sans: var(--font-inter-tight), 'Inter Tight', sans-serif;
@@ -166,6 +169,14 @@
      important cascade against `img, video { filter: grayscale(1) !important }`. */
   .group:hover img.logo-invert {
     filter: invert(1) !important;
+  }
+  /* Brand logo keeps its colour, exempt from the grayscale rule. */
+  img.logo-brand {
+    filter: none !important;
+  }
+  /* …rendered white on dark backgrounds (e.g. the hero navbar). */
+  img.logo-brand-light {
+    filter: brightness(0) invert(1) !important;
   }
   a {
     text-decoration: none;

@@ -1,10 +1,10 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import WordScrub from '@/components/ui/WordScrub'
 
 const cards = [
   {
-    title: 'Free diagnostic',
-    body: 'An initial, no-commitment session to analyse your business and propose concrete solutions before you decide anything.',
+    key: 'diagnostic',
     dark: false,
     icon: (
       <>
@@ -14,8 +14,7 @@ const cards = [
     ),
   },
   {
-    title: 'AI that actually works',
-    body: 'We build production-ready AI and machine learning systems that run reliably, compound over time and deliver measurable outcomes.',
+    key: 'aiWorks',
     dark: true,
     icon: (
       <>
@@ -31,8 +30,7 @@ const cards = [
     ),
   },
   {
-    title: 'Complete software',
-    body: 'End-to-end delivery from architecture to deployment, including maintenance and continuous evolution as your business grows.',
+    key: 'complete',
     dark: false,
     icon: (
       <path
@@ -44,9 +42,10 @@ const cards = [
       />
     ),
   },
-]
+] as const
 
 export default function ApproachSection() {
+  const t = useTranslations('about')
   return (
     <section className="py-14 md:py-28 bg-ivory border-t border-black/10">
       <div className="mx-auto max-w-page px-5 md:px-8 flex flex-col gap-10">
@@ -56,14 +55,13 @@ export default function ApproachSection() {
             as="h2"
             className="text-[clamp(1.75rem,3vw,2.5rem)] font-bold tracking-[-0.04em] text-black leading-[1.15] max-w-[34rem]"
           >
-            Why companies choose DevInvicta
+            {t('approach.headline')}
           </WordScrub>
           <p
             className="text-[0.9375rem] text-dark-gray leading-[1.7] max-w-[34rem] md:ml-auto"
             data-anim
           >
-            From deep technical know-how to full regulatory compliance, we combine the experience,
-            rigour and global perspective needed to turn ambitious ideas into software that lasts.
+            {t('approach.body')}
           </p>
         </div>
 
@@ -73,8 +71,8 @@ export default function ApproachSection() {
           data-anim
         >
           <Image
-            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1600&h=900&fit=crop&q=85"
-            alt="Minimalist concrete architecture"
+            src="https://images.unsplash.com/photo-1496236436299-cde70e3587cf?w=1600&h=900&fit=crop&q=85"
+            alt="Brutalist concrete fins, raking light and shadow"
             fill
             sizes="100vw"
             className="approach-center-img object-cover [filter:grayscale(1)_contrast(1.2)_brightness(0.9)]"
@@ -85,7 +83,7 @@ export default function ApproachSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5" data-anim>
           {cards.map((c) => (
             <div
-              key={c.title}
+              key={c.key}
               className={`flex flex-col rounded-card p-7 ${
                 c.dark ? 'bg-black' : 'bg-white border border-black/10'
               }`}
@@ -99,12 +97,12 @@ export default function ApproachSection() {
                 {c.icon}
               </svg>
               <div className={`text-lg font-bold mb-2 ${c.dark ? 'text-white' : 'text-black'}`}>
-                {c.title}
+                {t(`approach.cards.${c.key}.title`)}
               </div>
               <div
                 className={`text-sm leading-[1.6] ${c.dark ? 'text-white/50' : 'text-dark-gray'}`}
               >
-                {c.body}
+                {t(`approach.cards.${c.key}.body`)}
               </div>
             </div>
           ))}

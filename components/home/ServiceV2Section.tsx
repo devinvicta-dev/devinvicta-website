@@ -1,11 +1,22 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
 import { cn } from '@/lib/utils'
 
+const SERVICE_ROWS = [
+  { z: 'z-[6]', key: 'web' },
+  { z: 'z-[5]', key: 'mobile' },
+  { z: 'z-[4]', key: 'ai' },
+  { z: 'z-[3]', key: 'design' },
+  { z: 'z-[2]', key: 'automation' },
+  { z: 'z-[1]', key: 'cloud' },
+] as const
+
 export default function ServiceV2Section() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('home')
 
   useGSAP(
     () => {
@@ -68,19 +79,12 @@ export default function ServiceV2Section() {
           data-anim
           className="mb-12 max-w-[44rem] text-[clamp(1.5625rem,3.5vw,2.5rem)] font-semibold leading-[1.25] tracking-[-0.03em] text-black md:mb-16"
         >
-          We tailor software the way it should be: measured to your business, built to last.
+          {t('serviceV2.headline')}
         </h2>
         <div className="relative flex flex-col gap-[0.875rem] [perspective:2000px]">
-          {[
-            { z: 'z-[6]', title: 'Web Development' },
-            { z: 'z-[5]', title: 'Mobile Apps' },
-            { z: 'z-[4]', title: 'AI Agents & LLM Integration' },
-            { z: 'z-[3]', title: 'UX/UI Design' },
-            { z: 'z-[2]', title: 'AI Automation & Workflows' },
-            { z: 'z-[1]', title: 'Cloud & Backend' },
-          ].map((item) => (
+          {SERVICE_ROWS.map((item) => (
             <div
-              key={item.title}
+              key={item.key}
               className={cn(
                 'svc2-item relative flex items-center justify-start border-b-[0.0625rem] border-black/[0.08] py-6',
                 item.z
@@ -89,7 +93,7 @@ export default function ServiceV2Section() {
             >
               <div className="relative z-[2]">
                 <h3 className="text-[clamp(1.5rem,7vw,2.5rem)] font-semibold leading-[1.2] tracking-[-0.125rem] text-black mix-blend-difference [transition:color_0.35s] md:text-[clamp(2.15rem,6vw,6.35rem)]">
-                  {item.title}
+                  {t(`serviceV2.items.${item.key}`)}
                 </h3>
               </div>
             </div>

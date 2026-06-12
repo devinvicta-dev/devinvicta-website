@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import WordScrub from '@/components/ui/WordScrub'
 
 export default function MissionSection() {
+  const t = useTranslations('about')
   return (
     <section className="py-14 md:py-28 bg-ivory">
       <div className="mx-auto max-w-page px-5 md:px-8 grid grid-cols-1 md:grid-cols-[1fr_45%] gap-10 md:gap-20 items-start">
@@ -32,19 +34,17 @@ export default function MissionSection() {
             as="h2"
             className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-bold leading-[1.15] tracking-[-0.04em] text-black"
           >
-            We build intelligent, scalable software that generates real value for businesses,
-            pairing technological innovation with technical rigor and a focus on client results.
+            {t('mission.headline')}
           </WordScrub>
           <p className="text-base text-dark-gray leading-[1.7]" data-anim>
-            Our vision is to be the European reference in AI software development, recognised for
-            technical excellence, regulatory compliance and the ability to transform businesses.
+            {t('mission.body')}
           </p>
         </div>
         <div className="hidden md:flex flex-col gap-6 items-start" data-anim>
           <div className="relative w-full h-[clamp(420px,50vw,620px)]">
             <Image
-              src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=700&h=900&fit=crop&q=80"
-              alt="Minimalist modern architecture"
+              src="https://images.unsplash.com/photo-1593250816874-8edf4f732edb?w=700&h=900&fit=crop&q=80"
+              alt="Draped satin fabric, folds in raking light"
               fill
               sizes="(max-width: 768px) 100vw, 45vw"
               className="mission-img-single object-cover rounded-[1.25rem] [filter:grayscale(1)_contrast(1.2)_brightness(0.82)]"

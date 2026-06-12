@@ -1,18 +1,28 @@
 'use client'
 
 import Link from 'next/link'
-import { Play } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { SERVICES, type Service } from '@/lib/services'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 
+type Bullet = { label: string; text: string }
+type Feature = { title: string; desc: string }
+
 /**
  * Service-detail body — the single 2-column block (`rt-blog-content`) from
  * Vertora: a sticky service sidebar on the left, and the full editorial column
- * on the right (overview → strategy → video card → process bullets → 2×2 feature
- * grid → closing statement). Mirrors the live reference exactly.
+ * on the right (overview → strategy → process bullets → 2×2 feature
+ * grid → closing statement).
  */
 export default function ServiceDetailBody({ service }: { service: Service }) {
+  const t = useTranslations('services')
+
+  const def = `definitions.${service.slug}`
+  const introParas = t.raw(`${def}.introParas`) as string[]
+  const bullets = t.raw(`${def}.bullets`) as Bullet[]
+  const features = t.raw(`${def}.features`) as Feature[]
+
   return (
     <section className="bg-transparent">
       <div className="mx-auto max-w-page px-5 py-14 md:px-8 md:py-28">
@@ -33,7 +43,7 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
                           : 'bg-white text-black ring-1 ring-black/10 hover:bg-black hover:text-white'
                       )}
                     >
-                      {s.title}
+                      {t(`definitions.${s.slug}.title`)}
                       <span className="transition-transform duration-300 group-hover:translate-x-1">
                         →
                       </span>
@@ -51,10 +61,10 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
               data-anim
               className="text-h2 leading-[1.2] font-semibold tracking-[-0.04em] text-black"
             >
-              {service.intro}
+              {t(`${def}.intro`)}
             </h2>
             <div className="mt-6 flex flex-col gap-4">
-              {service.introParas.map((p, i) => (
+              {introParas.map((p, i) => (
                 <p data-anim key={i} className="text-body leading-[1.7] text-dark-gray">
                   {p}
                 </p>
@@ -66,48 +76,21 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
               data-anim
               className="mt-12 text-h4 leading-[1.3] font-semibold tracking-[-0.02em] text-black"
             >
-              {service.subHeading}
+              {t(`${def}.subHeading`)}
             </h3>
             <p data-anim className="mt-4 text-body leading-[1.7] text-dark-gray">
-              {service.subPara}
+              {t(`${def}.subPara`)}
             </p>
-
-            {/* video card */}
-            <div
-              data-anim
-              className="mt-12 relative aspect-[16/9] overflow-hidden rounded-panel bg-black"
-            >
-              <video
-                className="absolute inset-0 h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster={service.video.poster}
-              >
-                <source src={service.video.webm} type="video/webm" />
-                <source src={service.video.mp4} type="video/mp4" />
-              </video>
-              <div aria-hidden className="absolute inset-0 bg-black/20" />
-              <div className="absolute inset-0 flex items-end justify-between p-7">
-                <h4 className="max-w-[12ch] text-h4 leading-[1.15] font-semibold tracking-[-0.02em] text-white">
-                  {service.videoHeading}
-                </h4>
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-soft bg-white text-black">
-                  <Play className="h-5 w-5 translate-x-[1px] fill-current" />
-                </span>
-              </div>
-            </div>
 
             {/* process heading + bullets */}
             <h3
               data-anim
               className="mt-12 text-h3 leading-[1.2] font-semibold tracking-[-0.03em] text-black"
             >
-              How we work, from free diagnostic to delivery and beyond
+              {t('detail.processHeading')}
             </h3>
             <ul className="mt-6 flex flex-col gap-3">
-              {service.bullets.map((b) => (
+              {bullets.map((b) => (
                 <li
                   data-anim
                   key={b.label}
@@ -127,10 +110,10 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
 
             {/* 2×2 numbered feature grid */}
             <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-              {service.features.map((f) => (
-                <div data-anim key={f.num} className="flex gap-5">
+              {features.map((f, i) => (
+                <div data-anim key={f.title} className="flex gap-5">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black text-sub font-semibold text-white">
-                    {f.num}
+                    {service.featureNums[i]}
                   </span>
                   <div>
                     <h5 className="text-h5 font-semibold tracking-[-0.01em] text-black">
@@ -147,10 +130,10 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
               data-anim
               className="mt-16 text-h3 leading-[1.2] font-semibold tracking-[-0.03em] text-black"
             >
-              {service.closingHeading}
+              {t(`${def}.closingHeading`)}
             </h3>
             <p data-anim className="mt-5 text-body leading-[1.7] text-dark-gray">
-              {service.closingPara}
+              {t(`${def}.closingPara`)}
             </p>
           </div>
         </div>

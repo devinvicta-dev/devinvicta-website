@@ -1,11 +1,13 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
 import Navbar from '@/components/layout/Navbar'
 
 export default function AboutHero() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('about')
   const bigOuterRef = useRef<HTMLDivElement>(null)
   const bigInnerRef = useRef<HTMLDivElement>(null)
 
@@ -77,60 +79,35 @@ export default function AboutHero() {
     >
       <Navbar light />
       <h1 id="about-hero-title" className="sr-only">
-        About DevInvicta
+        {t('hero.srTitle')}
       </h1>
       <div className="relative flex flex-col items-center px-8 pt-64 pb-80 max-w-[82.5rem] mx-auto">
         <div className="relative flex flex-col items-center" id="di-text-wrap">
-          {/* Line 1: "About" */}
+          {/* Title — letters mapped from translations so the headline localizes
+              while keeping the per-letter reveal animation (line 2 is the brand). */}
           <div className="di-hero-line flex flex-row items-start overflow-hidden" id="di-line-1">
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              A
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              b
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              o
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              u
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              t
-            </div>
+            {t('hero.line1')
+              .split('')
+              .map((ch, i) => (
+                <div
+                  key={i}
+                  className="di-hero-letter block text-5xl md:text-[100px] lg:text-[150px] font-semibold leading-tight md:leading-[100px] lg:leading-[150px] tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]"
+                >
+                  {ch}
+                </div>
+              ))}
           </div>
-          {/* Line 2: "DevInvicta" */}
           <div className="di-hero-line flex flex-row items-start overflow-hidden" id="di-line-2">
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              D
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              e
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              v
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              I
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              n
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              v
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              i
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              c
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              t
-            </div>
-            <div className="di-hero-letter block text-[150px] font-semibold leading-[150px] tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]">
-              a
-            </div>
+            {t('hero.line2')
+              .split('')
+              .map((ch, i) => (
+                <div
+                  key={i}
+                  className="di-hero-letter block text-5xl md:text-[100px] lg:text-[150px] font-semibold leading-tight md:leading-[100px] lg:leading-[150px] tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]"
+                >
+                  {ch}
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -150,7 +127,7 @@ export default function AboutHero() {
               className="di-hero-big-bg w-full h-full bg-cover bg-center bg-no-repeat [filter:grayscale(1)_contrast(1.2)_brightness(0.82)]"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?w=1600&h=900&fit=crop&q=85')",
+                  "url('https://images.unsplash.com/photo-1565626424178-c699f6601afd?w=1600&h=900&fit=crop&q=85')",
               }}
             />
           </div>

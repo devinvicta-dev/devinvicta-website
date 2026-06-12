@@ -1,10 +1,12 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
 
 export default function CardsSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('home')
 
   useGSAP(
     () => {
@@ -64,7 +66,7 @@ export default function CardsSection() {
               className="max-w-[20rem] p-8 text-center text-[clamp(1.25rem,2.5vw,1.875rem)] font-semibold leading-[1.33] tracking-[-0.03em] text-black"
               id="circle-text"
             >
-              We engineer software that scales, performs, and ships
+              {t('cards.circleText')}
             </p>
           </div>
           <div
@@ -90,7 +92,7 @@ export default function CardsSection() {
             >
               <div className="mb-[1.875rem] flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                  Web &amp; Mobile
+                  {t('cards.items.web.label')}
                 </p>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
                   01
@@ -100,11 +102,10 @@ export default function CardsSection() {
                 className="font-semibold leading-[1.33] tracking-[-0.03em] text-black"
                 style={{ fontSize: '1.2rem', marginBottom: '0.75rem' }}
               >
-                Full-stack web &amp; mobile development
+                {t('cards.items.web.title')}
               </h3>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                We engineer performant web apps and native-quality mobile experiences from design to
-                deployment.
+                {t('cards.items.web.body')}
               </p>
             </div>
             <div
@@ -113,7 +114,7 @@ export default function CardsSection() {
             >
               <div className="mb-[1.875rem] flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                  AI &amp; Automation
+                  {t('cards.items.ai.label')}
                 </p>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
                   03
@@ -123,11 +124,10 @@ export default function CardsSection() {
                 className="font-semibold leading-[1.33] tracking-[-0.03em] text-black"
                 style={{ fontSize: '1.2rem', marginBottom: '0.75rem' }}
               >
-                AI agents &amp; intelligent automation
+                {t('cards.items.ai.title')}
               </h3>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                We deploy LLM-powered agents, RAG pipelines, and custom AI automations that cut
-                costs and eliminate repetitive work at scale.
+                {t('cards.items.ai.body')}
               </p>
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function CardsSection() {
             >
               <div className="mb-[1.875rem] flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                  UX / UI
+                  {t('cards.items.design.label')}
                 </p>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
                   02
@@ -148,11 +148,10 @@ export default function CardsSection() {
                 className="font-semibold leading-[1.33] tracking-[-0.03em] text-black"
                 style={{ fontSize: '1.2rem', marginBottom: '0.75rem' }}
               >
-                Product design &amp; user experience
+                {t('cards.items.design.title')}
               </h3>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                We craft interfaces that are both beautiful and intuitive, from wireframes to
-                pixel-perfect prototypes.
+                {t('cards.items.design.body')}
               </p>
             </div>
             <div
@@ -161,7 +160,7 @@ export default function CardsSection() {
             >
               <div className="mb-[1.875rem] flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                  Cloud &amp; Backend
+                  {t('cards.items.cloud.label')}
                 </p>
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-sm font-semibold text-white">
                   04
@@ -171,11 +170,10 @@ export default function CardsSection() {
                 className="font-semibold leading-[1.33] tracking-[-0.03em] text-black"
                 style={{ fontSize: '1.2rem', marginBottom: '0.75rem' }}
               >
-                Cloud infrastructure &amp; backend systems
+                {t('cards.items.cloud.title')}
               </h3>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
-                We architect scalable APIs, microservices, and cloud deployments built for
-                reliability and growth.
+                {t('cards.items.cloud.body')}
               </p>
             </div>
           </div>

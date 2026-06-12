@@ -1,11 +1,13 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
 import WordScrub from '@/components/ui/WordScrub'
 
 export default function ReviewsSection() {
   const sectionRef = useRef<HTMLElement>(null)
+  const t = useTranslations('home')
 
   useGSAP(
     () => {
@@ -103,13 +105,10 @@ export default function ReviewsSection() {
       {/* Marquee */}
       <div className="overflow-hidden bg-white py-12">
         <div className="flex w-max animate-[marquee_28s_linear_infinite] gap-[1.875rem] whitespace-nowrap">
-          {[
-            'Building the future for those who refuse to wait',
-            'Building the future for those who refuse to wait',
-          ].map((item, i) => (
+          {[0, 1].map((i) => (
             <span key={i} className="contents">
               <span className="text-[clamp(2.15rem,10vw,9.3rem)] font-semibold leading-[0.9] tracking-[-0.044em] text-black">
-                {item}
+                {t('reviews.marquee')}
               </span>
               <span className="text-blue">·</span>
             </span>
@@ -127,7 +126,7 @@ export default function ReviewsSection() {
                 as="h2"
                 className="relative z-[1] max-w-[32rem] text-[clamp(1.25rem,2.2vw,1.75rem)] font-semibold leading-[1.3] tracking-[-0.03em] text-black"
               >
-                What clients say about working with us.
+                {t('reviews.headline')}
               </WordScrub>
             </div>
 
@@ -142,7 +141,7 @@ export default function ReviewsSection() {
                   0%
                 </p>
                 <p className="text-sm font-semibold uppercase tracking-[0.05em] text-white/50">
-                  Client satisfaction
+                  {t('reviews.satisfaction')}
                 </p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
@@ -155,7 +154,7 @@ export default function ReviewsSection() {
                     fontWeight: 600,
                   }}
                 >
-                  Also
+                  {t('reviews.also')}
                 </p>
                 <p
                   style={{
@@ -174,7 +173,7 @@ export default function ReviewsSection() {
                       color: 'rgba(255,255,255,0.5)',
                     }}
                   >
-                    Projects delivered
+                    {t('reviews.projectsDelivered')}
                   </span>
                 </p>
               </div>
@@ -197,14 +196,14 @@ export default function ReviewsSection() {
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(0.875rem,1.3vw,1.05rem)] leading-[1.65] text-dark-gray">
-                &ldquo;They built our MVP in just 3 months, with automatic invoicing, AI invoice
-                reading and an integrated HR module. Our team was fully autonomous from day
-                one.&rdquo;
+                {t('reviews.items.fintech.quote')}
               </p>
               <div className="mt-auto flex items-center gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-black">Fintech Start-up</p>
-                  <p className="text-xs text-dark-gray">MVP delivered in 3 months</p>
+                  <p className="text-sm font-semibold text-black">
+                    {t('reviews.items.fintech.name')}
+                  </p>
+                  <p className="text-xs text-dark-gray">{t('reviews.items.fintech.meta')}</p>
                 </div>
               </div>
             </div>
@@ -215,13 +214,14 @@ export default function ReviewsSection() {
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(0.875rem,1.3vw,1.05rem)] leading-[1.65] text-white/85">
-                &ldquo;Our new institutional site went live with a full admin platform and AI that
-                categorises and prioritises every contact request. Live from day one.&rdquo;
+                {t('reviews.items.europacolon.quote')}
               </p>
               <div className="mt-auto flex items-center gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-white">Europacolon Portugal</p>
-                  <p className="text-xs text-white/55">europacolon.pt</p>
+                  <p className="text-sm font-semibold text-white">
+                    {t('reviews.items.europacolon.name')}
+                  </p>
+                  <p className="text-xs text-white/55">{t('reviews.items.europacolon.meta')}</p>
                 </div>
               </div>
             </div>
@@ -232,14 +232,14 @@ export default function ReviewsSection() {
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(1rem,1.6vw,1.25rem)] font-medium leading-[1.65] text-white/85">
-                &ldquo;They migrated us to a modern stack, rebuilt our quotation engine with AI and
-                automated our commercial workflows. Conversion is up more than 50% and the system is
-                noticeably faster.&rdquo;
+                {t('reviews.items.insurance.quote')}
               </p>
               <div className="mt-auto flex items-center gap-3 border-t border-white/15 pt-5">
                 <div>
-                  <p className="text-sm font-semibold text-white">Insurance Start-up</p>
-                  <p className="text-xs text-white/55">Conversion up &gt;50%</p>
+                  <p className="text-sm font-semibold text-white">
+                    {t('reviews.items.insurance.name')}
+                  </p>
+                  <p className="text-xs text-white/55">{t('reviews.items.insurance.meta')}</p>
                 </div>
               </div>
             </div>
@@ -250,14 +250,14 @@ export default function ReviewsSection() {
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(0.875rem,1.3vw,1.05rem)] leading-[1.65] text-dark-gray">
-                &ldquo;A modern site, a full admin platform and AI built into our operations, all
-                delivered in 4 months. We&apos;ve seen a considerable rise in clients since
-                launch.&rdquo;
+                {t('reviews.items.vmoove.quote')}
               </p>
               <div className="mt-auto flex items-center gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-black">Vmoove Transfers</p>
-                  <p className="text-xs text-dark-gray">vmoovetransfers.com</p>
+                  <p className="text-sm font-semibold text-black">
+                    {t('reviews.items.vmoove.name')}
+                  </p>
+                  <p className="text-xs text-dark-gray">{t('reviews.items.vmoove.meta')}</p>
                 </div>
               </div>
             </div>

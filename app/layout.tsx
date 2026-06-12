@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter_Tight } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
 import '@/styles/globals.css'
 import SmoothScroll from '@/components/ui/SmoothScroll'
 
@@ -32,7 +34,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -47,13 +52,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
 
   return (
-    <html lang="en" className={interTight.variable}>
+    <html lang={locale} className={interTight.variable}>
       <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
-        <SmoothScroll>{children}</SmoothScroll>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <SmoothScroll>{children}</SmoothScroll>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

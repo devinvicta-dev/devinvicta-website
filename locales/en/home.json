@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "wordLeft": "Building",
+    "wordRight": "your dreams",
+    "tagline": "AI agents, web platforms and mobile apps engineered to scale, automate and outperform."
+  },
+  "about": {
+    "label": "About us",
+    "headline": "We partner with ambitious teams building the next wave of AI-powered products",
+    "quote": "“They shipped our AI agent pipeline in three weeks. The system handles 80% of our support tickets automatically. We couldn’t have imagined this speed without them.”",
+    "cta": "Let's talk",
+    "yearsLabel": "Years of experience"
+  },
+  "differentiators": {
+    "badge": "Why DevInvicta",
+    "headline": "We build AI software differently, responsible by default and proven before you pay",
+    "items": {
+      "compliance": {
+        "label": "Compliant by design",
+        "title": "EU AI Act compliance built in",
+        "body": "We engineer responsible AI from day one, with governance, transparency and risk controls baked into every system we ship."
+      },
+      "pricing": {
+        "label": "Transparent pricing",
+        "title": "A free diagnostic, then phased pricing",
+        "body": "Start with a no-cost diagnostic and pay in clear phases as you see results. No bloated retainers, no surprises."
+      },
+      "engineering": {
+        "label": "Senior engineering",
+        "title": "Production-ready AI, not demos",
+        "body": "Senior engineers deliver AI that runs in production at scale, tested and observable, ready for real users on day one."
+      },
+      "bespoke": {
+        "label": "Bespoke and built to last",
+        "title": "Software tailored to your business",
+        "body": "Every build is shaped around your workflows and goals, crafted to stay maintainable and valuable for years to come."
+      }
+    }
+  },
+  "cards": {
+    "circleText": "We engineer software that scales, performs, and ships",
+    "items": {
+      "web": {
+        "label": "Web & Mobile",
+        "title": "Full-stack web & mobile development",
+        "body": "We engineer performant web apps and native-quality mobile experiences from design to deployment."
+      },
+      "design": {
+        "label": "UX / UI",
+        "title": "Product design & user experience",
+        "body": "We craft interfaces that are both beautiful and intuitive, from wireframes to pixel-perfect prototypes."
+      },
+      "ai": {
+        "label": "AI & Automation",
+        "title": "AI agents & intelligent automation",
+        "body": "We deploy LLM-powered agents, RAG pipelines, and custom AI automations that cut costs and eliminate repetitive work at scale."
+      },
+      "cloud": {
+        "label": "Cloud & Backend",
+        "title": "Cloud infrastructure & backend systems",
+        "body": "We architect scalable APIs, microservices, and cloud deployments built for reliability and growth."
+      }
+    }
+  },
+  "serviceV1": {
+    "headline": "AI-first engineering, from intelligent agents to full-stack products",
+    "cta": "Let's talk",
+    "body": "We build AI agents, automate business workflows, and engineer web & mobile platforms, delivering intelligent software that scales from day one.",
+    "items": {
+      "web": "Web Development",
+      "mobile": "Mobile App Development",
+      "ai": "AI Agents & Automation",
+      "design": "UX/UI Design",
+      "cloud": "Cloud & Backend Solutions"
+    }
+  },
+  "serviceV2": {
+    "headline": "We tailor software the way it should be: measured to your business, built to last.",
+    "items": {
+      "web": "Web Development",
+      "mobile": "Mobile Apps",
+      "ai": "AI Agents & LLM Integration",
+      "design": "UX/UI Design",
+      "automation": "AI Automation & Workflows",
+      "cloud": "Cloud & Backend"
+    }
+  },
+  "reviews": {
+    "marquee": "Building the future for those who refuse to wait",
+    "headline": "What clients say about working with us.",
+    "satisfaction": "Client satisfaction",
+    "also": "Also",
+    "projectsDelivered": "Projects delivered",
+    "items": {
+      "fintech": {
+        "quote": "“They built our MVP in just 3 months, with automatic invoicing, AI invoice reading and an integrated HR module. Our team was fully autonomous from day one.”",
+        "name": "Fintech Start-up",
+        "meta": "MVP delivered in 3 months"
+      },
+      "europacolon": {
+        "quote": "“Our new institutional site went live with a full admin platform and AI that categorises and prioritises every contact request. Live from day one.”",
+        "name": "Europacolon Portugal",
+        "meta": "europacolon.pt"
+      },
+      "insurance": {
+        "quote": "“They migrated us to a modern stack, rebuilt our quotation engine with AI and automated our commercial workflows. Conversion is up more than 50% and the system is noticeably faster.”",
+        "name": "Insurance Start-up",
+        "meta": "Conversion up >50%"
+      },
+      "vmoove": {
+        "quote": "“A modern site, a full admin platform and AI built into our operations, all delivered in 4 months. We’ve seen a considerable rise in clients since launch.”",
+        "name": "Vmoove Transfers",
+        "meta": "vmoovetransfers.com"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Find clear answers about our process, services and how we work with clients.",
+    "ctaTitle": "Can't find your answer?",
+    "ctaBody": "If you have questions or need more details, feel free to reach out.",
+    "ctaButton": "Let's talk",
+    "items": {
+      "aiAct": {
+        "question": "What is the AI Act and how does it affect my company?",
+        "answer": "The AI Act is the European regulation that classifies and regulates AI systems by risk level. DevInvicta ensures all software we develop is in full compliance, protecting your business from legal risks and sanctions."
+      },
+      "timeline": {
+        "question": "How long does it take to develop a custom project?",
+        "answer": "It varies a lot from project to project. We always try to work in phases, so you pay as you see concrete results. After the free diagnosis, we present a phased plan adapted to your business reality."
+      },
+      "monitoring": {
+        "question": "How is the project monitored along the way?",
+        "answer": "We keep regular communication with you throughout the project: progress meetings, progress reports and direct access to the team. You are always aware of every decision and result."
+      },
+      "scalable": {
+        "question": "Is the software scalable as we grow?",
+        "answer": "Yes. From the start we design each solution’s architecture with scalability at its core. Your software grows with us, with no need to rebuild from scratch."
+      },
+      "tech": {
+        "question": "What technologies and languages do you work with?",
+        "answer": "We work with the most recent technologies suited to each project, from Python, Node.js and React to AI frameworks like TensorFlow and LangChain. The choice is always guided by the best result for you."
+      },
+      "sector": {
+        "question": "Have you worked with companies in my sector?",
+        "answer": "Yes. We have experience in sectors like fintech, insurance, e-commerce, healthcare, maritime transport and manufacturing. Check our case studies or talk to us to see how we can help in your specific sector."
+      },
+      "confidentiality": {
+        "question": "How do you guarantee the confidentiality of my data and projects?",
+        "answer": "All projects are protected by confidentiality agreements (NDA). Client data is handled with total security and in compliance with GDPR and other applicable regulations."
+      },
+      "afterDelivery": {
+        "question": "What happens after the project is delivered?",
+        "answer": "We offer continuous maintenance and support plans, adapted to each client’s needs. Many of our projects include ongoing follow-up to ensure the software evolves with your business."
+      },
+      "pricing": {
+        "question": "How does the pricing structure work?",
+        "answer": "We work in a transparent, phased way, you pay as you see results. After the free diagnosis, we present a detailed proposal with clear investments per phase, no surprises."
+      },
+      "diagnosis": {
+        "question": "How does the free diagnosis work?",
+        "answer": "We schedule an initial no-commitment meeting where we analyze your business challenges and opportunities. At the end, we deliver a clear proposal with concrete solutions and the respective investments."
+      }
+    }
+  }
+}

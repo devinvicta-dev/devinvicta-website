@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "wordLeft": "Construindo",
+    "wordRight": "seus sonhos",
+    "tagline": "Agentes de IA, plataformas web e apps móveis projetados para escalar, automatizar e superar."
+  },
+  "about": {
+    "label": "Sobre nós",
+    "headline": "Trabalhamos com equipas ambiciosas que constroem a nova geração de produtos com IA",
+    "quote": "“Lançaram a nossa pipeline de agentes de IA em três semanas. O sistema trata automaticamente 80% dos nossos pedidos de suporte. Não imaginávamos esta rapidez sem eles.”",
+    "cta": "Vamos conversar",
+    "yearsLabel": "Anos de experiência"
+  },
+  "differentiators": {
+    "badge": "Porquê a DevInvicta",
+    "headline": "Construímos software de IA de forma diferente, responsável por defeito e comprovado antes de pagar",
+    "items": {
+      "compliance": {
+        "label": "Conformidade por design",
+        "title": "Conformidade com o EU AI Act incorporada",
+        "body": "Desenvolvemos IA responsável desde o primeiro dia, com governação, transparência e controlos de risco integrados em cada sistema que entregamos."
+      },
+      "pricing": {
+        "label": "Preços transparentes",
+        "title": "Um diagnóstico gratuito, depois preços por fases",
+        "body": "Comece com um diagnóstico sem custos e pague em fases claras à medida que vê resultados. Sem avenças inflacionadas, sem surpresas."
+      },
+      "engineering": {
+        "label": "Engenharia sénior",
+        "title": "IA pronta para produção, não demonstrações",
+        "body": "Engenheiros séniores entregam IA que corre em produção à escala, testada e observável, pronta para utilizadores reais desde o primeiro dia."
+      },
+      "bespoke": {
+        "label": "Feito à medida e para durar",
+        "title": "Software adaptado ao seu negócio",
+        "body": "Cada desenvolvimento é moldado em torno dos seus fluxos de trabalho e objetivos, criado para se manter sustentável e valioso durante anos."
+      }
+    }
+  },
+  "cards": {
+    "circleText": "Desenvolvemos software que escala, tem desempenho e é entregue",
+    "items": {
+      "web": {
+        "label": "Web & Mobile",
+        "title": "Desenvolvimento web & mobile full-stack",
+        "body": "Desenvolvemos aplicações web de elevado desempenho e experiências móveis de qualidade nativa, do design à implementação."
+      },
+      "design": {
+        "label": "UX / UI",
+        "title": "Design de produto & experiência do utilizador",
+        "body": "Criamos interfaces simultaneamente bonitas e intuitivas, de wireframes a protótipos pixel-perfect."
+      },
+      "ai": {
+        "label": "IA & Automação",
+        "title": "Agentes de IA & automação inteligente",
+        "body": "Implementamos agentes baseados em LLM, pipelines RAG e automações de IA à medida que reduzem custos e eliminam trabalho repetitivo à escala."
+      },
+      "cloud": {
+        "label": "Cloud & Backend",
+        "title": "Infraestrutura cloud & sistemas de backend",
+        "body": "Arquitetamos APIs escaláveis, microsserviços e implementações na cloud preparadas para fiabilidade e crescimento."
+      }
+    }
+  },
+  "serviceV1": {
+    "headline": "Engenharia AI-first, de agentes inteligentes a produtos full-stack",
+    "cta": "Vamos conversar",
+    "body": "Construímos agentes de IA, automatizamos fluxos de trabalho de negócio e desenvolvemos plataformas web & mobile, entregando software inteligente que escala desde o primeiro dia.",
+    "items": {
+      "web": "Desenvolvimento Web",
+      "mobile": "Desenvolvimento de Apps Móveis",
+      "ai": "Agentes de IA & Automação",
+      "design": "Design UX/UI",
+      "cloud": "Soluções Cloud & Backend"
+    }
+  },
+  "serviceV2": {
+    "headline": "Adaptamos o software como deve ser: à medida do seu negócio, construído para durar.",
+    "items": {
+      "web": "Desenvolvimento Web",
+      "mobile": "Apps Móveis",
+      "ai": "Agentes de IA & Integração de LLM",
+      "design": "Design UX/UI",
+      "automation": "Automação & Fluxos de IA",
+      "cloud": "Cloud & Backend"
+    }
+  },
+  "reviews": {
+    "marquee": "A construir o futuro para quem se recusa a esperar",
+    "headline": "O que os clientes dizem sobre trabalhar connosco.",
+    "satisfaction": "Satisfação dos clientes",
+    "also": "Também",
+    "projectsDelivered": "Projetos entregues",
+    "items": {
+      "fintech": {
+        "quote": "“Construíram o nosso MVP em apenas 3 meses, com faturação automática, leitura de faturas por IA e um módulo de RH integrado. A nossa equipa ficou totalmente autónoma desde o primeiro dia.”",
+        "name": "Start-up Fintech",
+        "meta": "MVP entregue em 3 meses"
+      },
+      "europacolon": {
+        "quote": "“O nosso novo site institucional entrou em funcionamento com uma plataforma de administração completa e IA que categoriza e prioriza cada pedido de contacto. Operacional desde o primeiro dia.”",
+        "name": "Europacolon Portugal",
+        "meta": "europacolon.pt"
+      },
+      "insurance": {
+        "quote": "“Migraram-nos para uma stack moderna, reconstruíram o nosso motor de cotações com IA e automatizaram os nossos fluxos comerciais. A conversão subiu mais de 50% e o sistema é nitidamente mais rápido.”",
+        "name": "Start-up de Seguros",
+        "meta": "Conversão +50%"
+      },
+      "vmoove": {
+        "quote": "“Um site moderno, uma plataforma de administração completa e IA integrada nas nossas operações, tudo entregue em 4 meses. Vimos um aumento considerável de clientes desde o lançamento.”",
+        "name": "Vmoove Transfers",
+        "meta": "vmoovetransfers.com"
+      }
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "subtitle": "Encontre respostas claras sobre o nosso processo, serviços e como trabalhamos com os clientes.",
+    "ctaTitle": "Não encontra a sua resposta?",
+    "ctaBody": "Se tiver questões ou precisar de mais detalhes, não hesite em contactar-nos.",
+    "ctaButton": "Vamos conversar",
+    "items": {
+      "aiAct": {
+        "question": "O que é o AI Act e como afeta a minha empresa?",
+        "answer": "O AI Act é o regulamento europeu que classifica e regula os sistemas de IA por nível de risco. A DevInvicta garante que todo o software que desenvolvemos está em total conformidade, protegendo o seu negócio de riscos legais e sanções."
+      },
+      "timeline": {
+        "question": "Quanto tempo demora a desenvolver um projeto à medida?",
+        "answer": "Varia muito de projeto para projeto. Procuramos sempre trabalhar por fases, para que pague à medida que vê resultados concretos. Após o diagnóstico gratuito, apresentamos um plano por fases adaptado à realidade do seu negócio."
+      },
+      "monitoring": {
+        "question": "Como é acompanhado o projeto ao longo do percurso?",
+        "answer": "Mantemos comunicação regular consigo durante todo o projeto: reuniões de progresso, relatórios de progresso e acesso direto à equipa. Está sempre a par de cada decisão e resultado."
+      },
+      "scalable": {
+        "question": "O software é escalável à medida que crescemos?",
+        "answer": "Sim. Desde o início concebemos a arquitetura de cada solução com a escalabilidade no centro. O seu software cresce connosco, sem necessidade de reconstruir de raiz."
+      },
+      "tech": {
+        "question": "Com que tecnologias e linguagens trabalham?",
+        "answer": "Trabalhamos com as tecnologias mais recentes adequadas a cada projeto, de Python, Node.js e React a frameworks de IA como TensorFlow e LangChain. A escolha é sempre guiada pelo melhor resultado para si."
+      },
+      "sector": {
+        "question": "Já trabalharam com empresas do meu setor?",
+        "answer": "Sim. Temos experiência em setores como fintech, seguros, e-commerce, saúde, transporte marítimo e indústria. Consulte os nossos casos de estudo ou fale connosco para ver como podemos ajudar no seu setor específico."
+      },
+      "confidentiality": {
+        "question": "Como garantem a confidencialidade dos meus dados e projetos?",
+        "answer": "Todos os projetos estão protegidos por acordos de confidencialidade (NDA). Os dados dos clientes são tratados com total segurança e em conformidade com o RGPD e outros regulamentos aplicáveis."
+      },
+      "afterDelivery": {
+        "question": "O que acontece após a entrega do projeto?",
+        "answer": "Oferecemos planos contínuos de manutenção e suporte, adaptados às necessidades de cada cliente. Muitos dos nossos projetos incluem acompanhamento contínuo para garantir que o software evolui com o seu negócio."
+      },
+      "pricing": {
+        "question": "Como funciona a estrutura de preços?",
+        "answer": "Trabalhamos de forma transparente e por fases, paga à medida que vê resultados. Após o diagnóstico gratuito, apresentamos uma proposta detalhada com investimentos claros por fase, sem surpresas."
+      },
+      "diagnosis": {
+        "question": "Como funciona o diagnóstico gratuito?",
+        "answer": "Agendamos uma reunião inicial sem compromisso onde analisamos os desafios e oportunidades do seu negócio. No final, entregamos uma proposta clara com soluções concretas e os respetivos investimentos."
+      }
+    }
+  }
+}
