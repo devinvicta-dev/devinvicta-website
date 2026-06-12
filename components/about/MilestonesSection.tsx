@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import WordScrub from '@/components/ui/WordScrub'
 import { milestones } from '@/data/milestones'
 
@@ -14,6 +15,11 @@ export default function MilestonesSection() {
     () => {
       const rows = gsap.utils.toArray<HTMLElement>('.milestone-row')
       if (!rows.length) return
+
+      if (prefersReducedMotion()) {
+        gsap.set(rows, { y: 0, opacity: 1 })
+        return
+      }
 
       gsap.set(rows, { y: 28, opacity: 0, force3D: true })
 

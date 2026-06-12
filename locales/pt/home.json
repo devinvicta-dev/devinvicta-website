@@ -1,13 +1,17 @@
 {
+  "meta": {
+    "title": "DevInvicta | Agentes de IA, Web & Mobile Software House",
+    "description": "Agentes de IA, plataformas web e apps móveis para equipas ambiciosas. Conformidade EU AI Act, comprovado antes de pagar."
+  },
   "hero": {
-    "wordLeft": "Construindo",
-    "wordRight": "seus sonhos",
-    "tagline": "Agentes de IA, plataformas web e apps móveis projetados para escalar, automatizar e superar."
+    "wordLeft": "A criar",
+    "wordRight": "negócios",
+    "tagline": "Agentes de IA, plataformas web e apps móveis concebidos para escalar, automatizar e superar."
   },
   "about": {
     "label": "Sobre nós",
-    "headline": "Trabalhamos com equipas ambiciosas que constroem a nova geração de produtos com IA",
-    "quote": "“Lançaram a nossa pipeline de agentes de IA em três semanas. O sistema trata automaticamente 80% dos nossos pedidos de suporte. Não imaginávamos esta rapidez sem eles.”",
+    "headline": "Trabalhamos com equipas ambiciosas que integram IA no centro das suas operações",
+    "quote": "\"Lançaram a nossa pipeline de agentes de IA em três semanas. O sistema trata automaticamente 80% dos nossos pedidos de suporte. Não imaginávamos esta rapidez sem eles.\"",
     "cta": "Vamos conversar",
     "yearsLabel": "Anos de experiência"
   },
@@ -69,9 +73,10 @@
     "items": {
       "web": "Desenvolvimento Web",
       "mobile": "Desenvolvimento de Apps Móveis",
-      "ai": "Agentes de IA & Automação",
+      "ai": "Fluxos de IA: LLM, ML & Agentes",
       "design": "Design UX/UI",
-      "cloud": "Soluções Cloud & Backend"
+      "cloud": "Soluções Cloud & Backend",
+      "outsourcing": "Outsourcing"
     }
   },
   "serviceV2": {
@@ -82,7 +87,8 @@
       "ai": "Agentes de IA & Integração de LLM",
       "design": "Design UX/UI",
       "automation": "Automação & Fluxos de IA",
-      "cloud": "Cloud & Backend"
+      "cloud": "Cloud & Backend",
+      "outsourcing": "Outsourcing"
     }
   },
   "reviews": {
@@ -93,22 +99,22 @@
     "projectsDelivered": "Projetos entregues",
     "items": {
       "fintech": {
-        "quote": "“Construíram o nosso MVP em apenas 3 meses, com faturação automática, leitura de faturas por IA e um módulo de RH integrado. A nossa equipa ficou totalmente autónoma desde o primeiro dia.”",
+        "quote": "\"Construíram o nosso MVP em apenas 3 meses, com faturação automática, leitura de faturas por IA e um módulo de RH integrado. A nossa equipa ficou totalmente autónoma desde o primeiro dia.\"",
         "name": "Start-up Fintech",
         "meta": "MVP entregue em 3 meses"
       },
       "europacolon": {
-        "quote": "“O nosso novo site institucional entrou em funcionamento com uma plataforma de administração completa e IA que categoriza e prioriza cada pedido de contacto. Operacional desde o primeiro dia.”",
+        "quote": "\"O nosso novo site institucional entrou em funcionamento com uma plataforma de administração completa e IA que categoriza e prioriza cada pedido de contacto. Operacional desde o primeiro dia.\"",
         "name": "Europacolon Portugal",
         "meta": "europacolon.pt"
       },
       "insurance": {
-        "quote": "“Migraram-nos para uma stack moderna, reconstruíram o nosso motor de cotações com IA e automatizaram os nossos fluxos comerciais. A conversão subiu mais de 50% e o sistema é nitidamente mais rápido.”",
+        "quote": "\"Migraram-nos para uma stack moderna, reconstruíram o nosso motor de cotações com IA e automatizaram os nossos fluxos comerciais. A conversão subiu mais de 50% e o sistema é nitidamente mais rápido.\"",
         "name": "Start-up de Seguros",
         "meta": "Conversão +50%"
       },
       "vmoove": {
-        "quote": "“Um site moderno, uma plataforma de administração completa e IA integrada nas nossas operações, tudo entregue em 4 meses. Vimos um aumento considerável de clientes desde o lançamento.”",
+        "quote": "\"Um site moderno, uma plataforma de administração completa e IA integrada nas nossas operações, tudo entregue em 4 meses. Vimos um aumento considerável de clientes desde o lançamento.\"",
         "name": "Vmoove Transfers",
         "meta": "vmoovetransfers.com"
       }

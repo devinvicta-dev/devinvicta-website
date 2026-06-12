@@ -3,8 +3,17 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 
-const SERVICE_KEYS = ['ai', 'web', 'mobile', 'cloud', 'design', 'automation'] as const
+const SERVICE_KEYS = [
+  'ai',
+  'web',
+  'mobile',
+  'cloud',
+  'design',
+  'automation',
+  'outsourcing',
+] as const
 
 export default function ServicesDarkSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -12,6 +21,10 @@ export default function ServicesDarkSection() {
 
   useGSAP(
     () => {
+      if (prefersReducedMotion()) {
+        gsap.set(gsap.utils.toArray<HTMLElement>('.services-dark-item'), { x: 0, opacity: 1 })
+        return
+      }
       gsap.utils.toArray<HTMLElement>('.services-dark-item').forEach((el) => {
         gsap.set(el, { x: -22, opacity: 0 })
         ScrollTrigger.create({

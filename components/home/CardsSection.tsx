@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 
 export default function CardsSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -12,6 +13,13 @@ export default function CardsSection() {
     () => {
       const section = sectionRef.current
       if (!section) return
+
+      if (prefersReducedMotion()) {
+        gsap.set(['#card-1', '#card-2', '#card-3', '#card-4'], { opacity: 1, x: 0, y: 0 })
+        gsap.set('.circle-inner', { scale: 1, opacity: 1 })
+        gsap.set(['#circle-two', '#circle-three'], { scale: 1, opacity: 1 })
+        return
+      }
 
       if (window.innerWidth > 767) {
         // Desktop: sticky scroll carousel animation
@@ -59,22 +67,22 @@ export default function CardsSection() {
 
   return (
     <section className="relative h-auto md:h-[700vh]" id="cards-section" ref={sectionRef}>
-      <div className="relative top-auto flex h-auto w-full flex-col items-center justify-center overflow-visible bg-ivory p-6 md:sticky md:top-0 md:h-screen md:flex-row md:overflow-hidden md:p-0">
+      <div className="relative top-auto flex h-auto w-full flex-col items-center justify-center overflow-visible bg-ivory p-6 md:sticky md:top-0 md:h-lvh md:flex-row md:overflow-hidden md:p-0">
         <div className="hidden md:relative md:flex md:items-center md:justify-center">
-          <div className="circle-inner relative z-[2] flex h-[28rem] w-[28rem] items-center justify-center rounded-full border-[0.0625rem] border-dashed border-black/30">
+          <div className="circle-inner relative z-2 flex h-112 w-112 items-center justify-center rounded-full border border-dashed border-black/30">
             <p
-              className="max-w-[20rem] p-8 text-center text-[clamp(1.25rem,2.5vw,1.875rem)] font-semibold leading-[1.33] tracking-[-0.03em] text-black"
+              className="max-w-80 p-8 text-center text-[clamp(1.25rem,2.5vw,1.875rem)] font-semibold leading-[1.33] tracking-[-0.03em] text-black"
               id="circle-text"
             >
               {t('cards.circleText')}
             </p>
           </div>
           <div
-            className="absolute h-[48rem] w-[48rem] scale-[0.3] rounded-full border-[0.0625rem] border-black/15 opacity-0"
+            className="absolute h-192 w-192 scale-30 rounded-full border border-black/15 opacity-0"
             id="circle-two"
           ></div>
           <div
-            className="absolute h-[70rem] w-[70rem] scale-[0.3] rounded-full border-[0.0625rem] border-black/10 opacity-0"
+            className="absolute h-280 w-280 scale-30 rounded-full border border-black/10 opacity-0"
             id="circle-three"
           ></div>
         </div>
@@ -84,13 +92,13 @@ export default function CardsSection() {
           <div data-dot="2"></div>
           <div data-dot="3"></div>
         </div>
-        <div className="relative inset-auto flex w-full max-w-none flex-col items-stretch justify-start gap-4 p-0 md:pointer-events-none md:absolute md:bottom-0 md:left-1/2 md:top-0 md:max-w-[85rem] md:-translate-x-1/2 md:flex-row md:items-center md:justify-between md:gap-0 md:px-16 md:py-0">
-          <div className="contents md:flex md:w-[16rem] md:flex-col md:gap-8 lg:w-[22rem]">
+        <div className="relative inset-auto flex w-full max-w-none flex-col items-stretch justify-start gap-4 p-0 md:pointer-events-none md:absolute md:bottom-0 md:left-1/2 md:top-0 md:max-w-340 md:-translate-x-1/2 md:flex-row md:items-center md:justify-between md:gap-0 md:px-16 md:py-0">
+          <div className="contents md:flex md:w-64 md:flex-col md:gap-8 lg:w-88">
             <div
-              className="card-item pointer-events-auto relative order-1 w-full max-w-none rounded-card bg-white p-[1.875rem] opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
+              className="card-item pointer-events-auto relative order-1 w-full max-w-none rounded-card bg-white p-7.5 opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
               id="card-1"
             >
-              <div className="mb-[1.875rem] flex items-center justify-between">
+              <div className="mb-7.5 flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
                   {t('cards.items.web.label')}
                 </p>
@@ -109,10 +117,10 @@ export default function CardsSection() {
               </p>
             </div>
             <div
-              className="card-item pointer-events-auto relative order-3 w-full max-w-none rounded-card bg-white p-[1.875rem] opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
+              className="card-item pointer-events-auto relative order-3 w-full max-w-none rounded-card bg-white p-7.5 opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
               id="card-3"
             >
-              <div className="mb-[1.875rem] flex items-center justify-between">
+              <div className="mb-7.5 flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
                   {t('cards.items.ai.label')}
                 </p>
@@ -131,12 +139,12 @@ export default function CardsSection() {
               </p>
             </div>
           </div>
-          <div className="contents md:flex md:w-[16rem] md:flex-col md:gap-8 lg:w-[22rem]">
+          <div className="contents md:flex md:w-64 md:flex-col md:gap-8 lg:w-88">
             <div
-              className="card-item pointer-events-auto relative order-2 w-full max-w-none rounded-card bg-white p-[1.875rem] opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
+              className="card-item pointer-events-auto relative order-2 w-full max-w-none rounded-card bg-white p-7.5 opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
               id="card-2"
             >
-              <div className="mb-[1.875rem] flex items-center justify-between">
+              <div className="mb-7.5 flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
                   {t('cards.items.design.label')}
                 </p>
@@ -155,10 +163,10 @@ export default function CardsSection() {
               </p>
             </div>
             <div
-              className="card-item pointer-events-auto relative order-4 w-full max-w-none rounded-card bg-white p-[1.875rem] opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
+              className="card-item pointer-events-auto relative order-4 w-full max-w-none rounded-card bg-white p-7.5 opacity-100 shadow-[0_2px_24px_rgba(0,0,0,0.06)] md:[will-change:transform,opacity]"
               id="card-4"
             >
-              <div className="mb-[1.875rem] flex items-center justify-between">
+              <div className="mb-7.5 flex items-center justify-between">
                 <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.875rem' }}>
                   {t('cards.items.cloud.label')}
                 </p>

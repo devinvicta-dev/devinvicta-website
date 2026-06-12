@@ -9,6 +9,21 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: { canonical: '/contact' },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: t('meta.title'),
+      description: t('meta.description'),
+      url: 'https://devinvicta.com/contact',
+      siteName: 'DevInvicta',
+      locale: 'pt_PT',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('meta.title'),
+      description: t('meta.description'),
+    },
   }
 }
 

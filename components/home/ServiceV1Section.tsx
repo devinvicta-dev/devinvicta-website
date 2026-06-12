@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import WordScrub from '@/components/ui/WordScrub'
 import SlideButton from '@/components/ui/SlideButton'
 
@@ -14,6 +15,7 @@ const SERVICE_ITEMS = [
   { num: '(03)', key: 'ai', svc: '3', slug: 'ai-agents-llm' },
   { num: '(04)', key: 'design', svc: '4', slug: 'ux-ui-design' },
   { num: '(05)', key: 'cloud', svc: '5', slug: 'cloud-backend' },
+  { num: '(06)', key: 'outsourcing', svc: '6', slug: 'outsourcing' },
 ] as const
 
 export default function ServiceV1Section() {
@@ -33,6 +35,12 @@ export default function ServiceV1Section() {
     () => {
       const section = sectionRef.current
       if (!section || window.innerWidth > 767) return
+
+      if (prefersReducedMotion()) {
+        const svcItems = section.querySelectorAll<HTMLElement>('.svc-item')
+        if (svcItems.length) gsap.set(svcItems, { opacity: 1, y: 0 })
+        return
+      }
 
       // Mobile-only: gentle staggered entrance for the service rows.
       const svcItems = section.querySelectorAll<HTMLElement>('.svc-item')
@@ -57,7 +65,7 @@ export default function ServiceV1Section() {
     <section className="h-auto pt-14 md:pt-28" id="services" ref={sectionRef}>
       <div className="relative">
         <div className="mx-auto max-w-page px-5 md:px-8">
-          <div className="mb-8 flex flex-col items-start gap-5 md:mb-[5.625rem] md:flex-row md:items-center md:justify-between md:gap-[1.875rem]">
+          <div className="mb-8 flex flex-col items-start gap-5 md:mb-22.5 md:flex-row md:items-center md:justify-between md:gap-7.5">
             <WordScrub className="max-w-[39.375rem] text-[clamp(1.5625rem,3.5vw,2.5rem)] font-semibold leading-[1.25] tracking-[-0.03em] text-black">
               {t('serviceV1.headline')}
             </WordScrub>
@@ -65,8 +73,8 @@ export default function ServiceV1Section() {
               <SlideButton href="/contact" text={t('serviceV1.cta')} />
             </div>
           </div>
-          <div className="flex flex-col gap-[1.875rem] lg:flex-row lg:items-start lg:justify-between">
-            <div className="flex w-full max-w-full flex-1 flex-col gap-[3.375rem] lg:max-w-[18.75rem]">
+          <div className="flex flex-col gap-7.5 lg:flex-row lg:items-start lg:justify-between">
+            <div className="flex w-full max-w-full flex-1 flex-col gap-[3.375rem] lg:max-w-75">
               <div className="relative overflow-hidden rounded-soft max-md:hidden">
                 <Image
                   src="/assets/images/service-1.jpg"
@@ -113,27 +121,38 @@ export default function ServiceV1Section() {
                 {t('serviceV1.body')}
               </p>
             </div>
-            <div className="flex max-w-[48.125rem] flex-1 flex-col">
+            <div className="flex max-w-192.5 flex-1 flex-col">
               {SERVICE_ITEMS.map((svc, i) => (
                 <Link
                   key={svc.svc}
                   href={`/service-detail/${svc.slug}`}
                   onMouseEnter={() => showImage(i)}
                   onMouseLeave={() => showImage(0)}
-                  className="svc-item group relative block cursor-pointer overflow-hidden border-b-[0.0625rem] border-black/[0.12] before:absolute before:inset-0 before:z-0 before:-translate-x-full before:bg-black before:content-[''] before:[transition:transform_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)] md:hover:before:translate-x-0"
+                  className="svc-item group relative block cursor-pointer overflow-hidden border-b border-black/[0.12] before:absolute before:inset-0 before:z-0 before:-translate-x-full before:bg-black before:content-[''] before:[transition:transform_0.4s_cubic-bezier(0.25,0.46,0.45,0.94)] md:hover:before:translate-x-0"
                   data-svc={svc.svc}
                 >
-                  <div className="relative z-[1] flex items-center justify-between px-[1.875rem] py-[2.8125rem]">
+                  <div className="relative z-1 flex items-center justify-between px-7.5 py-11.25">
                     <span className="min-w-[3rem] text-sm font-semibold text-dark-gray [transition:color_0.35s] md:group-hover:text-white">
                       {svc.num}
                     </span>
                     <span className="flex-1 px-[1.875rem] text-2xl font-semibold text-black [transition:color_0.35s] md:group-hover:text-white">
                       {t(`serviceV1.items.${svc.key}`)}
                     </span>
-                    <div className="flex h-8 w-8 items-center justify-center overflow-hidden">
-                      <img
+                    <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden">
+                      <Image
                         src="/assets/svgs/arrow-black.svg"
-                        className="w-5 [transition:transform_0.3s] md:group-hover:translate-x-1 md:group-hover:-translate-y-1 md:group-hover:invert"
+                        width={20}
+                        height={20}
+                        unoptimized
+                        className="absolute w-5 [transition:opacity_0.3s,transform_0.3s] md:group-hover:translate-x-1 md:group-hover:-translate-y-1 md:group-hover:opacity-0"
+                        alt=""
+                      />
+                      <Image
+                        src="/assets/svgs/arrow-white.svg"
+                        width={20}
+                        height={20}
+                        unoptimized
+                        className="absolute w-5 opacity-0 [transition:opacity_0.3s,transform_0.3s] md:group-hover:translate-x-1 md:group-hover:-translate-y-1 md:group-hover:opacity-100"
                         alt="→"
                       />
                     </div>

@@ -1,9 +1,10 @@
 'use client'
 
 import { useRef } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP } from '@/lib/gsap'
-import { SWING_TO } from '@/lib/animations/easing'
+import { SWING_TO, prefersReducedMotion } from '@/lib/animations/easing'
 import Navbar from '@/components/layout/Navbar'
 import WordScrub from '@/components/ui/WordScrub'
 import AwardBadge from '@/components/ui/AwardBadge'
@@ -19,6 +20,10 @@ export default function ContactHero() {
 
   useGSAP(
     () => {
+      if (prefersReducedMotion()) {
+        gsap.set('.contact-letter', { yPercent: 0 })
+        return
+      }
       gsap.fromTo(
         '.contact-letter',
         { yPercent: 110 },
@@ -43,10 +48,13 @@ export default function ContactHero() {
           </h1>
           <div className="relative hidden h-28 w-28 shrink-0 lg:block">
             <AwardBadge className="absolute inset-0 h-full w-full animate-badge-spin" />
-            <img
+            <Image
               src={BADGE_ICON}
               alt=""
-              className="absolute left-1/2 top-1/2 h-9 w-9 -translate-x-1/2 -translate-y-1/2"
+              width={36}
+              height={36}
+              unoptimized
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
         </div>

@@ -79,7 +79,7 @@ export default function ServicesHero() {
       className="relative overflow-hidden bg-transparent"
     >
       <Navbar light />
-      <div className="mx-auto max-w-page px-5 pt-24 md:pt-28 pb-20 md:px-8">
+      <div className="mx-auto max-w-page px-5 pt-24 pb-20 md:px-8">
         {/* top row: title + subhead */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <h1
@@ -99,13 +99,13 @@ export default function ServicesHero() {
         </div>
 
         {/* 3 hero image cards — middle card is taller (4/5), outer cards 3/4 */}
-        <div ref={cardsRef} className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:mt-20">
+        <div ref={cardsRef} className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 lg:mt-20">
           {HERO_IMAGES.map((src, i) => (
             <div
               key={i}
               className={cn(
                 'svc-hero-card relative overflow-hidden rounded-panel',
-                i === 1 ? 'sm:-mt-16' : i === 2 ? 'sm:mt-10' : ''
+                i === 1 ? 'md:-mt-16' : i === 2 ? 'md:mt-10' : ''
               )}
               style={{ aspectRatio: i === 1 ? '4 / 5' : '3 / 4' }}
             >
@@ -114,6 +114,7 @@ export default function ServicesHero() {
                 alt=""
                 fill
                 loading="eager"
+                priority={i === 0}
                 sizes="(max-width: 640px) 100vw, 33vw"
                 className={`svc-hero-img-${i} h-full w-full scale-[1.06] object-cover`}
               />

@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { Accordion as AccordionPrimitive } from '@base-ui/react/accordion'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import { Accordion, AccordionItem } from '@/components/ui/accordion'
 import WordScrub from '@/components/ui/WordScrub'
 import SlideButton from '@/components/ui/SlideButton'
@@ -18,6 +19,11 @@ export default function FaqSection() {
     () => {
       const items = gsap.utils.toArray<HTMLElement>('.faq-item')
       if (!items.length) return
+
+      if (prefersReducedMotion()) {
+        gsap.set(items, { y: 0, opacity: 1 })
+        return
+      }
 
       gsap.set(items, { y: 30, opacity: 0 })
       ScrollTrigger.create({
@@ -71,13 +77,13 @@ export default function FaqSection() {
 
   return (
     <section
-      className="bg-[radial-gradient(circle,rgba(0,0,0,0.07)_1px,transparent_1px)] [background-size:22px_22px] pt-14 md:pt-28"
+      className="bg-[radial-gradient(circle,rgba(0,0,0,0.07)_1px,transparent_1px)] bg-size-[22px_22px] pt-14 md:pt-28"
       ref={sectionRef}
     >
       <div className="mx-auto max-w-page px-5 md:px-8">
-        <div className="flex flex-col gap-[1.875rem] lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-7.5 lg:flex-row lg:items-start lg:justify-between">
           {/* Left column — sticks while the questions scroll past on desktop */}
-          <div className="flex max-w-[25rem] flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
+          <div className="flex max-w-100 flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
             <div>
               <WordScrub className="text-[clamp(1.5625rem,3.5vw,2.5rem)] font-semibold leading-[1.25] tracking-[-0.03em] text-black">
                 {t('faq.title')}
@@ -91,7 +97,7 @@ export default function FaqSection() {
               </p>
             </div>
             <div
-              className="flex flex-col gap-[1.875rem] rounded-card border border-black/15 p-[1.875rem]"
+              className="flex flex-col gap-7.5 rounded-card border border-black/15 p-7.5"
               data-anim
             >
               <h4 className="text-2xl font-semibold leading-[1.41] tracking-[-0.045rem] text-black">
@@ -105,26 +111,26 @@ export default function FaqSection() {
           </div>
 
           {/* Right column — accordion */}
-          <Accordion defaultValue={[0]} className="max-w-[41.875rem] flex-1" ref={faqRightRef}>
+          <Accordion defaultValue={[0]} className="max-w-167.5 flex-1" ref={faqRightRef}>
             {faqItems.map((item, i) => (
               <AccordionItem
                 key={i}
                 value={i}
-                className="faq-item border-b-[0.0625rem] border-black/20 px-[1.875rem] pb-[0.5625rem] last:border-b-0"
+                className="faq-item border-b border-black/20 px-7.5 pb-2.25 last:border-b-0"
               >
                 <AccordionPrimitive.Header className="flex">
-                  <AccordionPrimitive.Trigger className="group/faq flex w-full cursor-pointer items-center justify-between gap-4 pt-[1.8125rem] pb-[0.6875rem] text-left outline-none">
+                  <AccordionPrimitive.Trigger className="group/faq flex w-full cursor-pointer items-center justify-between gap-4 pt-7.25 pb-2.75 text-left outline-none">
                     <span className="text-2xl font-semibold leading-[1.41] text-black">
                       {t(`faq.items.${item.key}.question`)}
                     </span>
                     <div className="relative flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-black">
-                      <div className="absolute h-0.5 w-[0.6875rem] bg-white"></div>
-                      <div className="absolute h-0.5 w-[0.6875rem] rotate-90 bg-white [transition:transform_0.3s,opacity_0.3s] group-aria-expanded/faq:rotate-0 group-aria-expanded/faq:opacity-0"></div>
+                      <div className="absolute h-0.5 w-2.75 bg-white"></div>
+                      <div className="absolute h-0.5 w-2.75 rotate-90 bg-white [transition:rotate_0.3s,opacity_0.3s] group-aria-expanded/faq:rotate-0 group-aria-expanded/faq:opacity-0"></div>
                     </div>
                   </AccordionPrimitive.Trigger>
                 </AccordionPrimitive.Header>
                 <AccordionPrimitive.Panel className="h-(--accordion-panel-height) overflow-hidden transition-[height] duration-400 ease-out data-ending-style:h-0 data-starting-style:h-0">
-                  <p className="pb-[1.875rem] text-[0.9375rem] leading-[1.625] text-dark-gray">
+                  <p className="pb-7.5 text-[0.9375rem] leading-[1.625] text-dark-gray">
                     {t(`faq.items.${item.key}.answer`)}
                   </p>
                 </AccordionPrimitive.Panel>

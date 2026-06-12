@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
@@ -35,18 +36,18 @@ export default function Navbar({ light = false }: { light?: boolean }) {
   return (
     <>
       <nav
-        className="absolute inset-x-0 top-0 z-[100] px-5 pb-4 pt-4 md:px-10 md:pb-4 md:pt-8"
+        className="absolute inset-x-0 top-0 z-100 px-5 pb-4 pt-4 md:px-10 md:pb-4 md:pt-8"
         id="navbar"
       >
         <div className="flex items-center justify-between">
           <Link href="/" aria-label="DevInvicta home" className="flex items-center">
-            <img
+            <Image
               src="/assets/logo/devinvicta.svg"
               alt="DevInvicta"
-              className={cn(
-                'h-auto w-[140px] md:w-[160px]',
-                light ? 'logo-brand' : 'logo-brand-light'
-              )}
+              width={160}
+              height={40}
+              unoptimized
+              className={cn('h-auto w-35 md:w-40', light ? 'logo-brand' : 'logo-brand-light')}
             />
           </Link>
           <div className="hidden items-center gap-8 md:flex">
@@ -90,7 +91,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
           </div>
           <button
             className={cn(
-              'z-[200] flex cursor-pointer flex-col justify-center gap-[5px] border-none bg-transparent p-1.5 md:hidden',
+              'z-200 flex cursor-pointer flex-col justify-center gap-1.25 border-none bg-transparent p-1.5 md:hidden',
               light && 'text-black'
             )}
             id="hamburger"
@@ -99,21 +100,21 @@ export default function Navbar({ light = false }: { light?: boolean }) {
           >
             <span
               className={cn(
-                'block h-0.5 w-5 rounded-[2px] transition-all duration-300 ease-[ease]',
+                'block h-0.5 w-5 rounded-[2px] transition-[transform,opacity] duration-300 ease-[ease]',
                 light ? 'bg-black/90' : 'bg-white/90',
                 menuOpen && 'translate-y-[7px] rotate-45'
               )}
             ></span>
             <span
               className={cn(
-                'block h-0.5 w-5 rounded-[2px] transition-all duration-300 ease-[ease]',
+                'block h-0.5 w-5 rounded-[2px] transition-[transform,opacity] duration-300 ease-[ease]',
                 light ? 'bg-black/90' : 'bg-white/90',
                 menuOpen && 'opacity-0'
               )}
             ></span>
             <span
               className={cn(
-                'block h-0.5 w-5 rounded-[2px] transition-all duration-300 ease-[ease]',
+                'block h-0.5 w-5 rounded-[2px] transition-[transform,opacity] duration-300 ease-[ease]',
                 light ? 'bg-black/90' : 'bg-white/90',
                 menuOpen && 'translate-y-[-7px] -rotate-45'
               )}

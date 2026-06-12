@@ -98,7 +98,7 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
                 >
                   <span
                     aria-hidden
-                    className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rounded-full bg-fiery-red"
+                    className="mt-2.2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-accent"
                   />
                   <span>
                     <span className="font-semibold text-black">{b.label} : </span>
@@ -109,7 +109,7 @@ export default function ServiceDetailBody({ service }: { service: Service }) {
             </ul>
 
             {/* 2×2 numbered feature grid */}
-            <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
+            <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2">
               {features.map((f, i) => (
                 <div data-anim key={f.title} className="flex gap-5">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black text-sub font-semibold text-white">

@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import WordScrub from '@/components/ui/WordScrub'
 
 export default function ReviewsSection() {
@@ -11,6 +12,18 @@ export default function ReviewsSection() {
 
   useGSAP(
     () => {
+      if (prefersReducedMotion()) {
+        gsap.set('.bento-cell', { y: 0, opacity: 1, scale: 1 })
+        const statEl = sectionRef.current?.querySelector<HTMLElement>(
+          '.bc-stat-number[data-target]'
+        )
+        if (statEl) {
+          const target = Number(statEl.dataset.target)
+          const suffix = statEl.dataset.suffix ?? ''
+          statEl.textContent = String(target) + suffix
+        }
+        return
+      }
       // Stat counter for bc-stat-number
       const statEl = sectionRef.current?.querySelector<HTMLElement>('.bc-stat-number[data-target]')
       if (statEl) {
@@ -104,7 +117,7 @@ export default function ReviewsSection() {
     >
       {/* Marquee */}
       <div className="overflow-hidden bg-white py-12">
-        <div className="flex w-max animate-[marquee_28s_linear_infinite] gap-[1.875rem] whitespace-nowrap">
+        <div className="flex w-max animate-[marquee_28s_linear_infinite] gap-7.5 whitespace-nowrap">
           {[0, 1].map((i) => (
             <span key={i} className="contents">
               <span className="text-[clamp(2.15rem,10vw,9.3rem)] font-semibold leading-[0.9] tracking-[-0.044em] text-black">
@@ -121,17 +134,17 @@ export default function ReviewsSection() {
         <div className="mx-auto max-w-page px-5 md:px-8">
           <div className="bento-grid grid grid-cols-1 grid-rows-[auto] gap-4 min-[600px]:grid-cols-2 min-[900px]:grid-cols-3">
             {/* Headline cell */}
-            <div className="bento-cell relative order-1 flex min-h-[11rem] flex-col justify-end overflow-hidden rounded-panel bg-white px-[3.0625rem] py-10 before:pointer-events-none before:absolute before:-top-6 before:left-6 before:font-serif before:text-[12rem] before:font-bold before:leading-none before:text-black/5 before:content-['\22'] min-[600px]:order-none min-[600px]:col-span-2 min-[600px]:col-start-1 min-[600px]:row-start-1 min-[900px]:col-start-1 min-[900px]:row-start-1">
+            <div className="bento-cell relative order-1 flex min-h-44 flex-col justify-end overflow-hidden rounded-panel bg-white px-12.25 py-10 before:pointer-events-none before:absolute before:-top-6 before:left-6 before:font-serif before:text-[12rem] before:font-bold before:leading-none before:text-black/5 before:content-['\22'] min-[600px]:order-none min-[600px]:col-span-2 min-[600px]:col-start-1 min-[600px]:row-start-1 min-[900px]:col-start-1 min-[900px]:row-start-1">
               <WordScrub
                 as="h2"
-                className="relative z-[1] max-w-[32rem] text-[clamp(1.25rem,2.2vw,1.75rem)] font-semibold leading-[1.3] tracking-[-0.03em] text-black"
+                className="relative z-1 max-w-128 text-[clamp(1.25rem,2.2vw,1.75rem)] font-semibold leading-[1.3] tracking-[-0.03em] text-black"
               >
                 {t('reviews.headline')}
               </WordScrub>
             </div>
 
             {/* Stat cell */}
-            <div className="bento-cell order-2 flex flex-col justify-between gap-4 rounded-panel bg-black p-[1.875rem] min-[600px]:order-none min-[600px]:col-start-1 min-[600px]:row-start-2 min-[900px]:col-start-3 min-[900px]:row-start-1 min-[900px]:row-span-2">
+            <div className="bento-cell order-2 flex flex-col justify-between gap-4 rounded-panel bg-black p-7.5 min-[600px]:order-none min-[600px]:col-start-1 min-[600px]:row-start-2 min-[900px]:col-start-3 min-[900px]:row-start-1 min-[900px]:row-span-2">
               <div>
                 <p
                   className="bc-stat-number text-[clamp(3rem,6vw,5rem)] font-bold leading-none tracking-[-0.05em] text-white"
@@ -191,7 +204,7 @@ export default function ReviewsSection() {
             </div>
 
             {/* Flossie card */}
-            <div className="bento-cell order-3 flex flex-col gap-[0.875rem] rounded-panel bg-white p-[1.875rem] min-[600px]:order-none min-[600px]:col-start-2 min-[600px]:row-start-2 min-[900px]:col-start-1 min-[900px]:row-start-2">
+            <div className="bento-cell order-3 flex flex-col gap-3.5 rounded-panel bg-white p-7.5 min-[600px]:order-none min-[600px]:col-start-2 min-[600px]:row-start-2 min-[900px]:col-start-1 min-[900px]:row-start-2">
               <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-black/[0.12]">
                 &ldquo;
               </div>
@@ -209,7 +222,7 @@ export default function ReviewsSection() {
             </div>
 
             {/* Davis card */}
-            <div className="bento-cell order-4 flex flex-col gap-[0.875rem] rounded-panel bg-black p-[1.875rem] min-[600px]:order-none min-[600px]:col-start-1 min-[600px]:row-start-3 min-[900px]:col-start-2 min-[900px]:row-start-2">
+            <div className="bento-cell order-4 flex flex-col gap-3.5 rounded-panel bg-black p-7.5 min-[600px]:order-none min-[600px]:col-start-1 min-[600px]:row-start-3 min-[900px]:col-start-2 min-[900px]:row-start-2">
               <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/20">
                 &ldquo;
               </div>
@@ -227,7 +240,7 @@ export default function ReviewsSection() {
             </div>
 
             {/* Lincoln featured card (blue, wide) */}
-            <div className="bento-cell order-6 flex flex-col gap-4 rounded-panel bg-blue p-[2.5rem] min-[600px]:order-none min-[600px]:col-span-2 min-[600px]:col-start-1 min-[600px]:row-start-4 min-[900px]:col-span-2 min-[900px]:col-start-1 min-[900px]:row-start-3">
+            <div className="bento-cell order-6 flex flex-col gap-4 rounded-panel bg-blue p-10 min-[600px]:order-none min-[600px]:col-span-2 min-[600px]:col-start-1 min-[600px]:row-start-4 min-[900px]:col-span-2 min-[900px]:col-start-1 min-[900px]:row-start-3">
               <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/25">
                 &ldquo;
               </div>
@@ -245,7 +258,7 @@ export default function ReviewsSection() {
             </div>
 
             {/* Aggy card */}
-            <div className="bento-cell order-5 flex flex-col gap-[0.875rem] rounded-panel bg-white p-[1.875rem] min-[600px]:order-none min-[600px]:col-start-2 min-[600px]:row-start-3 min-[900px]:col-start-3 min-[900px]:row-start-3">
+            <div className="bento-cell order-5 flex flex-col gap-3.5 rounded-panel bg-white p-7.5 min-[600px]:order-none min-[600px]:col-start-2 min-[600px]:row-start-3 min-[900px]:col-start-3 min-[900px]:row-start-3">
               <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-black/[0.12]">
                 &ldquo;
               </div>

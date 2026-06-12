@@ -23,9 +23,26 @@ export async function generateMetadata({
   const project = getProject(slug)
   const t = await getTranslations('projects')
   if (!project) return { title: t('meta.fallbackTitle') }
+  const title = `${t(`items.${slug}.title`)} | DevInvicta`
+  const description = t(`items.${slug}.solution`)
   return {
-    title: `${t(`items.${slug}.title`)} | DevInvicta`,
-    description: t(`items.${slug}.solution`),
+    title,
+    description,
+    alternates: { canonical: `/projects/${slug}` },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title,
+      description,
+      url: `https://devinvicta.com/projects/${slug}`,
+      siteName: 'DevInvicta',
+      locale: 'pt_PT',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   }
 }
 
@@ -35,16 +52,37 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   if (!project) notFound()
 
   const t = await getTranslations('projects')
+  const projectName = t(`items.${slug}.title`)
+  const projectUrl = `https://devinvicta.com/projects/${slug}`
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://devinvicta.com' },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: 'https://devinvicta.com/projects',
+      },
+      { '@type': 'ListItem', position: 3, name: projectName, item: projectUrl },
+    ],
+  }
 
   return (
     <AnimWrapper
       as="main"
       className="bg-ivory bg-[radial-gradient(circle,rgba(0,0,0,0.06)_1px,transparent_1.6px)] [background-size:24px_24px]"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* hero — typographic, on the light background */}
       <section className="relative bg-transparent">
         <Navbar light />
-        <div className="mx-auto max-w-page px-5 pt-24 md:pt-28 pb-10 md:px-8">
+        <div className="mx-auto max-w-page px-5 pt-24 pb-10 md:px-8">
           <Link
             data-anim
             href="/projects"
@@ -54,7 +92,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           </Link>
           <span
             data-anim
-            className="mt-8 block text-sub font-medium tracking-[0.08em] text-fiery-red uppercase"
+            className="mt-8 block text-sub font-medium tracking-[0.08em] text-brand-accent uppercase"
           >
             {t(`items.${slug}.category`)}
           </span>
@@ -67,12 +105,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
 
         <div className="mx-auto max-w-page px-5 md:px-8">
-          <div className="grid grid-cols-1 gap-3 py-6 text-sub font-medium tracking-[0.08em] text-dark-gray uppercase sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 py-6 text-sub font-medium tracking-[0.08em] text-dark-gray uppercase md:grid-cols-3">
             <span data-anim>{t('detail.projectDetails')}</span>
-            <span data-anim className="sm:text-center">
+            <span data-anim className="md:text-center">
               {t('detail.caseStudy')}
             </span>
-            <span data-anim className="sm:text-right">
+            <span data-anim className="md:text-right">
               {t('detail.fallbackClient')}
             </span>
           </div>

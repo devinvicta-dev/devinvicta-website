@@ -13,8 +13,13 @@
   --color-fiery-red: #f3350c;
   /* Brand accent — matched to the DevInvicta logo (purple). Kept under the
      `blue` token name so existing `text-blue`/`bg-blue` usages pick it up. */
-  --color-blue: #51356e;
-  --color-purple: #51356e;
+  --color-blue: #51366e;
+  --color-purple: #51366e;
+  --color-brand-accent: #51366e;
+  --color-brand-yellow: #f6d045;
+  --color-tara: #cbeed3;
+  --color-brand-cyan: #bfe7e6;
+  --color-oasis: #fef2d1;
 
   /* ── Fonts (provided by next/font via --font-inter-tight) ── */
   --font-sans: var(--font-inter-tight), 'Inter Tight', sans-serif;
@@ -172,6 +177,10 @@
   }
   /* Brand logo keeps its colour, exempt from the grayscale rule. */
   img.logo-brand {
+    filter: none !important;
+  }
+  /* Feature icons keep their colour — exempt from the site-wide grayscale. */
+  img.icon-color {
     filter: none !important;
   }
   /* …rendered white on dark backgrounds (e.g. the hero navbar). */

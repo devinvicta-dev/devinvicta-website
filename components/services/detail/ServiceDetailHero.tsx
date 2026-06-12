@@ -51,7 +51,7 @@ export default function ServiceDetailHero({ service }: { service: Service }) {
     <section ref={sectionRef} className="relative bg-transparent">
       {/* menu separated above the hero, on the light background */}
       <Navbar light />
-      <div className="px-3 pt-24 pb-0 sm:px-5 md:px-8 md:pt-28">
+      <div className="px-3 pt-24 pb-0 md:px-8">
         <div
           ref={bannerRef}
           className="relative flex h-[80vh] min-h-[460px] items-end overflow-hidden rounded-panel bg-black"
@@ -90,12 +90,12 @@ export default function ServiceDetailHero({ service }: { service: Service }) {
 
       {/* meta row */}
       <div className="mx-auto max-w-page px-5 md:px-8">
-        <div className="grid grid-cols-1 gap-3 py-6 text-sub font-medium tracking-[0.08em] text-dark-gray uppercase sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 py-6 text-sub font-medium tracking-[0.08em] text-dark-gray uppercase md:grid-cols-3">
           <span data-anim>{t('detail.metaServiceDetails')}</span>
-          <span data-anim className="sm:text-center">
+          <span data-anim className="md:text-center">
             {service.years}
           </span>
-          <span data-anim className="sm:text-right">
+          <span data-anim className="md:text-right">
             {t('detail.metaProjectsByYears')}
           </span>
         </div>

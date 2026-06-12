@@ -13,6 +13,21 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('meta.title'),
     description: t('meta.description'),
+    alternates: { canonical: '/projects' },
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: t('meta.title'),
+      description: t('meta.description'),
+      url: 'https://devinvicta.com/projects',
+      siteName: 'DevInvicta',
+      locale: 'pt_PT',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('meta.title'),
+      description: t('meta.description'),
+    },
   }
 }
 
@@ -25,7 +40,7 @@ export default async function ProjectsPage() {
     >
       <section className="relative overflow-hidden bg-transparent">
         <Navbar light />
-        <div className="mx-auto max-w-page px-5 pt-24 md:pt-28 pb-20 md:px-8">
+        <div className="mx-auto max-w-page px-5 pt-24 pb-20 md:px-8">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
             <h1
               data-anim

@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import Navbar from '@/components/layout/Navbar'
 
 export default function AboutHero() {
@@ -13,7 +14,22 @@ export default function AboutHero() {
 
   useGSAP(
     () => {
-      gsap.set('#di-line-1 .di-hero-letter, #di-line-2 .di-hero-letter', { yPercent: 100 })
+      if (prefersReducedMotion()) {
+        gsap.set('#di-line-1 .di-hero-letter, #di-line-2 .di-hero-letter', { y: 0, opacity: 1 })
+        gsap.set('.di-hero-big-wrap', { opacity: 1, y: 0 })
+        if (bigOuterRef.current)
+          gsap.set(bigOuterRef.current, {
+            x: 0,
+            y: 0,
+            scaleX: 1,
+            scaleY: 1,
+            borderRadius: '1.25rem',
+          })
+        if (bigInnerRef.current) gsap.set(bigInnerRef.current, { scaleX: 1, scaleY: 1 })
+        return
+      }
+
+      gsap.set('#di-line-1 .di-hero-letter, #di-line-2 .di-hero-letter', { y: 20, opacity: 0 })
 
       if (bigOuterRef.current)
         gsap.set(bigOuterRef.current, {
@@ -30,14 +46,15 @@ export default function AboutHero() {
       const heroTL = gsap.timeline({ delay: 0.2 })
       heroTL
         .to('#di-line-1 .di-hero-letter', {
-          yPercent: 0,
+          y: 0,
+          opacity: 1,
           duration: 1.0,
           ease: 'power3.out',
           stagger: 0.035,
         })
         .to(
           '#di-line-2 .di-hero-letter',
-          { yPercent: 0, duration: 1.0, ease: 'power3.out', stagger: 0.035 },
+          { y: 0, opacity: 1, duration: 1.0, ease: 'power3.out', stagger: 0.035 },
           '-=0.78'
         )
         .to('.di-hero-big-wrap', { opacity: 1, y: 0, duration: 1.4, ease: 'power3.out' }, '-=0.5')
@@ -81,29 +98,35 @@ export default function AboutHero() {
       <h1 id="about-hero-title" className="sr-only">
         {t('hero.srTitle')}
       </h1>
-      <div className="relative flex flex-col items-center px-8 pt-64 pb-80 max-w-[82.5rem] mx-auto">
+      <div className="relative flex flex-col items-center px-8 pt-64 pb-80 max-w-330 mx-auto">
         <div className="relative flex flex-col items-center" id="di-text-wrap">
           {/* Title — letters mapped from translations so the headline localizes
               while keeping the per-letter reveal animation (line 2 is the brand). */}
-          <div className="di-hero-line flex flex-row items-start overflow-hidden" id="di-line-1">
+          <div
+            className="di-hero-line flex flex-row items-start mix-blend-difference"
+            id="di-line-1"
+          >
             {t('hero.line1')
               .split('')
               .map((ch, i) => (
                 <div
                   key={i}
-                  className="di-hero-letter block text-5xl md:text-[100px] lg:text-[150px] font-semibold leading-tight md:leading-[100px] lg:leading-[150px] tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]"
+                  className="di-hero-letter block text-5xl md:text-[6.25rem] lg:text-[9.375rem] font-semibold leading-tight md:leading-25 lg:leading-37.5 tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] text-white [will-change:transform]"
                 >
                   {ch}
                 </div>
               ))}
           </div>
-          <div className="di-hero-line flex flex-row items-start overflow-hidden" id="di-line-2">
+          <div
+            className="di-hero-line flex flex-row items-start mix-blend-difference"
+            id="di-line-2"
+          >
             {t('hero.line2')
               .split('')
               .map((ch, i) => (
                 <div
                   key={i}
-                  className="di-hero-letter block text-5xl md:text-[100px] lg:text-[150px] font-semibold leading-tight md:leading-[100px] lg:leading-[150px] tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] mix-blend-difference text-white [will-change:transform]"
+                  className="di-hero-letter block text-5xl md:text-[6.25rem] lg:text-[9.375rem] font-semibold leading-tight md:leading-25 lg:leading-37.5 tracking-[-1.5px] md:tracking-[-4px] lg:tracking-[-6.4px] text-white [will-change:transform]"
                 >
                   {ch}
                 </div>
@@ -114,7 +137,7 @@ export default function AboutHero() {
       {/* Big image */}
       <div className="di-hero-big-wrap relative w-full px-5 md:px-8 overflow-hidden">
         <div
-          className="di-hero-big-outer relative w-full h-[600px] overflow-hidden origin-center [will-change:transform]"
+          className="di-hero-big-outer relative w-full h-150 overflow-hidden origin-center [will-change:transform]"
           id="di-big-outer"
           ref={bigOuterRef}
         >

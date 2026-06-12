@@ -3,15 +3,17 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import { gsap, useGSAP, ScrollTrigger } from '@/lib/gsap'
+import { prefersReducedMotion } from '@/lib/animations/easing'
 import { cn } from '@/lib/utils'
 
 const SERVICE_ROWS = [
-  { z: 'z-[6]', key: 'web' },
-  { z: 'z-[5]', key: 'mobile' },
-  { z: 'z-[4]', key: 'ai' },
-  { z: 'z-[3]', key: 'design' },
-  { z: 'z-[2]', key: 'automation' },
-  { z: 'z-[1]', key: 'cloud' },
+  { z: 'z-7', key: 'web' },
+  { z: 'z-6', key: 'mobile' },
+  { z: 'z-5', key: 'ai' },
+  { z: 'z-4', key: 'design' },
+  { z: 'z-3', key: 'automation' },
+  { z: 'z-2', key: 'cloud' },
+  { z: 'z-1', key: 'outsourcing' },
 ] as const
 
 export default function ServiceV2Section() {
@@ -20,6 +22,10 @@ export default function ServiceV2Section() {
 
   useGSAP(
     () => {
+      if (prefersReducedMotion()) {
+        gsap.set(gsap.utils.toArray<HTMLElement>('.svc2-item'), { y: 0, opacity: 1 })
+        return
+      }
       gsap.utils.toArray<HTMLElement>('.svc2-item').forEach((el) => {
         gsap.set(el, { y: 40, opacity: 0 })
         ScrollTrigger.create({
@@ -81,17 +87,17 @@ export default function ServiceV2Section() {
         >
           {t('serviceV2.headline')}
         </h2>
-        <div className="relative flex flex-col gap-[0.875rem] [perspective:2000px]">
+        <div className="relative flex flex-col gap-3.5 [perspective:2000px]">
           {SERVICE_ROWS.map((item) => (
             <div
               key={item.key}
               className={cn(
-                'svc2-item relative flex items-center justify-start border-b-[0.0625rem] border-black/[0.08] py-6',
+                'svc2-item relative flex items-center justify-start border-b border-black/[0.08] py-6',
                 item.z
               )}
               data-anim=""
             >
-              <div className="relative z-[2]">
+              <div className="relative z-2">
                 <h3 className="text-[clamp(1.5rem,7vw,2.5rem)] font-semibold leading-[1.2] tracking-[-0.125rem] text-black mix-blend-difference [transition:color_0.35s] md:text-[clamp(2.15rem,6vw,6.35rem)]">
                   {t(`serviceV2.items.${item.key}`)}
                 </h3>

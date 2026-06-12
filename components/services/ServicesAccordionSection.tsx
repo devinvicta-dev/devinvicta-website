@@ -2,13 +2,11 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import WordScrub from '@/components/ui/WordScrub'
 import AwardBadge from '@/components/ui/AwardBadge'
 import { Separator } from '@/components/ui/separator'
-
-const ARROW =
-  'https://cdn.prod.website-files.com/691d92c72b801c04cbc08bec/6932c0d5b86dc72da6639743_Arrow%2010%20(1).svg'
 
 const SERVICES = [
   {
@@ -47,10 +45,15 @@ const SERVICES = [
     image:
       'https://images.unsplash.com/photo-1496236436299-cde70e3587cf?auto=format&fit=crop&w=1600&q=70',
   },
+  {
+    key: 'outsourcing',
+    href: '/service-detail/outsourcing',
+    image:
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70',
+  },
 ] as const
 
 export default function ServicesAccordionSection() {
-  // Hover-only: the hovered row opens (no scroll-driven auto-change). Default = first.
   const [active, setActive] = useState(0)
   const t = useTranslations('services')
 
@@ -76,37 +79,24 @@ export default function ServicesAccordionSection() {
               <div
                 key={s.key}
                 data-anim
-                onMouseEnter={() => setActive(i)}
-                className="group/row relative pt-7"
+                onClick={() => setActive(i)}
+                className="group/row relative cursor-pointer pt-7"
               >
                 <div className="flex items-center justify-between gap-4">
                   <h3 className="text-h4 font-semibold tracking-[-0.045rem] text-black">{title}</h3>
-                  <a
+                  <Link
                     href={s.href}
-                    className="flex shrink-0 items-center gap-2 text-sub font-semibold text-black"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex shrink-0 items-center gap-2 text-sub font-semibold text-black transition-colors duration-300 hover:text-brand-accent"
                   >
                     {t('accordion.viewMore')}
-                    {/* dual-arrow hover swap */}
-                    <span className="relative block h-[0.875rem] w-[0.875rem] overflow-hidden">
-                      <img
-                        src={ARROW}
-                        alt=""
-                        aria-hidden
-                        className="absolute inset-0 h-full w-full transition-transform duration-300 ease-out group-hover/row:translate-x-full group-hover/row:-translate-y-full"
-                      />
-                      <img
-                        src={ARROW}
-                        alt=""
-                        aria-hidden
-                        className="absolute inset-0 h-full w-full -translate-x-full translate-y-full transition-transform duration-300 ease-out group-hover/row:translate-x-0 group-hover/row:translate-y-0"
-                      />
-                    </span>
-                  </a>
+                    <span aria-hidden>↗</span>
+                  </Link>
                 </div>
 
                 {/* reveal panel: full-width image above full-width body */}
                 <div
-                  className="grid transition-all duration-500 ease-out"
+                  className="grid transition-[grid-template-rows,opacity] duration-500 ease-out"
                   style={{
                     gridTemplateRows: isActive ? '1fr' : '0fr',
                     opacity: isActive ? 1 : 0,

@@ -97,7 +97,7 @@ export default function ContactForm() {
     return (
       <div
         data-anim
-        className="flex min-h-[420px] flex-col items-start justify-center gap-3 rounded-panel bg-white p-8 ring-1 ring-black/5 sm:p-10"
+        className="flex min-h-105 flex-col items-start justify-center gap-3 rounded-panel bg-white p-8 ring-1 ring-black/5 md:p-10"
       >
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-fiery-red text-xl text-white">
           ✓
@@ -121,7 +121,7 @@ export default function ContactForm() {
     <form
       data-anim
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-panel bg-white p-8 ring-1 ring-black/5 sm:p-10"
+      className="rounded-panel bg-white p-8 ring-1 ring-black/5 md:p-10"
       noValidate
     >
       <FieldGroup className="gap-7">
@@ -139,7 +139,7 @@ export default function ContactForm() {
           <FieldError errors={errors.name ? [errors.name] : undefined} />
         </Field>
 
-        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
           <Field data-invalid={!!errors.email}>
             <FieldLabel htmlFor="email">{t('form.email')}</FieldLabel>
             <Input
@@ -167,7 +167,7 @@ export default function ContactForm() {
           </Field>
         </div>
 
-        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
           <Field>
             <FieldLabel htmlFor="company">{t('form.company')}</FieldLabel>
             <Input
