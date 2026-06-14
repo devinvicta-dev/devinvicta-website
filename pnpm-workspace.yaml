@@ -1,2 +1,8 @@
 overrides:
   zod: "^4.4.3"
+
+onlyBuiltDependencies:
+  - "@parcel/watcher"
+  - "@swc/core"
+  - sharp
+  - unrs-resolver
