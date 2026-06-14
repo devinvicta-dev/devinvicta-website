@@ -17,9 +17,9 @@
   --color-purple: #51366e;
   --color-brand-accent: #51366e;
   --color-brand-yellow: #f6d045;
-  --color-tara: #cbeed3;
-  --color-brand-cyan: #bfe7e6;
-  --color-oasis: #fef2d1;
+  --color-tara: #e8dff0;
+  --color-brand-cyan: #c4aed6;
+  --color-oasis: #f5f0fa;
 
   /* ── Fonts (provided by next/font via --font-inter-tight) ── */
   --font-sans: var(--font-inter-tight), 'Inter Tight', sans-serif;
