@@ -4,8 +4,8 @@
     "description": "AI agents, web platforms and mobile apps engineered for ambitious teams. EU AI Act compliant, proven before you pay."
   },
   "hero": {
-    "wordLeft": "Building",
-    "wordRight": "businesses",
+    "wordLeft": "Shipping",
+    "wordRight": "excellence",
     "tagline": "AI agents, web platforms and mobile apps engineered to scale, automate and outperform."
   },
   "about": {
@@ -105,8 +105,8 @@
       },
       "europacolon": {
         "quote": "“Our new institutional site went live with a full admin platform and AI that categorises and prioritises every contact request. Live from day one.”",
-        "name": "Europacolon Portugal",
-        "meta": "europacolon.pt"
+        "name": "Healthcare NGO",
+        "meta": "AI live from day one"
       },
       "insurance": {
         "quote": "“They migrated us to a modern stack, rebuilt our quotation engine with AI and automated our commercial workflows. Conversion is up more than 50% and the system is noticeably faster.”",
@@ -149,7 +149,7 @@
       },
       "sector": {
         "question": "Have you worked with companies in my sector?",
-        "answer": "Yes. We have experience in sectors like fintech, insurance, e-commerce, healthcare, maritime transport and manufacturing. Check our case studies or talk to us to see how we can help in your specific sector."
+        "answer": "Yes. We have worked across fintech, insurance, e-commerce, healthcare and manufacturing, among others. Whatever your sector, talk to us and we will show you how we can help."
       },
       "confidentiality": {
         "question": "How do you guarantee the confidentiality of my data and projects?",

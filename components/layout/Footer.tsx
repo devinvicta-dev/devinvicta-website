@@ -95,10 +95,10 @@ export default function Footer() {
               info@devinvicta.com
             </a>
             <a
-              href="tel:+351928144223"
+              href="tel:+351928277832"
               className="block text-[0.9375rem] text-gray [transition:color_0.2s,transform_0.2s] hover:translate-x-1.6 hover:text-black"
             >
-              +351 928 144 223
+              +351 928 277 832
             </a>
           </div>
         </div>

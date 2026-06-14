@@ -82,10 +82,10 @@ export default function ContactHero() {
                   {t('hero.phoneLabel')}
                 </span>
                 <a
-                  href="tel:+351928144223"
+                  href="tel:+351928277832"
                   className="text-h5 font-semibold text-black transition-opacity hover:opacity-60"
                 >
-                  +351 928 144 223
+                  +351 928 277 832
                 </a>
               </div>
             </div>
