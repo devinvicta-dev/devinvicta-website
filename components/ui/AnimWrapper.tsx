@@ -32,16 +32,10 @@ export default function AnimWrapper({
         return
       }
 
-      // On touch devices, animating filter:blur() during scroll is GPU-heavy and
-      // makes scrolling feel laggy — drop the blur there and keep the cheap
-      // y/opacity reveal. Desktop keeps the full Vertora blur reveal.
-      const lite = typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
-      const blur = (px: number) => (lite ? {} : { filter: `blur(${px}px)` })
-
-      // Reveal once: rise from y50 (+blur on desktop) → settle, on scroll-in.
+      // Reveal once: rise from y40 + scale 0.97 → settle, on scroll-in.
       // No leave/back handlers, so content stays visible once revealed and never
       // disappears while scrolling.
-      gsap.set(items, { y: 50, opacity: 0, ...blur(6) })
+      gsap.set(items, { y: 40, opacity: 0, scale: 0.97, force3D: true })
       ScrollTrigger.batch(items, {
         start: 'top 90%',
         once: true,
@@ -49,7 +43,7 @@ export default function AnimWrapper({
           gsap.to(batch, {
             y: 0,
             opacity: 1,
-            ...blur(0),
+            scale: 1,
             duration,
             ease: REVEAL_EASE,
             force3D: true,
