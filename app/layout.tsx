@@ -118,7 +118,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Agents Development' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Platform Development' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development' } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'EU AI Act Compliance Consulting' } },
+        {
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: 'EU AI Act Compliance Consulting' },
+        },
       ],
     },
     sameAs: ['https://www.linkedin.com/company/devinvicta/'],
@@ -131,7 +134,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     url: 'https://devinvicta.com',
     potentialAction: {
       '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: 'https://devinvicta.com/?q={search_term_string}' },
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://devinvicta.com/?q={search_term_string}',
+      },
       'query-input': 'required name=search_term_string',
     },
   }
