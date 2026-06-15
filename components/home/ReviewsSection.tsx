@@ -153,7 +153,7 @@ export default function ReviewsSection() {
                 >
                   0%
                 </p>
-                <p className="text-sm font-semibold uppercase tracking-[0.05em] text-white/50">
+                <p className="text-sm font-semibold uppercase tracking-[0.05em] text-white/70">
                   {t('reviews.satisfaction')}
                 </p>
               </div>
@@ -223,7 +223,7 @@ export default function ReviewsSection() {
 
             {/* Davis card */}
             <div className="bento-cell order-4 flex flex-col gap-3.5 rounded-panel bg-black p-7.5 min-[600px]:order-none min-[600px]:col-start-1 min-[600px]:row-start-3 min-[900px]:col-start-2 min-[900px]:row-start-2">
-              <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/20">
+              <div aria-hidden="true" className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/20">
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(0.875rem,1.3vw,1.05rem)] leading-[1.65] text-white/85">
@@ -234,14 +234,14 @@ export default function ReviewsSection() {
                   <p className="text-sm font-semibold text-white">
                     {t('reviews.items.europacolon.name')}
                   </p>
-                  <p className="text-xs text-white/55">{t('reviews.items.europacolon.meta')}</p>
+                  <p className="text-xs text-white/75">{t('reviews.items.europacolon.meta')}</p>
                 </div>
               </div>
             </div>
 
             {/* Lincoln featured card (blue, wide) */}
             <div className="bento-cell order-6 flex flex-col gap-4 rounded-panel bg-blue p-10 min-[600px]:order-none min-[600px]:col-span-2 min-[600px]:col-start-1 min-[600px]:row-start-4 min-[900px]:col-span-2 min-[900px]:col-start-1 min-[900px]:row-start-3">
-              <div className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/25">
+              <div aria-hidden="true" className="mb-1 font-serif text-5xl font-bold leading-[0.8] text-white/25">
                 &ldquo;
               </div>
               <p className="flex-1 text-[clamp(1rem,1.6vw,1.25rem)] font-medium leading-[1.65] text-white/85">
@@ -252,7 +252,7 @@ export default function ReviewsSection() {
                   <p className="text-sm font-semibold text-white">
                     {t('reviews.items.insurance.name')}
                   </p>
-                  <p className="text-xs text-white/55">{t('reviews.items.insurance.meta')}</p>
+                  <p className="text-xs text-white/75">{t('reviews.items.insurance.meta')}</p>
                 </div>
               </div>
             </div>
