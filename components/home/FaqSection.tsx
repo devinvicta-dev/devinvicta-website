@@ -100,9 +100,9 @@ export default function FaqSection() {
               className="flex flex-col gap-7.5 rounded-card border border-black/15 p-7.5"
               data-anim
             >
-              <h4 className="text-2xl font-semibold leading-[1.41] tracking-[-0.045rem] text-black">
+              <h3 className="text-2xl font-semibold leading-[1.41] tracking-[-0.045rem] text-black">
                 {t('faq.ctaTitle')}
-              </h4>
+              </h3>
               <p className="leading-[1.625] text-dark-gray" style={{ fontSize: '0.9375rem' }}>
                 {t('faq.ctaBody')}
               </p>

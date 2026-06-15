@@ -68,6 +68,7 @@ export default function CardsSection() {
   return (
     <section className="relative h-auto md:h-[700vh]" id="cards-section" ref={sectionRef}>
       <div className="relative top-auto flex h-auto w-full flex-col items-center justify-center overflow-visible bg-ivory p-6 md:sticky md:top-0 md:h-lvh md:flex-row md:overflow-hidden md:p-0">
+        <h2 className="sr-only">{t('cards.sectionTitle')}</h2>
         <div className="hidden md:relative md:flex md:items-center md:justify-center">
           <div className="circle-inner relative z-2 flex h-112 w-112 items-center justify-center rounded-full border border-dashed border-black/30">
             <p
