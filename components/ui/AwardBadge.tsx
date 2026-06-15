@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
  */
 export default function AwardBadge({
   className,
-  text = 'AWARD WINNING SOLUTIONS · SINCE 2024 · ',
+  text = 'SHIPPING EXCELLENCE · SINCE 2024 · ',
   ...props
 }: React.ComponentProps<'svg'> & { text?: string }) {
   // A circle centered at 56,56 with r=44 inside a 112x112 box.

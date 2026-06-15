@@ -4,8 +4,8 @@
     "description": "Agentes de IA, plataformas web e apps móveis para equipas ambiciosas. Conformidade EU AI Act, comprovado antes de pagar."
   },
   "hero": {
-    "wordLeft": "A criar",
-    "wordRight": "negócios",
+    "wordLeft": "Lançar",
+    "wordRight": "excelência",
     "tagline": "Agentes de IA, plataformas web e apps móveis concebidos para escalar, automatizar e superar."
   },
   "about": {
@@ -106,8 +106,8 @@
       },
       "europacolon": {
         "quote": "\"O nosso novo site institucional entrou em funcionamento com uma plataforma de administração completa e IA que categoriza e prioriza cada pedido de contacto. Operacional desde o primeiro dia.\"",
-        "name": "Europacolon Portugal",
-        "meta": "europacolon.pt"
+        "name": "ONG de Saúde",
+        "meta": "IA operacional desde o primeiro dia"
       },
       "insurance": {
         "quote": "\"Migraram-nos para uma stack moderna, reconstruíram o nosso motor de cotações com IA e automatizaram os nossos fluxos comerciais. A conversão subiu mais de 50% e o sistema é nitidamente mais rápido.\"",
@@ -150,7 +150,7 @@
       },
       "sector": {
         "question": "Já trabalharam com empresas do meu setor?",
-        "answer": "Sim. Temos experiência em setores como fintech, seguros, e-commerce, saúde, transporte marítimo e indústria. Consulte os nossos casos de estudo ou fale connosco para ver como podemos ajudar no seu setor específico."
+        "answer": "Sim. Já trabalhámos em fintech, seguros, e-commerce, saúde e indústria, entre outros. Seja qual for o seu setor, fale connosco e mostramos como podemos ajudar."
       },
       "confidentiality": {
         "question": "Como garantem a confidencialidade dos meus dados e projetos?",

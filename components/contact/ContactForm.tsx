@@ -33,7 +33,9 @@ type FormValues = {
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
 const fieldClass =
-  'border-0 border-b border-black/15 bg-transparent px-0 pb-2.5 pt-1 text-body text-black rounded-none h-auto md:text-body placeholder:text-dark-gray/70 focus-visible:border-black focus-visible:ring-0 transition-colors'
+  'border-0 border-b border-white/20 bg-transparent px-0 pb-3 pt-1 text-body text-white rounded-none h-auto md:text-body placeholder:text-white/30 focus-visible:border-brand-yellow focus-visible:ring-0 transition-colors'
+
+const labelClass = 'text-white/40 text-xs tracking-widest uppercase font-medium'
 
 export default function ContactForm() {
   const t = useTranslations('contact')
@@ -96,20 +98,19 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div
-        data-anim
-        className="flex min-h-105 flex-col items-start justify-center gap-3 rounded-panel bg-white p-8 ring-1 ring-black/5 md:p-10"
+        className="flex min-h-105 flex-col items-start justify-center gap-4 rounded-panel bg-primary p-8 ring-1 ring-white/10 md:p-10"
       >
-        <span className="flex h-12 w-12 items-center justify-center rounded-full bg-fiery-red text-xl text-white">
+        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-yellow text-lg text-black">
           ✓
         </span>
-        <h3 className="text-h4 font-semibold tracking-[-0.02em] text-black">
+        <h3 className="text-h4 font-medium tracking-tight text-white">
           {t('form.successTitle')}
         </h3>
-        <p className="text-body leading-[1.7] text-dark-gray">{t('form.successBody')}</p>
+        <p className="text-body leading-relaxed text-white/50">{t('form.successBody')}</p>
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-2 text-button font-semibold text-black underline underline-offset-4 hover:opacity-60"
+          className="mt-2 text-button font-medium text-white/40 underline underline-offset-4 hover:text-white transition-colors"
         >
           {t('form.successAgain')}
         </button>
@@ -119,14 +120,13 @@ export default function ContactForm() {
 
   return (
     <form
-      data-anim
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-panel bg-white p-8 ring-1 ring-black/5 md:p-10"
+      className="rounded-panel bg-primary p-8 ring-1 ring-white/10 md:p-10"
       noValidate
     >
-      <FieldGroup className="gap-7">
+      <FieldGroup className="gap-8">
         <Field data-invalid={!!errors.name}>
-          <FieldLabel htmlFor="name">{t('form.name')}</FieldLabel>
+          <FieldLabel htmlFor="name" className={labelClass}>{t('form.name')}</FieldLabel>
           <Input
             id="name"
             type="text"
@@ -136,12 +136,12 @@ export default function ContactForm() {
             className={fieldClass}
             {...register('name')}
           />
-          <FieldError errors={errors.name ? [errors.name] : undefined} />
+          <FieldError errors={errors.name ? [errors.name] : undefined} className="text-fiery-red" />
         </Field>
 
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Field data-invalid={!!errors.email}>
-            <FieldLabel htmlFor="email">{t('form.email')}</FieldLabel>
+            <FieldLabel htmlFor="email" className={labelClass}>{t('form.email')}</FieldLabel>
             <Input
               id="email"
               type="email"
@@ -151,11 +151,11 @@ export default function ContactForm() {
               className={fieldClass}
               {...register('email')}
             />
-            <FieldError errors={errors.email ? [errors.email] : undefined} />
+            <FieldError errors={errors.email ? [errors.email] : undefined} className="text-fiery-red" />
           </Field>
 
           <Field>
-            <FieldLabel htmlFor="phone">{t('form.phone')}</FieldLabel>
+            <FieldLabel htmlFor="phone" className={labelClass}>{t('form.phone')}</FieldLabel>
             <Input
               id="phone"
               type="tel"
@@ -167,9 +167,9 @@ export default function ContactForm() {
           </Field>
         </div>
 
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <Field>
-            <FieldLabel htmlFor="company">{t('form.company')}</FieldLabel>
+            <FieldLabel htmlFor="company" className={labelClass}>{t('form.company')}</FieldLabel>
             <Input
               id="company"
               type="text"
@@ -181,15 +181,15 @@ export default function ContactForm() {
           </Field>
 
           <Field>
-            <FieldLabel htmlFor="budget">{t('form.budget')}</FieldLabel>
+            <FieldLabel htmlFor="budget" className={labelClass}>{t('form.budget')}</FieldLabel>
             <select
               id="budget"
               className={cn(fieldClass, 'cursor-pointer outline-none')}
               {...register('budget')}
             >
-              <option value="">{t('form.budgetPlaceholder')}</option>
+              <option value="" className="bg-black text-white">{t('form.budgetPlaceholder')}</option>
               {BUDGETS.map((b) => (
-                <option key={b} value={b}>
+                <option key={b} value={b} className="bg-black text-white">
                   {b}
                 </option>
               ))}
@@ -198,7 +198,7 @@ export default function ContactForm() {
         </div>
 
         <Field data-invalid={!!errors.message}>
-          <FieldLabel htmlFor="message">{t('form.message')}</FieldLabel>
+          <FieldLabel htmlFor="message" className={labelClass}>{t('form.message')}</FieldLabel>
           <Textarea
             id="message"
             rows={4}
@@ -207,10 +207,10 @@ export default function ContactForm() {
             className={cn(fieldClass, 'min-h-0 resize-none')}
             {...register('message')}
           />
-          <FieldError errors={errors.message ? [errors.message] : undefined} />
+          <FieldError errors={errors.message ? [errors.message] : undefined} className="text-fiery-red" />
         </Field>
 
-        <Separator className="bg-black/10" />
+        <Separator className="bg-white/10" />
 
         {status === 'error' && (
           <p role="alert" className="text-sub text-fiery-red">
@@ -222,6 +222,7 @@ export default function ContactForm() {
           type="submit"
           disabled={status === 'loading'}
           text={status === 'loading' ? t('form.sending') : t('form.submit')}
+          variant="white"
           className="w-fit"
         />
       </FieldGroup>

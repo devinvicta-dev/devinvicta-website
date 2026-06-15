@@ -388,7 +388,7 @@ export default async function Page() {
 - Tailwind v4, CSS-first. Tokens in `app/globals.css`.
 - **No arbitrary Tailwind values (`[value]`)** — Tailwind v4 uses an open-ended numeric scale, so classes like `pt-120`, `max-w-100`, `gap-18` are valid and do NOT need to be added to `globals.css`. Only the `[value]` bracket syntax for values is forbidden (e.g. `w-[100px]`). Selector/modifier brackets like `[&>div]` are allowed. Opacity modifiers (`/10`, `/45`) are fine. Tailwind v4 `!` suffix (e.g. `hover:bg-primary-hover!`) is valid — NOT a violation.
 - **`cn()` for ALL conditional/merged class names** — never template literals (`` `foo ${bar}` ``) or raw ternaries in `className`. Use `cn("base", condition && "extra")` or `cn(condition ? "a" : "b")`. Every `className` with any logic must go through `cn()`.
-- Brand: Primary (#0e220e), Secondary (#f6d045), Tara (#cbeed3), Oasis (#fef2d1), Cyan (#bfe7e6).
+- Brand: Purple (#51356e — primary brand, logo colour), Yellow (#f6d045 — warm accent, complementary), Tara (#e8dff0 — light lavender), Oasis (#f5f0fa — ultra-light lavender), Cyan (#c4aed6 — medium lavender). CSS tokens: `bg-purple`, `bg-brand-accent`, `bg-tara`, `bg-oasis`, `bg-brand-cyan`, `bg-brand-yellow`.
 - **`h-lvh`** always — never `min-h-screen` or `h-screen`.
 - **No `transition-all`** — target specific CSS properties explicitly.
 - **No large blur values** — `blur-3xl` and above are forbidden.
